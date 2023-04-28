@@ -1,2 +1,0 @@
-# FULLSTACK
-Curso FullStack TuCarreraDigital
