@@ -1,0 +1,222 @@
+html {
+    font-size: 62.5%;
+    /*Relacion del rem modificada a 1 rem ~ 10 px (parte 1)*/
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #02052F;
+    /*Relacion del rem modificada a 1 rem ~ 10 px (parte 2)*/
+}
+
+/* /*selector{
+    propiedad: valor;
+}*/
+
+/* h1 {
+    color: red; Color de la fuente
+    text-align: center; Justificación del texto
+    background-color: black; Color del fondo
+    padding: 50px;
+    margin: 50px; Márgenes verticales y horizontales del cuadro de texto
+    font-size: 45px; Tamaño de la fuente
+    Unidades de medida en css: px (ud fijas), em, rem (uds relativas). 
+    rem mas utilizada para visualizar en diferentes dispositivos
+    1 rem ~ 16px
+}
+
+.titulo{
+    color: blue;
+}
+Se superpone por especifidad al llamar al selector mediante clase
+
+.primera_seccion a{ Todos los enlaces de la clase primera sección
+    color:green;
+}*/
+.header {
+    text-align: right;
+}
+
+.header a {
+    color: #00e497;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.cursos_sobre_informate {
+    width: 100%;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cursos_sobre_informate img_tcd {
+    text-align: left;
+}
+
+.cursos_sobre_informate .menu {
+
+    text-align: right;
+
+}
+
+.cursos_sobre_informate a {
+    color: #02052f;
+    margin: 1rem;
+    text-decoration: none;
+}
+
+.cursos_sobre_informate .informate {
+    background-color: #00e497;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    border-radius: 20px;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+}
+
+.primera_seccion {
+    background-image: url(/ProyectoInicio/img/11641891319_banner_zona_norte.png);
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 180px;
+    background-position: top left;
+    box-sizing: border-box;
+}
+
+.primera_seccion h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 5rem;
+    color: #02052F;  
+    font-weight: 800 bolder; 
+    margin-bottom: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.primera_seccion .titulo div{    
+    background-color: white;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: 800;
+    padding: 3px 15px;
+    margin-left: 4rem;
+    box-sizing: border-box;
+}
+
+.primera_seccion a {
+    color: white;
+    background-color: #02052f;
+    border: 2px;
+    border-radius: 1rem;
+    padding: 3rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.primera_seccion .logos {
+    margin-top: -120px;
+    background: #fff;
+    border-radius: 12px;
+    max-width: 720px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    display: block;
+}
+
+.seccion_cursos {
+    text-align: center;
+}
+
+.seccion_cursos .cursos {
+    color: #00e497;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.seccion_cursos .conectamos {
+    color: #02052f;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 27px;
+}
+
+.seccion_cursos a {
+    text-decoration: none;
+    color: #02052f;
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid;
+    border-color: #02052f;
+}
+
+.seccion_cursos .ver_todo {
+    background-color: #00e497;
+    color: white;
+    border-radius: 10px;
+    padding: 0.6rem 1.2rem;
+    border: none;
+}
+
+.inscribir .marketing{
+    background-image:url(/ProyectoInicio/img/Curso-marketing-digital-norte.png);
+    color: white;
+    background-size:contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: block;
+    min-height: 250px;
+}
+.inscribir .marketing .inscribirme{
+    text-decoration: none;
+    background-color: #fff;
+    color: #02052f;
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 1.5rem 3rem;
+}
+.inscribir .programacion_web{
+    background-image:url(/ProyectoInicio/img/Curso-programacion-web-full-stack-norte.png);
+    color: white;
+    background-size:contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: block;
+    min-height: 250px;
+}
+.inscribir .programacion_web .inscribirme{
+    text-decoration: none;
+    background-color: #fff;
+    color: #02052f;
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 1.5rem 3rem;
+}
+
+.pedir{
+    text-align: center;
+    color: #02052f;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+}
+
+.pedir a{
+    background-color: #00e497;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    border-radius: 25px;
+    padding: 1.5rem 2.5rem;
+    text-decoration: none;
+}

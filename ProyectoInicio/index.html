@@ -6,6 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Carrera Digital</title>
+
+    <!-- <style>
+        h1{
+            color:red;
+            
+        }
+    </style> No hacer el css en el archivo html-->
+
+    <link rel="preload" href="css/style.css" as="style">
+    <link href="css/style.css" rel="stylesheet">
+    <!--Precarga y enlace del archivo style.css con el index.html, siempre los 2 link juntos -->
 </head>
 
 <body>
@@ -20,7 +31,8 @@
 
     <!-- Comentar: Ctlr + ç -->
     <!-- Ordenar código: Alt + Shift + F -->
-    <header>
+
+    <header class="header"> <!--Cabecera-->
         <a href="#">
             Login Alumnos
         </a>
@@ -29,41 +41,63 @@
             Login Empresas
         </a>
     </header>
-    <nav>
-        <a href="#">
-            <img src="img/Tu-carrera-digital-general.png" alt="Cursos digitales">
-            <!--src: dirección del archivo img, alt: referenciar la imagen-->
-        </a>
-        <a href="#">
-            Cursos
-        </a>
-        <a href="#">
-            Sobre Nosotros
-        </a>
-        <a href="#">
-            Infórmate
-        </a>
+    <nav class="cursos_sobre_informate">
+        <div class="img_tcd">
+            <a href="#">
+                <img src="img/Tu-carrera-digital-general.png" alt="Cursos digitales">
+                <!--src: dirección del archivo img, alt: referenciar la imagen-->
+            </a>
+        </div>
+        <div class="menu">
+            <a href="#">
+                Cursos
+            </a>
+            <a href="#">
+                Sobre Nosotros
+            </a>
+            <a href="#" class="informate">
+                Infórmate
+            </a>
+        </div>
+
     </nav>
 
-    <section>
-        <h1>
-            Descubre nuestros cursos gratuitos y fómarte en las disciplinas mas demandadas del mercado.
+    <section class="primera_seccion">
+        <h1 class="titulo">
+            <div>
+                <strong>Descubre nuestros</strong>
+            </div>
+            <div>
+                <strong>cursos gratuitos y</strong>
+            </div>
+            <div>
+                <strong>fómarte en las disciplinas</strong>
+            </div>
+            <div>
+                <strong>mas demandadas</strong>
+            </div>
+            <div>
+                <strong>del mercado.</strong>
+            </div>
         </h1>
         <a href="#">
             Ver Cursos
         </a>
-        <img src="img/Logos-oficiales.png" alt="Logos Oficiales">
-        <img src="img/Logo-Adecco.png" alt="Adecco">
+        <div class="logos">
+            <img src="img/Logos-oficiales.png" alt="Logos Oficiales">
+            <img src="img/Logo-Adecco.png" alt="Adecco">
+        </div>
+
     </section>
 
-    <section>
-        <h3>
+    <section class="seccion_cursos">
+        <h3 class="cursos">
             Cursos
         </h3>
-        <h2>
+        <h2 class="conectamos">
             Conectamos personas y empleo
         </h2>
-        <a href="#">
+        <a href="#" class="ver_todo">
             Ver todo
         </a>
         <a href="#">
@@ -89,22 +123,26 @@
         </a>
     </section>
 
-    <section>
-        <h2>
-            Marketing digital
-        </h2>
-        <a href="#">
-            Inscribirme
-        </a>
-        <h2>
-            Programación web full stack
-        </h2>
-        <a href="#">
-            Inscribirme
-        </a>
+    <section class="inscribir">
+        <div class="marketing">
+            <h2>
+                Marketing digital
+            </h2>
+            <a href="#" class="inscribirme">
+                Inscribirme
+            </a>
+        </div>
+        <div class="programacion_web">
+            <h2>
+                Programación web full stack
+            </h2>
+            <a href="#" class="inscribirme">
+                Inscribirme
+            </a>
+        </div>
     </section>
 
-    <section>
+    <section class="pedir">
         <h3>
             ¿Te interesa algún otro curso en tu ciudad?
         </h3>
@@ -256,7 +294,7 @@
         </fieldset>
     </form>
 
-    <footer>
+    <footer> <!--Pie de página-->
         <a href="#">
             Cursos Zona-Norte
         </a>
