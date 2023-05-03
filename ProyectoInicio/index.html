@@ -14,6 +14,16 @@
         }
     </style> No hacer el css en el archivo html-->
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+    <!-- Fuente descargada desde google fonts -->
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link href="css/normalize.css" rel="stylesheet">
+    <!--Precarga y enlace del archivo normalize.css con el index.html, este archivo añadido
+    se hace siempre, se descarga desde normalize.css y se crea otro archivo .css-->
+
     <link rel="preload" href="css/style.css" as="style">
     <link href="css/style.css" rel="stylesheet">
     <!--Precarga y enlace del archivo style.css con el index.html, siempre los 2 link juntos -->
@@ -63,200 +73,258 @@
     </nav>
 
     <section class="primera_seccion">
-        <h1 class="titulo">
-            <div>
+        <div class="contenedor">
+            <h1 class="titulo">
                 <strong>Descubre nuestros</strong>
-            </div>
-            <div>
                 <strong>cursos gratuitos y</strong>
-            </div>
-            <div>
-                <strong>fómarte en las disciplinas</strong>
-            </div>
-            <div>
+                <strong>fórmate en las disciplinas</strong>
                 <strong>mas demandadas</strong>
-            </div>
-            <div>
                 <strong>del mercado.</strong>
-            </div>
-        </h1>
-        <a href="#">
-            Ver Cursos
-        </a>
-        <div class="logos">
-            <img src="img/Logos-oficiales.png" alt="Logos Oficiales">
-            <img src="img/Logo-Adecco.png" alt="Adecco">
+            </h1>
+            <a class="boton" href="#">
+                Ver Cursos
+            </a>
         </div>
+    </section>
 
+    <section class="seccion_logos">
+        <img src="img/Logos-oficiales.png" alt="Logos Oficiales">
+        <img src="img/Logo-Adecco.png" alt="Adecco">
     </section>
 
     <section class="seccion_cursos">
-        <h3 class="cursos">
-            Cursos
-        </h3>
-        <h2 class="conectamos">
-            Conectamos personas y empleo
-        </h2>
-        <a href="#" class="ver_todo">
-            Ver todo
-        </a>
-        <a href="#">
-            Bilbao
-        </a>
-        <a href="#">
-            Gijón
-        </a>
-        <a href="#">
-            La Coruña
-        </a>
-        <a href="#">
-            Oviedo
-        </a>
-        <a href="#">
-            Santander
-        </a>
-        <a href="#">
-            Vigo
-        </a>
-        <a href="#">
-            Vitoria-Gasteiz
-        </a>
-    </section>
-
-    <section class="inscribir">
-        <div class="marketing">
-            <h2>
-                Marketing digital
+        <div class="contenedor">
+            <h3 class="cursos">
+                Cursos
+            </h3>
+            <h2 class="conectamos">
+                Conectamos personas y empleo
             </h2>
-            <a href="#" class="inscribirme">
-                Inscribirme
+            <a href="#" class="ver_todo">
+                Ver todo
             </a>
-        </div>
-        <div class="programacion_web">
-            <h2>
-                Programación web full stack
-            </h2>
-            <a href="#" class="inscribirme">
-                Inscribirme
+            <a href="#">
+                Bilbao
+            </a>
+            <a href="#">
+                Gijón
+            </a>
+            <a href="#">
+                La Coruña
+            </a>
+            <a href="#">
+                Oviedo
+            </a>
+            <a href="#">
+                Santander
+            </a>
+            <a href="#">
+                Vigo
+            </a>
+            <a href="#">
+                Vitoria-Gasteiz
             </a>
         </div>
     </section>
 
-    <section class="pedir">
-        <h3>
-            ¿Te interesa algún otro curso en tu ciudad?
-        </h3>
-        <a href="#">
-            Pídenoslo
-        </a>
+    <section class="seccion_inscribir">
+        <div class="contenedor">
+            <div class="marketing">
+                <h2>
+                    Marketing digital
+                </h2>
+                <a href="#" class="inscribirme">
+                    Inscribirme
+                </a>
+            </div>
+            <div class="programacion_web">
+                <h2>
+                    Programación web full stack
+                </h2>
+                <a href="#" class="inscribirme">
+                    Inscribirme
+                </a>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h3>
-            ¿Para quién son estos cursos?
-        </h3>
-        <h2>
-            Si quieres dar un giro a tu carrera profesional y formarte en profesiones digitales con futuro, este es tu
-            lugar.
-        </h2>
-        <p>Cuando eliges un curso en Tu Carrera Digital, estás dando el paso definitivo hacia las profesiones con más
-            demanda del momento, como Marketing Digital, Desarrollo Web Full Stack y Programación de Videojuegos, Diseño
-            3D
-            y Realidad Virtual. Nosotros te ofrecemos formación con docentes expertos y contenidos alineados a las
-            necesidades
-            de las empresas. Queremos que saques el máximo partido a estos cursos y que potencies tus posibilidades de
-            encontrar un empleo.</p>
-        <h4>
-            Para participar, necesitarás estas inscrito en garantía juvenil
-        </h4>
-        <a href="#">
-            Ir a la web de Garantía Juvenil
-        </a>
-        <p>Descárgate esta infografía en la que te mostramos cómo descargar tu certificado de Garantía Juvenil:</p>
-        <a href="#">
-            Descargar infografía adjunta
-        </a>
-        <h2>
-            ¿Eres mayor de 16 años y menor de 30?
-            ¿Estás sin trabajar?
-            ¿Estas sin cursar formación?
-        </h2>
+    <section class="seccion_interes">
+        <div class="contenedor">
+            <h3>
+                ¿Te interesa algún otro curso en tu ciudad?
+            </h3>
+            <a href="#">
+                Pídenoslo
+            </a>
+        </div>
     </section>
 
-    <section>
-        <h4>
-            Dale Forma a tu futuro y despega con tu carrera digital
-        </h4>
-        <h2>
-            Localizaciones:
-        </h2>
-        <h3>
-            Vigo
-        </h3>
-        <p>Avenida del alcalde Gregorio Espino 50 36205, Galicia, Pontevedra.</p>
-        <h3>
-            Gijón
-        </h3>
-        <p>Calle Azcárraga 16 33208, Asturias, Asturias</p>
-        <h3>
-            Oviedo
-        </h3>
-        <p>Calle Fuente de la Plata 103 33013, Asturias, Asturias</p>
-        <h3>
-            Bilbao
-        </h3>
-        <p>Calle Islas Canarias 21 48015, Euskadi, Vizcaya.</p>
-        <h3>
-            Vitoria-Gasteiz
-        </h3>
-        <p>Calle Manuel Iradier 17 01055, Euskadi, Alava.</p>
-        <h3>
-            La Coruña
-        </h3>
-        <p>Calle Marqués de Amboage 12 15006, Galicia, La Coruña.</p>
-        <h3>
-            Vigo
-        </h3>
-        <p>Calle Santa Marta S/N 36202, Galicia, Pontevedra.</p>
-        <h3>
-            Santander
-        </h3>
-        <p>Calle Vargas 65 39010, Cantabria, Cantabria</p>
+    <section class="seccion_info">
+        <div class="contenedor">
+            <h3>
+                ¿Para quién son estos cursos?
+            </h3>
+            <h2>
+                Si quieres dar un giro a tu carrera profesional y formarte en profesiones digitales con futuro, este es
+                tu
+                lugar.
+            </h2>
+            <p>Cuando eliges un curso en Tu Carrera Digital, estás dando el paso definitivo hacia las profesiones con
+                más
+                demanda del momento, como Marketing Digital, Desarrollo Web Full Stack y Programación de Videojuegos,
+                Diseño
+                3D
+                y Realidad Virtual. Nosotros te ofrecemos formación con docentes expertos y contenidos alineados a las
+                necesidades
+                de las empresas. Queremos que saques el máximo partido a estos cursos y que potencies tus posibilidades
+                de
+                encontrar un empleo.</p>
+            <h4>
+                Para participar, necesitarás estas inscrito en garantía juvenil
+            </h4>
+            <a href="#">
+                Ir a la web de Garantía Juvenil
+            </a>
+            <p>Descárgate esta infografía en la que te mostramos cómo descargar tu certificado de Garantía Juvenil:</p>
+            <a href="#">
+                Descargar infografía adjunta
+            </a>
+            <h2>
+                ¿Eres mayor de 16 años y menor de 30?
+                ¿Estás sin trabajar?
+                ¿Estas sin cursar formación?
+            </h2>
+
+            <h3>
+                ¿Para quién son estos cursos?
+            </h3>
+            <h2>
+                Si quieres dar un giro a tu carrera profesional y formarte en profesiones digitales con futuro, este es
+                tu
+                lugar.
+            </h2>
+            <p>Cuando eliges un curso en Tu Carrera Digital, estás dando el paso definitivo hacia las profesiones con
+                más
+                demanda del momento, como Marketing Digital, Desarrollo Web Full Stack y Programación de Videojuegos,
+                Diseño
+                3D
+                y Realidad Virtual. Nosotros te ofrecemos formación con docentes expertos y contenidos alineados a las
+                necesidades
+                de las empresas. Queremos que saques el máximo partido a estos cursos y que potencies tus posibilidades
+                de
+                encontrar un empleo.</p>
+            <h4>
+                Para participar, necesitarás estas inscrito en garantía juvenil
+            </h4>
+            <a href="#">
+                Ir a la web de Garantía Juvenil
+            </a>
+            <p>Descárgate esta infografía en la que te mostramos cómo descargar tu certificado de Garantía Juvenil:</p>
+            <a href="#">
+                Descargar infografía adjunta
+            </a>
+            <h2>
+                ¿Eres mayor de 16 años y menor de 30?
+                ¿Estás sin trabajar?
+                ¿Estas sin cursar formación?
+            </h2>
+            <h4>
+                Dale Forma a tu futuro y despega con tu carrera digital
+            </h4>
+        </div>
     </section>
 
-    <section>
-        <h3>
-            Contactar
-        </h3>
-        <h2>
-            ¿Tienes dudas? Habla con nosotros:
-        </h2>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-calling" width="60"
-            height="60" viewBox="0 0 24 24" stroke-width="2" stroke="#7bc62d" fill="none" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-                d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
-            <line x1="15" y1="7" x2="15" y2="7.01" />
-            <line x1="18" y1="7" x2="18" y2="7.01" />
-            <line x1="21" y1="7" x2="21" y2="7.01" />
-        </svg>
-        <!--Iconos obtenidos desde Tabler Icons, copiar en la web y pegar aquí. Puedo descargar SVG desde google fonts y guardarlo en una carpeta svg-->
-        <p>Llámanos:</p>
-        <a href="#">
-            616290460
-        </a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="60" height="60"
-            viewBox="0 0 24 24" stroke-width="2" stroke="#7bc62d" fill="none" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <rect x="3" y="5" width="18" height="14" rx="2" />
-            <polyline points="3 7 12 13 21 7" />
-        </svg>
-        <p>Escríbenos:</p>
-        <a href="#">
-            inmaculada.fernandez@adecco.com
-        </a>
+    <section class="seccion_localizaciones">
+        <div class="contenedor">
+            <h2>
+                Localizaciones:
+            </h2>
+            <div>
+                <h3>
+                    Vigo
+                </h3>
+                <p>Avenida del alcalde Gregorio Espino 50 36205, Galicia, Pontevedra.</p>
+            </div>
+            <div>
+                <h3>
+                    Gijón
+                </h3>
+                <p>Calle Azcárraga 16 33208, Asturias, Asturias</p>
+            </div>
+            <div>
+                <h3>
+                    Oviedo
+                </h3>
+                <p>Calle Fuente de la Plata 103 33013, Asturias, Asturias</p>
+            </div>
+            <div>
+                <h3>
+                    Bilbao
+                </h3>
+                <p>Calle Islas Canarias 21 48015, Euskadi, Vizcaya.</p>
+            </div>
+            <div>
+                <h3>
+                    Vitoria-Gasteiz
+                </h3>
+                <p>Calle Manuel Iradier 17 01055, Euskadi, Alava.</p>
+            </div>
+            <div>
+                <h3>
+                    La Coruña
+                </h3>
+                <p>Calle Marqués de Amboage 12 15006, Galicia, La Coruña.</p>
+            </div>
+            <div>
+                <h3>
+                    Vigo
+                </h3>
+                <p>Calle Santa Marta S/N 36202, Galicia, Pontevedra.</p>
+            </div>
+            <div>
+                <h3>
+                    Santander
+                </h3>
+                <p>Calle Vargas 65 39010, Cantabria, Cantabria</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion_contactar">
+        <div class="contenedor">
+            <h3>
+                Contactar
+            </h3>
+            <h2>
+                ¿Tienes dudas? Habla con nosotros:
+            </h2>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-calling" width="60"
+                height="60" viewBox="0 0 24 24" stroke-width="2" stroke="#7bc62d" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                <line x1="15" y1="7" x2="15" y2="7.01" />
+                <line x1="18" y1="7" x2="18" y2="7.01" />
+                <line x1="21" y1="7" x2="21" y2="7.01" />
+            </svg>
+            <!--Iconos obtenidos desde Tabler Icons, copiar en la web y pegar aquí. Puedo descargar SVG desde google fonts y guardarlo en una carpeta svg-->
+            <p>Llámanos:</p>
+            <a href="#">
+                616290460
+            </a>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="60" height="60"
+                viewBox="0 0 24 24" stroke-width="2" stroke="#7bc62d" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <polyline points="3 7 12 13 21 7" />
+            </svg>
+            <p>Escríbenos:</p>
+            <a href="#">
+                inmaculada.fernandez@adecco.com
+            </a>
+        </div>
     </section>
 
     <form> <!--Formulario de contacto-->
@@ -295,27 +363,29 @@
     </form>
 
     <footer> <!--Pie de página-->
-        <a href="#">
-            Cursos Zona-Norte
-        </a>
-        <a href="#">
-            Sobre Nosotros
-        </a>
-        <a href="#">
-            Preguntas Frecuentas (FAQ)
-        </a>
-        <a href="#">
-            Política de Cookies
-        </a>
-        <a href="#">
-            Política de Privacidad
-        </a>
-        <a href="#">
-            Aviso
-        </a>
-        <a href="#">
-            Legal
-        </a>
+        <div class="contenedor">
+            <a href="#">
+                Cursos Zona-Norte
+            </a>
+            <a href="#">
+                Sobre Nosotros
+            </a>
+            <a href="#">
+                Preguntas Frecuentas (FAQ)
+            </a>
+            <a href="#">
+                Política de Cookies
+            </a>
+            <a href="#">
+                Política de Privacidad
+            </a>
+            <a href="#">
+                Aviso
+            </a>
+            <a href="#">
+                Legal
+            </a>
+        </div>
     </footer>
 </body>
 

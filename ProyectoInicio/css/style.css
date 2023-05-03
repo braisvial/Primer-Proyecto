@@ -1,3 +1,13 @@
+:root {
+    --color_principal: #00e497;
+    --color_secundario: #02052F;
+    --font_principal: 'Open Sans', sans-serif;
+    /*--font_principal: 'Sigmar', cursive; Fuente copiada desde google fonts*/
+}
+
+/*Creación de variables usadas reiteradamente*/
+
+
 html {
     font-size: 62.5%;
     /*Relacion del rem modificada a 1 rem ~ 10 px (parte 1)*/
@@ -5,10 +15,10 @@ html {
 
 body {
     font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    color: #02052F;
     /*Relacion del rem modificada a 1 rem ~ 10 px (parte 2)*/
+    font-family: var(--font_principal);
+    font-weight: 400;
+    color: var(--color_secundario);
 }
 
 /* /*selector{
@@ -31,18 +41,34 @@ body {
     color: blue;
 }
 Se superpone por especifidad al llamar al selector mediante clase
+Especifidad Selector: Elemento < .Clase < #ID < !Important
 
 .primera_seccion a{ Todos los enlaces de la clase primera sección
     color:green;
+
+color:  #000; HEX
+        rgb(255,255,255);
+        rgba(255,255,255,1); Opacidad
+
 }*/
+.contenedor {
+    width: 114rem;
+    /*Ancho del contenedor*/
+    /*margin: 0(top) auto(right) 0(botton) auto(left);
+    margin: 0(top, botton) auto(right, left);
+    margin-top:0; margin-right:auto...*/
+    margin: 0 auto;
+}
+
 .header {
     text-align: right;
 }
 
 .header a {
-    color: #00e497;
+    color: var(--color_principal);
+    /*Llamada de variable*/
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font_principal);
     font-weight: 400;
 }
 
@@ -54,25 +80,23 @@ Se superpone por especifidad al llamar al selector mediante clase
     margin-left: auto;
 }
 
-.cursos_sobre_informate img_tcd {
+.cursos_sobre_informate .img_tcd {
     text-align: left;
 }
 
 .cursos_sobre_informate .menu {
-
     text-align: right;
-
 }
 
 .cursos_sobre_informate a {
-    color: #02052f;
+    color: var(--color_secundario);
     margin: 1rem;
     text-decoration: none;
 }
 
 .cursos_sobre_informate .informate {
-    background-color: #00e497;
-    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color_principal);
+    font-family: var(--font_principal);
     font-size: 14px;
     font-weight: 700;
     color: white;
@@ -84,46 +108,51 @@ Se superpone por especifidad al llamar al selector mediante clase
 .primera_seccion {
     background-image: url(/ProyectoInicio/img/11641891319_banner_zona_norte.png);
     background-size: cover;
-    padding-top: 80px;
-    padding-bottom: 180px;
-    background-position: top left;
-    box-sizing: border-box;
+    background-repeat: no-repeat;
+    padding-bottom: 18rem;
 }
 
-.primera_seccion h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 5rem;
-    color: #02052F;  
-    font-weight: 800 bolder; 
-    margin-bottom: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+.primera_seccion .titulo {
+    font-family: var(--font_principal);
+    color: var(--color_secundario);
+    padding-top: 8rem;
+    margin-bottom: 3.3rem;
 }
 
-.primera_seccion .titulo div{    
+.primera_seccion .titulo strong {
     background-color: white;
-    border-radius: 1rem;
-    display: inline-block;
-    margin-bottom: 10px;
+    font-family: var(--font_principal);
+    font-size: 4.7rem;
     font-weight: 800;
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1.2;
     padding: 3px 15px;
-    margin-left: 4rem;
+    border-radius: 1rem;
     box-sizing: border-box;
 }
 
 .primera_seccion a {
     color: white;
-    background-color: #02052f;
-    border: 2px;
+    background-color: var(--color_secundario);
+    text-decoration: none;
     border-radius: 1rem;
-    padding: 3rem;
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding: 2.4rem 9.4rem;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
 }
 
-.primera_seccion .logos {
-    margin-top: -120px;
-    background: #fff;
+.boton:hover {
+    background-color: white;
+    color: var(--color_secundario);
+    border: 2px solid;
+    border-color: var(--color_secundario);
+}
+
+.seccion_logos {
+    margin-top: -9rem;
+    background: white;
     border-radius: 12px;
     max-width: 720px;
     width: 100%;
@@ -137,86 +166,114 @@ Se superpone por especifidad al llamar al selector mediante clase
 
 .seccion_cursos {
     text-align: center;
+    margin-top: 3rem;
 }
 
 .seccion_cursos .cursos {
-    color: #00e497;
-    font-family: 'Open Sans', sans-serif;
+    color: var(--color_principal);
+    font-family: var(--font_principal);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .seccion_cursos .conectamos {
-    color: #02052f;
-    font-family: 'Open Sans', sans-serif;
+    color: var(--color_secundario);
+    font-family: var(--font_principal);
     font-size: 27px;
 }
 
 .seccion_cursos a {
     text-decoration: none;
-    color: #02052f;
+    color: var(--color_secundario);
     margin: 1rem;
     border-radius: 10px;
     padding: 0.6rem 1.2rem;
     border: 1px solid;
-    border-color: #02052f;
+    border-color: var(--color_secundario);
 }
 
 .seccion_cursos .ver_todo {
-    background-color: #00e497;
+    background-color: var(--color_principal);
     color: white;
     border-radius: 10px;
     padding: 0.6rem 1.2rem;
     border: none;
 }
 
-.inscribir .marketing{
-    background-image:url(/ProyectoInicio/img/Curso-marketing-digital-norte.png);
+.seccion_inscribir .marketing {
+    background-image: url(/ProyectoInicio/img/Curso-marketing-digital-norte.png);
     color: white;
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     border-radius: 10px;
     display: block;
     min-height: 250px;
 }
-.inscribir .marketing .inscribirme{
+
+.seccion_inscribir .marketing .inscribirme {
     text-decoration: none;
-    background-color: #fff;
-    color: #02052f;
-    margin: 1rem;
-    border-radius: 10px;
-    padding: 1.5rem 3rem;
-}
-.inscribir .programacion_web{
-    background-image:url(/ProyectoInicio/img/Curso-programacion-web-full-stack-norte.png);
-    color: white;
-    background-size:contain;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    display: block;
-    min-height: 250px;
-}
-.inscribir .programacion_web .inscribirme{
-    text-decoration: none;
-    background-color: #fff;
-    color: #02052f;
+    background-color: white;
+    color: var(--color_secundario);
     margin: 1rem;
     border-radius: 10px;
     padding: 1.5rem 3rem;
 }
 
-.pedir{
+.seccion_inscribir .programacion_web {
+    background-image: url(/ProyectoInicio/img/Curso-programacion-web-full-stack-norte.png);
+    color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: block;
+    min-height: 250px;
+}
+
+.seccion_inscribir .programacion_web .inscribirme {
+    text-decoration: none;
+    background-color: white;
+    color: var(--color_secundario);
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 1.5rem 3rem;
+}
+
+.seccion_interes {
     text-align: center;
-    color: #02052f;
-    font-family: 'Open Sans', sans-serif;
+    color: var(--color_secundario);
+    font-family: var(--font_principal);
     font-size: 2rem;
 }
 
-.pedir a{
-    background-color: #00e497;
-    font-family: 'Open Sans', sans-serif;
+.seccion_interes a {
+    background-color: var(--color_principal);
+    font-family: var(--font_principal);
     font-size: 2rem;
     font-weight: 700;
     color: white;
     border-radius: 25px;
     padding: 1.5rem 2.5rem;
     text-decoration: none;
+}
+
+.seccion_info {}
+
+.seccion_localizaciones {
+    background-color: var(--color_secundario);
+}
+
+.seccion_localizaciones .contenedor {
+    color: white;
+}
+
+.seccion_localizaciones .contenedor div,
+.contenedor h3,
+.contenedor p {
+    font-size: 1.5rem;
+    display: inline;
+}
+
+.seccion_contactar {
+    background-color: var(--color_principal);
 }
