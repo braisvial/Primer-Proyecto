@@ -73,9 +73,6 @@ color:  #000; HEX
 }
 
 .cursos_sobre_informate {
-    width: 100%;
-    padding-right: 3rem;
-    padding-left: 3rem;
     margin-right: auto;
     margin-left: auto;
 }
@@ -166,58 +163,92 @@ color:  #000; HEX
 
 .seccion_cursos {
     text-align: center;
-    margin-top: 3rem;
+    padding-top: 6rem;
 }
 
 .seccion_cursos .cursos {
     color: var(--color_principal);
     font-family: var(--font_principal);
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     font-weight: 700;
     text-transform: uppercase;
+    padding-top: 4rem;
+
 }
 
 .seccion_cursos .conectamos {
     color: var(--color_secundario);
     font-family: var(--font_principal);
+    text-transform: uppercase;
+    font-weight: 800;
     font-size: 27px;
+    padding-top: 1.5rem;
+}
+.seccion_cursos .enlaces{
+    padding-top: 4rem ;
+    padding-bottom: 6.5rem;
 }
 
 .seccion_cursos a {
+    font-size: 1.4rem;
+    font-weight: bold;
     text-decoration: none;
+    text-transform: uppercase;
     color: var(--color_secundario);
-    margin: 1rem;
-    border-radius: 10px;
-    padding: 0.6rem 1.2rem;
+    margin-right: 1rem;
+    border-radius: 8px;
+    padding: 1.8rem 1.5rem;
     border: 1px solid;
-    border-color: var(--color_secundario);
+    border-color: var(--color_principal);
 }
 
 .seccion_cursos .ver_todo {
     background-color: var(--color_principal);
     color: white;
-    border-radius: 10px;
-    padding: 0.6rem 1.2rem;
-    border: none;
+}
+
+.seccion_inscribir .alineacion_inscribir{
+    padding-top: 5rem;
+    box-sizing: border-box;
+    display: flex;  
 }
 
 .seccion_inscribir .marketing {
     background-image: url(/ProyectoInicio/img/Curso-marketing-digital-norte.png);
-    color: white;
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 10px;
     display: block;
-    min-height: 250px;
+    min-height: 30rem;
+    margin-right: 5rem;
+}
+.seccion_inscribir .marketing h2{
+    color: white;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    padding-top: 4rem;
+    padding-left: 5rem;
 }
 
 .seccion_inscribir .marketing .inscribirme {
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-family: "DinBold", sans-serif;
+    font-weight: 700;
+    min-height: 1.4rem;
     background-color: white;
     color: var(--color_secundario);
     margin: 1rem;
     border-radius: 10px;
-    padding: 1.5rem 3rem;
+    padding: 2rem 4.4rem;
+}
+
+.seccion_inscribir .marketing .inscribirme:hover{
+    color:white;
+    background-color: var(--color_principal);
+    border: 1px solid;
+    border-color: white;
 }
 
 .seccion_inscribir .programacion_web {
@@ -227,17 +258,38 @@ color:  #000; HEX
     background-repeat: no-repeat;
     border-radius: 10px;
     display: block;
-    min-height: 250px;
+    min-height: 30rem;
+}
+
+.seccion_inscribir .programacion_web h2{
+    color: white;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    padding-top: 4rem;
+    padding-left: 5rem;
 }
 
 .seccion_inscribir .programacion_web .inscribirme {
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-family: "DinBold", sans-serif;
+    font-weight: 700;
+    min-height: 1.4rem;
     background-color: white;
     color: var(--color_secundario);
     margin: 1rem;
     border-radius: 10px;
-    padding: 1.5rem 3rem;
+    padding: 2rem 4.4rem;
 }
+
+.seccion_inscribir .programacion_web .inscribirme:hover{
+    color:white;
+    background-color: var(--color_principal);
+    border: 1px solid;
+    border-color: white;
+}
+
 
 .seccion_interes {
     text-align: center;
