@@ -4,9 +4,7 @@
     --font_principal: 'Open Sans', sans-serif;
     /*--font_principal: 'Sigmar', cursive; Fuente copiada desde google fonts*/
 }
-
 /*Creación de variables usadas reiteradamente*/
-
 
 html {
     font-size: 62.5%;
@@ -51,6 +49,20 @@ color:  #000; HEX
         rgba(255,255,255,1); Opacidad
 
 }*/
+
+/* .ejercicio_flex{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 50%;
+    max-width: 50%;
+}
+.ejercicio_flex a{
+    color: white;
+    font-weight: bold;
+} */
+
 .contenedor {
     width: 114rem;
     /*Ancho del contenedor*/
@@ -61,7 +73,11 @@ color:  #000; HEX
 }
 
 .header {
+    /* display: flex;
+    justify-content: flex-end; */
     text-align: right;
+    padding-top: 1.5rem;
+    padding-bottom: 2.4rem;
 }
 
 .header a {
@@ -72,36 +88,64 @@ color:  #000; HEX
     font-weight: 400;
 }
 
+.header .separador{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    color: var(--color_principal);
+}
+
+.header a:hover{
+    text-decoration: underline;
+}
+
+/*Clases de imagen TuCarreraDigital y enlaces Cursos, Sobrenosotros e Informate*/
 .cursos_sobre_informate {
-    margin-right: auto;
-    margin-left: auto;
+    display: flex;
 }
 
 .cursos_sobre_informate .img_tcd {
-    text-align: left;
+    display: flex;
+    flex: 34%;
+    max-width: 34%;    
+    justify-content: flex-start;
 }
 
 .cursos_sobre_informate .menu {
-    text-align: right;
+    display:flex;
+    flex: 66%;
+    max-width: 66%;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .cursos_sobre_informate a {
     color: var(--color_secundario);
-    margin: 1rem;
+    font-size: 1.4rem;
+    margin-left: 2.5rem;
+    font-weight: bold;
     text-decoration: none;
+}
+.cursos_sobre_informate a:hover{
+    text-decoration: underline;
 }
 
 .cursos_sobre_informate .informate {
     background-color: var(--color_principal);
-    font-family: var(--font_principal);
-    font-size: 14px;
-    font-weight: 700;
+    font-weight: bold;
     color: white;
     border-radius: 20px;
-    padding: 0.6rem 1.2rem;
+    padding: 1rem 1.4rem;
     text-decoration: none;
 }
 
+.cursos_sobre_informate .informate:hover{
+    text-decoration: none;
+    background-color: #17a2b8;
+}
+
+
+
+/*Clases primera seccion*/
 .primera_seccion {
     background-image: url(/ProyectoInicio/img/11641891319_banner_zona_norte.png);
     background-size: cover;
@@ -114,6 +158,10 @@ color:  #000; HEX
     color: var(--color_secundario);
     padding-top: 8rem;
     margin-bottom: 3.3rem;
+    display: flex;
+    flex-direction: column;
+    flex: 66%;
+    max-width: 66%;
 }
 
 .primera_seccion .titulo strong {
@@ -121,12 +169,11 @@ color:  #000; HEX
     font-family: var(--font_principal);
     font-size: 4.7rem;
     font-weight: 800;
-    display: block;
     margin-bottom: 10px;
     line-height: 1.2;
     padding: 3px 15px;
     border-radius: 1rem;
-    box-sizing: border-box;
+    max-width: fit-content;
 }
 
 .primera_seccion a {
@@ -147,18 +194,30 @@ color:  #000; HEX
     border-color: var(--color_secundario);
 }
 
-.seccion_logos {
+/*Clases Logos*/
+.seccion_logos .contenedor {
     margin-top: -9rem;
     background: white;
     border-radius: 12px;
-    max-width: 720px;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    box-sizing: border-box;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    padding-top: 2rem;
+}
+
+.seccion_logos .contenedor .logo_oficial{
+    flex: 60%;
+    max-width: 60%; 
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion_logos .contenedor .logo_adecco{
+    flex:40%;
+    max-width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .seccion_cursos {
@@ -181,7 +240,7 @@ color:  #000; HEX
     font-family: var(--font_principal);
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 27px;
+    font-size: 2.7rem;
     padding-top: 1.5rem;
 }
 .seccion_cursos .enlaces{
@@ -197,7 +256,7 @@ color:  #000; HEX
     color: var(--color_secundario);
     margin-right: 1rem;
     border-radius: 8px;
-    padding: 1.8rem 1.5rem;
+    padding: 1.4rem 2.4rem;
     border: 1px solid;
     border-color: var(--color_principal);
 }
@@ -209,18 +268,21 @@ color:  #000; HEX
 
 .seccion_inscribir .alineacion_inscribir{
     padding-top: 5rem;
-    box-sizing: border-box;
     display: flex;  
+    flex-direction: row;
+    padding-bottom: 10rem;
 }
 
 .seccion_inscribir .marketing {
     background-image: url(/ProyectoInicio/img/Curso-marketing-digital-norte.png);
     background-size: contain;
     background-repeat: no-repeat;
-    border-radius: 10px;
-    display: block;
+    flex: 50%;
+    max-width: 50%;
     min-height: 30rem;
-    margin-right: 5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 10px;
 }
 .seccion_inscribir .marketing h2{
     color: white;
@@ -239,9 +301,9 @@ color:  #000; HEX
     min-height: 1.4rem;
     background-color: white;
     color: var(--color_secundario);
-    margin: 1rem;
     border-radius: 10px;
     padding: 2rem 4.4rem;
+    margin-left: 5rem;
 }
 
 .seccion_inscribir .marketing .inscribirme:hover{
@@ -256,9 +318,12 @@ color:  #000; HEX
     color: white;
     background-size: contain;
     background-repeat: no-repeat;
-    border-radius: 10px;
-    display: block;
+    flex: 50%;
+    max-width: 50%;
     min-height: 30rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 10px;
 }
 
 .seccion_inscribir .programacion_web h2{
@@ -278,8 +343,8 @@ color:  #000; HEX
     min-height: 1.4rem;
     background-color: white;
     color: var(--color_secundario);
-    margin: 1rem;
     border-radius: 10px;
+    margin-left: 5rem;
     padding: 2rem 4.4rem;
 }
 
