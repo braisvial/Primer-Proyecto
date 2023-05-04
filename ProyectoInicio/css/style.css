@@ -1,27 +1,29 @@
+/*------------------Creación de variables usadas reiteradamente------------------------------------------------------------*/
 :root {
     --color_principal: #00e497;
     --color_secundario: #02052F;
     --font_principal: 'Open Sans', sans-serif;
     /*--font_principal: 'Sigmar', cursive; Fuente copiada desde google fonts*/
 }
-/*Creación de variables usadas reiteradamente*/
+
 
 html {
-    font-size: 62.5%;
-    /*Relacion del rem modificada a 1 rem ~ 10 px (parte 1)*/
+    font-size: 62.5%;                                   /*Relacion del rem modificada a 1 rem ~ 10 px (parte 1)*/
 }
 
+/*------------------Creacion de la clase body donde almacenar todos los atributos comunos en toda la página----------------*/
 body {
-    font-size: 16px;
-    /*Relacion del rem modificada a 1 rem ~ 10 px (parte 2)*/
-    font-family: var(--font_principal);
-    font-weight: 400;
-    color: var(--color_secundario);
+    font-size: 16px;                                    /*Relacion del rem modificada a 1 rem ~ 10 px (parte 2)*/
+    font-family: var(--font_principal);                 /*Tipo de fuente*/
+    font-weight: 400;                                   /*Grosor de la fuente*/
+    color: var(--color_secundario);                     /*Color de la fuente*/
 }
 
-/* /*selector{
+/* 
+selector{
     propiedad: valor;
-}*/
+}
+*/
 
 /* h1 {
     color: red; Color de la fuente
@@ -63,66 +65,70 @@ color:  #000; HEX
     font-weight: bold;
 } */
 
+/*------------------Creación de la clase contenedor--------------------------------------------------------------------------*/
 .contenedor {
-    width: 114rem;
-    /*Ancho del contenedor*/
+    width: 114rem;                                          /*Ancho del contenedor*/
     /*margin: 0(top) auto(right) 0(botton) auto(left);
     margin: 0(top, botton) auto(right, left);
     margin-top:0; margin-right:auto...*/
     margin: 0 auto;
 }
 
+/*------------------Creacion de la clase header-----------------------------------------------------------------------------*/
+
 .header {
     /* display: flex;
     justify-content: flex-end; */
-    text-align: right;
-    padding-top: 1.5rem;
-    padding-bottom: 2.4rem;
+    text-align: right;                                      /*Alineación del texto a la derecha*/
+    padding-top: 1.5rem;                                    /*Tamaño superior del bloque header*/
+    padding-bottom: 2.4rem;                                 /*Tamaño inferior del bloque header*/
 }
 
 .header a {
     color: var(--color_principal);
     /*Llamada de variable*/
-    text-decoration: none;
+    text-decoration: none;                                  /*Subrayado del enlace deshabilitado*/
     font-family: var(--font_principal);
     font-weight: 400;
 }
 
 .header .separador{
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: 0.5rem;                                    /*Margen izquierdo*/
+    margin-right: 0.5rem;                                   /*Margen derecho*/
+    /*margin: 0 0.5rem;*/
     color: var(--color_principal);
 }
 
 .header a:hover{
-    text-decoration: underline;
+    text-decoration: underline;                             /*Habilitar subrayado*/
 }
 
-/*Clases de imagen TuCarreraDigital y enlaces Cursos, Sobrenosotros e Informate*/
+/*------------------Clases de imagen TuCarreraDigital y enlaces Cursos, Sobrenosotros e Informate---------------------------*/
 .cursos_sobre_informate {
-    display: flex;
+    display: flex;                                          /*Permite habilitar la distribución del bloque*/              
+    /*flex-direction: row, row-reverse, colummn o column-reverse;  No hace falta ponerlo porque los enlaces ya estan en row*/
 }
 
 .cursos_sobre_informate .img_tcd {
     display: flex;
-    flex: 34%;
-    max-width: 34%;    
-    justify-content: flex-start;
+    flex: 34%;                                              /*Porcentaje de ocupación del bloque en el div*/
+    max-width: 34%;                                         /*Ancho del bloque en el div*/
+    justify-content: flex-start;                            /*Justificación del bloque al inicio del mismo*/
 }
 
 .cursos_sobre_informate .menu {
     display:flex;
     flex: 66%;
     max-width: 66%;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: flex-end;                              /*Justificación del bloque al final del mismo*/       
+    align-items: center;                                    /*Alineacion del objeto al centro del bloque*/
 }
 
 .cursos_sobre_informate a {
     color: var(--color_secundario);
     font-size: 1.4rem;
     margin-left: 2.5rem;
-    font-weight: bold;
+    font-weight: bold;                                      /*Fuente en negrita*/
     text-decoration: none;
 }
 .cursos_sobre_informate a:hover{
@@ -130,11 +136,11 @@ color:  #000; HEX
 }
 
 .cursos_sobre_informate .informate {
-    background-color: var(--color_principal);
+    background-color: var(--color_principal);               /*Color del fondo del bloque*/
     font-weight: bold;
     color: white;
-    border-radius: 20px;
-    padding: 1rem 1.4rem;
+    border-radius: 20px;                                    /*Radio de las esquinas del bloque*/
+    padding: 1rem 1.4rem;                                   /*Relleno de arriba, abajo y los laterales del bloque*/
     text-decoration: none;
 }
 
@@ -145,12 +151,12 @@ color:  #000; HEX
 
 
 
-/*Clases primera seccion*/
+/*------------------Clases primera seccion----------------------------------------------------------------------------------*/
 .primera_seccion {
-    background-image: url(/ProyectoInicio/img/11641891319_banner_zona_norte.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-bottom: 18rem;
+    background-image: url(/ProyectoInicio/img/11641891319_banner_zona_norte.png);   /*Imagen de fondo*/
+    background-size: cover;                                 /*La imagen ocupa toda la sección*/
+    background-repeat: no-repeat;                           /*La imagen no se repite para ocupar toda la sección*/
+    padding-bottom: 18rem;                                  /*Relleno inferior del bloque*/
 }
 
 .primera_seccion .titulo {
@@ -159,7 +165,7 @@ color:  #000; HEX
     padding-top: 8rem;
     margin-bottom: 3.3rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;                                 /*Distribución del bloque en columna*/
     flex: 66%;
     max-width: 66%;
 }
@@ -167,13 +173,13 @@ color:  #000; HEX
 .primera_seccion .titulo strong {
     background-color: white;
     font-family: var(--font_principal);
-    font-size: 4.7rem;
-    font-weight: 800;
+    font-size: 4.7rem;                                      /*Tamaño de la fuente*/
+    font-weight: 800;       
     margin-bottom: 10px;
-    line-height: 1.2;
+    line-height: 1.2;                                       /*Tamaño de la linea de texto*/
     padding: 3px 15px;
     border-radius: 1rem;
-    max-width: fit-content;
+    max-width: fit-content;                                 /*El ancho del bloque se ajusta al contenido*/
 }
 
 .primera_seccion a {
@@ -182,7 +188,7 @@ color:  #000; HEX
     text-decoration: none;
     border-radius: 1rem;
     padding: 2.4rem 9.4rem;
-    text-transform: uppercase;
+    text-transform: uppercase;                              /*Texto transformado a mayúsculas*/
     font-size: 1.4rem;
     font-weight: 700;
 }
@@ -190,17 +196,17 @@ color:  #000; HEX
 .boton:hover {
     background-color: white;
     color: var(--color_secundario);
-    border: 2px solid;
-    border-color: var(--color_secundario);
+    border: 2px solid;                                      /*Tamaño del borde del bloque y opacidad*/
+    border-color: var(--color_secundario);                  /*Color del border*/
 }
 
-/*Clases Logos*/
+/*------------------Clases Logos--------------------------------------------------------------------------------------------*/
 .seccion_logos .contenedor {
     margin-top: -9rem;
     background: white;
     border-radius: 12px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row;                                    /*Distribucion del bloque en fila*/
     padding-top: 2rem;
 }
 
@@ -208,8 +214,8 @@ color:  #000; HEX
     flex: 60%;
     max-width: 60%; 
     display:flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;                                    /*Alineación del objeto al centro*/
+    justify-content: center;                                
 }
 
 .seccion_logos .contenedor .logo_adecco{
@@ -219,6 +225,8 @@ color:  #000; HEX
     align-items: center;
     justify-content: center;
 }
+
+/*------------------Clases de la sección de los cursos-----------------------------------------------------------------------*/
 
 .seccion_cursos {
     text-align: center;
@@ -232,7 +240,6 @@ color:  #000; HEX
     font-weight: 700;
     text-transform: uppercase;
     padding-top: 4rem;
-
 }
 
 .seccion_cursos .conectamos {
@@ -266,6 +273,8 @@ color:  #000; HEX
     color: white;
 }
 
+/*------------------Clases de la sección de los bloques de inscribir---------------------------------------------------------*/
+
 .seccion_inscribir .alineacion_inscribir{
     padding-top: 5rem;
     display: flex;  
@@ -275,7 +284,7 @@ color:  #000; HEX
 
 .seccion_inscribir .marketing {
     background-image: url(/ProyectoInicio/img/Curso-marketing-digital-norte.png);
-    background-size: contain;
+    background-size: contain;                               /*La imagen se adapta para entrar en el bloque*/
     background-repeat: no-repeat;
     flex: 50%;
     max-width: 50%;
@@ -355,7 +364,7 @@ color:  #000; HEX
     border-color: white;
 }
 
-
+/*------------------Clases de la sección de interés--------------------------------------------------------------------------*/
 .seccion_interes {
     text-align: center;
     color: var(--color_secundario);
@@ -374,8 +383,11 @@ color:  #000; HEX
     text-decoration: none;
 }
 
+/*------------------Clases de la sección info--------------------------------------------------------------------------------*/
 .seccion_info {}
 
+
+/*------------------Clases de la sección de las localizaciones---------------------------------------------------------------*/
 .seccion_localizaciones {
     background-color: var(--color_secundario);
 }
@@ -391,6 +403,7 @@ color:  #000; HEX
     display: inline;
 }
 
+/*------------------Clases de la sección contactar---------------------------------------------------------------------------*/
 .seccion_contactar {
     background-color: var(--color_principal);
 }
