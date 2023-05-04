@@ -394,3 +394,33 @@ color:  #000; HEX
 .seccion_contactar {
     background-color: var(--color_principal);
 }
+
+
+/* 
+@media (min-width:400px){
+
+    body{
+        background-color: purple;
+    }
+    
+}
+
+@media (min-width:750px){
+
+    body{
+        background-color: yellow;
+    }
+
+}
+
+@media (min-width:900px){
+
+    body{
+        background-color: red;
+    }
+
+} 
+
+PC-> 1140px
+Tablet -> 768px
+Movil -> 480px */
