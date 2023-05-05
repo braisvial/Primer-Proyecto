@@ -8,15 +8,20 @@
 
 
 html {
-    font-size: 62.5%;                                   /*Relacion del rem modificada a 1 rem ~ 10 px (parte 1)*/
+    font-size: 62.5%;
+    /*Relacion del rem modificada a 1 rem ~ 10 px (parte 1)*/
 }
 
 /*------------------Creacion de la clase body donde almacenar todos los atributos comunos en toda la página----------------*/
 body {
-    font-size: 16px;                                    /*Relacion del rem modificada a 1 rem ~ 10 px (parte 2)*/
-    font-family: var(--font_principal);                 /*Tipo de fuente*/
-    font-weight: 400;                                   /*Grosor de la fuente*/
-    color: var(--color_secundario);                     /*Color de la fuente*/
+    font-size: 16px;
+    /*Relacion del rem modificada a 1 rem ~ 10 px (parte 2)*/
+    font-family: var(--font_principal);
+    /*Tipo de fuente*/
+    font-weight: 400;
+    /*Grosor de la fuente*/
+    color: var(--color_secundario);
+    /*Color de la fuente*/
 }
 
 /* 
@@ -67,7 +72,8 @@ color:  #000; HEX
 
 /*------------------Creación de la clase contenedor--------------------------------------------------------------------------*/
 .contenedor {
-    width: 114rem;                                          /*Ancho del contenedor*/
+    width: 60%;
+    /*Ancho del contenedor*/
     /*margin: 0(top) auto(right) 0(botton) auto(left);
     margin: 0(top, botton) auto(right, left);
     margin-top:0; margin-right:auto...*/
@@ -79,72 +85,90 @@ color:  #000; HEX
 .header {
     /* display: flex;
     justify-content: flex-end; */
-    text-align: right;                                      /*Alineación del texto a la derecha*/
-    padding-top: 1.5rem;                                    /*Tamaño superior del bloque header*/
-    padding-bottom: 2.4rem;                                 /*Tamaño inferior del bloque header*/
+    text-align: right;
+    /*Alineación del texto a la derecha*/
+    padding-top: 1.5rem;
+    /*Tamaño superior del bloque header*/
+    padding-bottom: 2.4rem;
+    /*Tamaño inferior del bloque header*/
 }
 
 .header a {
     color: var(--color_principal);
     /*Llamada de variable*/
-    text-decoration: none;                                  /*Subrayado del enlace deshabilitado*/
+    text-decoration: none;
+    /*Subrayado del enlace deshabilitado*/
     font-family: var(--font_principal);
     font-weight: 400;
 }
 
-.header .separador{
-    margin-left: 0.5rem;                                    /*Margen izquierdo*/
-    margin-right: 0.5rem;                                   /*Margen derecho*/
+.header .separador {
+    margin-left: 0.5rem;
+    /*Margen izquierdo*/
+    margin-right: 0.5rem;
+    /*Margen derecho*/
     /*margin: 0 0.5rem;*/
     color: var(--color_principal);
 }
 
-.header a:hover{
-    text-decoration: underline;                             /*Habilitar subrayado*/
+.header a:hover {
+    text-decoration: underline;
+    /*Habilitar subrayado*/
 }
 
 /*------------------Clases de imagen TuCarreraDigital y enlaces Cursos, Sobrenosotros e Informate---------------------------*/
 .cursos_sobre_informate {
-    display: flex;                                          /*Permite habilitar la distribución del bloque*/              
+    display: flex;
+    /*Permite habilitar la distribución del bloque*/
     /*flex-direction: row, row-reverse, colummn o column-reverse;  No hace falta ponerlo porque los enlaces ya estan en row*/
 }
 
 .cursos_sobre_informate .img_tcd {
     display: flex;
-    flex: 34%;                                              /*Porcentaje de ocupación del bloque en el div*/
-    max-width: 34%;                                         /*Ancho del bloque en el div*/
-    justify-content: flex-start;                            /*Justificación del bloque al inicio del mismo*/
+    flex: 34%;
+    /*Porcentaje de ocupación del bloque en el div*/
+    max-width: 34%;
+    /*Ancho del bloque en el div*/
+    justify-content: flex-start;
+    /*Justificación del bloque al inicio del mismo*/
 }
 
 .cursos_sobre_informate .menu {
-    display:flex;
+    display: flex;
     flex: 66%;
     max-width: 66%;
-    justify-content: flex-end;                              /*Justificación del bloque al final del mismo*/       
-    align-items: center;                                    /*Alineacion del objeto al centro del bloque*/
+    justify-content: flex-end;
+    /*Justificación del bloque al final del mismo*/
+    align-items: center;
+    /*Alineacion del objeto al centro del bloque*/
 }
 
 .cursos_sobre_informate a {
     color: var(--color_secundario);
     font-size: 1.4rem;
     margin-left: 2.5rem;
-    font-weight: bold;                                      /*Fuente en negrita*/
+    font-weight: bold;
+    /*Fuente en negrita*/
     text-decoration: none;
 }
-.cursos_sobre_informate a:hover{
+
+.cursos_sobre_informate a:hover {
     text-decoration: underline;
 }
 
 .cursos_sobre_informate .informate {
-    background-color: var(--color_principal);               /*Color del fondo del bloque*/
+    background-color: var(--color_principal);
+    /*Color del fondo del bloque*/
     font-weight: bold;
     color: white;
-    border-radius: 20px;                                    /*Radio de las esquinas del bloque*/
-    padding: 1rem 1.4rem;                                   /*Relleno de arriba, abajo y los laterales del bloque*/
+    border-radius: 20px;
+    /*Radio de las esquinas del bloque*/
+    padding: 1rem 1.4rem;
+    /*Relleno de arriba, abajo y los laterales del bloque*/
     text-decoration: none;
 }
 
-.cursos_sobre_informate .informate:hover{
+.cursos_sobre_informate .informate:hover {
     text-decoration: none;
     background-color: #17a2b8;
 }
@@ -153,10 +177,14 @@ color:  #000; HEX
 
 /*------------------Clases primera seccion----------------------------------------------------------------------------------*/
 .primera_seccion {
-    background-image: url(/ProyectoInicio/img/11641891319_banner_zona_norte.png);   /*Imagen de fondo*/
-    background-size: cover;                                 /*La imagen ocupa toda la sección*/
-    background-repeat: no-repeat;                           /*La imagen no se repite para ocupar toda la sección*/
-    padding-bottom: 18rem;                                  /*Relleno inferior del bloque*/
+    background-image: url(/ProyectoInicio/img/11641891319_banner_zona_norte.png);
+    /*Imagen de fondo*/
+    background-size: cover;
+    /*La imagen ocupa toda la sección*/
+    background-repeat: no-repeat;
+    /*La imagen no se repite para ocupar toda la sección*/
+    padding-bottom: 18rem;
+    /*Relleno inferior del bloque*/
 }
 
 .primera_seccion .titulo {
@@ -165,7 +193,8 @@ color:  #000; HEX
     padding-top: 8rem;
     margin-bottom: 3.3rem;
     display: flex;
-    flex-direction: column;                                 /*Distribución del bloque en columna*/
+    flex-direction: column;
+    /*Distribución del bloque en columna*/
     flex: 66%;
     max-width: 66%;
 }
@@ -173,13 +202,16 @@ color:  #000; HEX
 .primera_seccion .titulo strong {
     background-color: white;
     font-family: var(--font_principal);
-    font-size: 4.7rem;                                      /*Tamaño de la fuente*/
-    font-weight: 800;       
+    font-size: 4.7rem;
+    /*Tamaño de la fuente*/
+    font-weight: 800;
     margin-bottom: 10px;
-    line-height: 1.2;                                       /*Tamaño de la linea de texto*/
+    line-height: 1.2;
+    /*Tamaño de la linea de texto*/
     padding: 3px 15px;
     border-radius: 1rem;
-    max-width: fit-content;                                 /*El ancho del bloque se ajusta al contenido*/
+    max-width: fit-content;
+    /*El ancho del bloque se ajusta al contenido*/
 }
 
 .primera_seccion a {
@@ -188,7 +220,8 @@ color:  #000; HEX
     text-decoration: none;
     border-radius: 1rem;
     padding: 2.4rem 9.4rem;
-    text-transform: uppercase;                              /*Texto transformado a mayúsculas*/
+    text-transform: uppercase;
+    /*Texto transformado a mayúsculas*/
     font-size: 1.4rem;
     font-weight: 700;
 }
@@ -196,8 +229,10 @@ color:  #000; HEX
 .boton:hover {
     background-color: white;
     color: var(--color_secundario);
-    border: 2px solid;                                      /*Tamaño del borde del bloque y opacidad*/
-    border-color: var(--color_secundario);                  /*Color del border*/
+    border: 2px solid;
+    /*Tamaño del borde del bloque y opacidad*/
+    border-color: var(--color_secundario);
+    /*Color del border*/
 }
 
 /*------------------Clases Logos--------------------------------------------------------------------------------------------*/
@@ -206,20 +241,22 @@ color:  #000; HEX
     background: white;
     border-radius: 12px;
     display: flex;
-    flex-direction: row;                                    /*Distribucion del bloque en fila*/
+    flex-direction: row;
+    /*Distribucion del bloque en fila*/
     padding-top: 2rem;
 }
 
-.seccion_logos .contenedor .logo_oficial{
+.seccion_logos .contenedor .logo_oficial {
     flex: 60%;
-    max-width: 60%; 
-    display:flex;
-    align-items: center;                                    /*Alineación del objeto al centro*/
-    justify-content: center;                                
+    max-width: 60%;
+    display: flex;
+    align-items: center;
+    /*Alineación del objeto al centro*/
+    justify-content: center;
 }
 
-.seccion_logos .contenedor .logo_adecco{
-    flex:40%;
+.seccion_logos .contenedor .logo_adecco {
+    flex: 40%;
     max-width: 40%;
     display: flex;
     align-items: center;
@@ -231,6 +268,7 @@ color:  #000; HEX
 .seccion_cursos {
     text-align: center;
     padding-top: 6rem;
+    margin: 0 auto;
 }
 
 .seccion_cursos .cursos {
@@ -239,7 +277,7 @@ color:  #000; HEX
     font-size: 1.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    padding-top: 4rem;
+    padding: 4rem 0rem;
 }
 
 .seccion_cursos .conectamos {
@@ -250,20 +288,23 @@ color:  #000; HEX
     font-size: 2.7rem;
     padding-top: 1.5rem;
 }
-.seccion_cursos .enlaces{
-    padding-top: 4rem ;
-    padding-bottom: 6.5rem;
+
+.seccion_cursos .enlaces {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    display: row;
+    justify-content: space-between;
 }
 
 .seccion_cursos a {
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
     color: var(--color_secundario);
     margin-right: 1rem;
     border-radius: 8px;
-    padding: 1.4rem 2.4rem;
+    padding: 1.4rem 2rem;
     border: 1px solid;
     border-color: var(--color_principal);
 }
@@ -275,16 +316,18 @@ color:  #000; HEX
 
 /*------------------Clases de la sección de los bloques de inscribir---------------------------------------------------------*/
 
-.seccion_inscribir .alineacion_inscribir{
+.seccion_inscribir .alineacion_inscribir {
     padding-top: 5rem;
-    display: flex;  
+    display: flex;
     flex-direction: row;
-    padding-bottom: 10rem;
+    padding-bottom: 6rem;
+    background-position: right;
 }
 
 .seccion_inscribir .marketing {
     background-image: url(/ProyectoInicio/img/Curso-marketing-digital-norte.png);
-    background-size: contain;                               /*La imagen se adapta para entrar en el bloque*/
+    background-size: contain;
+    /*La imagen se adapta para entrar en el bloque*/
     background-repeat: no-repeat;
     flex: 50%;
     max-width: 50%;
@@ -292,12 +335,30 @@ color:  #000; HEX
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
-.seccion_inscribir .marketing h2{
+
+.seccion_inscribir .programacion_web {
+    background-image: url(/ProyectoInicio/img/Curso-programacion-web-full-stack-norte.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex: 50%;
+    max-width: 50%;
+    min-height: 30rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.seccion_inscribir h2 {
     color: white;
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
-    padding-top: 4rem;
+    padding-top: 1rem;
     padding-left: 5rem;
 }
 
@@ -307,40 +368,14 @@ color:  #000; HEX
     font-size: 1.4rem;
     font-family: "DinBold", sans-serif;
     font-weight: 700;
-    min-height: 1.4rem;
     background-color: white;
     color: var(--color_secundario);
     border-radius: 10px;
     padding: 2rem 4.4rem;
+    max-width: fit-content;
     margin-left: 5rem;
-}
-
-.seccion_inscribir .marketing .inscribirme:hover{
-    color:white;
-    background-color: var(--color_principal);
-    border: 1px solid;
-    border-color: white;
-}
-
-.seccion_inscribir .programacion_web {
-    background-image: url(/ProyectoInicio/img/Curso-programacion-web-full-stack-norte.png);
-    color: white;
-    background-size: contain;
-    background-repeat: no-repeat;
-    flex: 50%;
-    max-width: 50%;
-    min-height: 30rem;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    border-radius: 10px;
-}
-
-.seccion_inscribir .programacion_web h2{
-    color: white;
-    font-size: 2.7rem;
-    text-transform: uppercase;
-    padding-top: 4rem;
-    padding-left: 5rem;
+    margin-top: 8rem;
+    margin-bottom: 5rem;
 }
 
 .seccion_inscribir .programacion_web .inscribirme {
@@ -349,16 +384,18 @@ color:  #000; HEX
     font-size: 1.4rem;
     font-family: "DinBold", sans-serif;
     font-weight: 700;
-    min-height: 1.4rem;
     background-color: white;
     color: var(--color_secundario);
     border-radius: 10px;
-    margin-left: 5rem;
     padding: 2rem 4.4rem;
+    max-width: fit-content;
+    margin-left: 5rem;
+    margin-top: 4rem;
+    margin-bottom: 8.5rem;
 }
 
-.seccion_inscribir .programacion_web .inscribirme:hover{
-    color:white;
+.seccion_inscribir .inscribirme:hover {
+    color: white;
     background-color: var(--color_principal);
     border: 1px solid;
     border-color: white;
@@ -366,26 +403,173 @@ color:  #000; HEX
 
 /*------------------Clases de la sección de interés--------------------------------------------------------------------------*/
 .seccion_interes {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: var(--color_secundario);
     font-family: var(--font_principal);
     font-size: 2rem;
+    text-transform: uppercase;
+    padding-bottom: 6rem;
 }
 
 .seccion_interes a {
     background-color: var(--color_principal);
     font-family: var(--font_principal);
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: white;
-    border-radius: 25px;
-    padding: 1.5rem 2.5rem;
+    border-radius: 96px;
+    padding: 2rem 4rem;
     text-decoration: none;
+    margin-top: 3rem;
+}
+
+.seccion_interes a:hover {
+    text-decoration: underline;
+    background-color: var(--color_secundario);
+    color: white;
 }
 
 /*------------------Clases de la sección info--------------------------------------------------------------------------------*/
-.seccion_info {}
+.seccion_info{
+    display: flex;
+    flex-direction: row;
+}
 
+.seccion_info .izquierda {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    max-width: 50%;
+}
+
+.seccion_info .derecha {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    max-width: 50%;
+    align-items: end;
+}
+
+.seccion_info .izquierda h3 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--color_principal);
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 0rem;
+    margin-bottom: 2.2rem;
+}
+
+.seccion_info .izquierda h2 {
+    font-size: 2.7rem;
+    font-weight: 800;
+    font-family: inherit;
+    margin-top: 0rem;
+    margin-bottom: 2.2rem;
+}
+
+.seccion_info .izquierda p{
+    color: var(--color_secundario);
+    font-size: 1.4rem;
+    margin-top: 0rem;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+.seccion_info .izquierda h4{
+    font-weight: 800;
+    font-family: inherit;
+    text-transform: uppercase;
+    width: 80%;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+.seccion_info .izquierda .ir_a_web{
+    text-transform: uppercase;
+    color: var(--color_principal);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 0rem;
+    margin-bottom: 5rem;
+}
+.seccion_info .izquierda .ir_a_web::after {
+    content: "";
+    margin-left: 10px;
+    width: 13px;
+    height: 12px;
+    background: url(/ProyectoInicio/img/arrow-right-small-green.png);
+    display: inline-block;
+}
+
+.seccion_info .izquierda .descargate{
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--color_secundario);
+    line-height: 1.5;
+    text-align: left;
+    font-family: inherit;
+    margin-top: 0rem;
+    margin-bottom: 2.5rem;
+}
+
+.seccion_info .izquierda .descargar{
+    background: var(--color_secundario);
+    padding: 20px 40px;
+    border: 2px solid;
+    border-color: var(--color_secundario);
+    font-size: 1.4rem;
+    color: white;
+    font-family: "DinBold", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    max-width: fit-content;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.seccion_info .izquierda .descargar:hover{
+    background-color: var(--color_principal);
+    color: var(--color_secundario);
+}
+
+.seccion_info .derecha h2{
+    margin-top: 13rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.seccion_info .derecha h2 strong{
+    background-color: var(--color_secundario);
+    color: white;
+    font-family: var(--font_principal);
+    font-size: 2.5rem;
+    font-weight: 1000;
+    line-height: 2;
+    padding: 3px 15px;
+    margin-bottom: 0.8rem;
+    border-radius: 1rem;
+    max-width: fit-content;
+}
+
+.seccion_info .derecha h4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color_principal);
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 1000;
+}
 
 /*------------------Clases de la sección de las localizaciones---------------------------------------------------------------*/
 .seccion_localizaciones {
