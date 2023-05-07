@@ -83,9 +83,8 @@ color:  #000; HEX
 /*------------------Creacion de la clase header-----------------------------------------------------------------------------*/
 
 .header {
-    /* display: flex;
-    justify-content: flex-end; */
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
     /*Alineación del texto a la derecha*/
     padding-top: 1.5rem;
     /*Tamaño superior del bloque header*/
@@ -103,6 +102,7 @@ color:  #000; HEX
 }
 
 .header .separador {
+    margin-top: 0rem;
     margin-left: 0.5rem;
     /*Margen izquierdo*/
     margin-right: 0.5rem;
@@ -297,7 +297,7 @@ color:  #000; HEX
 }
 
 .seccion_cursos a {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
@@ -360,6 +360,7 @@ color:  #000; HEX
     text-transform: uppercase;
     padding-top: 1rem;
     padding-left: 5rem;
+    max-width: 70%;
 }
 
 .seccion_inscribir .marketing .inscribirme {
@@ -374,7 +375,7 @@ color:  #000; HEX
     padding: 2rem 4.4rem;
     max-width: fit-content;
     margin-left: 5rem;
-    margin-top: 8rem;
+    margin-top: 10rem;
     margin-bottom: 5rem;
 }
 
@@ -390,7 +391,7 @@ color:  #000; HEX
     padding: 2rem 4.4rem;
     max-width: fit-content;
     margin-left: 5rem;
-    margin-top: 4rem;
+    margin-top: 7rem;
     margin-bottom: 8.5rem;
 }
 
@@ -432,7 +433,7 @@ color:  #000; HEX
 }
 
 /*------------------Clases de la sección info--------------------------------------------------------------------------------*/
-.seccion_info{
+.seccion_info {
     display: flex;
     flex-direction: row;
 }
@@ -470,7 +471,7 @@ color:  #000; HEX
     margin-bottom: 2.2rem;
 }
 
-.seccion_info .izquierda p{
+.seccion_info .izquierda p {
     color: var(--color_secundario);
     font-size: 1.4rem;
     margin-top: 0rem;
@@ -478,7 +479,8 @@ color:  #000; HEX
     font-weight: 400;
     line-height: 1.4;
 }
-.seccion_info .izquierda h4{
+
+.seccion_info .izquierda h4 {
     font-weight: 800;
     font-family: inherit;
     text-transform: uppercase;
@@ -490,7 +492,7 @@ color:  #000; HEX
     margin-bottom: 1rem;
 }
 
-.seccion_info .izquierda .ir_a_web{
+.seccion_info .izquierda .ir_a_web {
     text-transform: uppercase;
     color: var(--color_principal);
     font-size: 1.4rem;
@@ -498,6 +500,7 @@ color:  #000; HEX
     margin-top: 0rem;
     margin-bottom: 5rem;
 }
+
 .seccion_info .izquierda .ir_a_web::after {
     content: "";
     margin-left: 10px;
@@ -507,7 +510,7 @@ color:  #000; HEX
     display: inline-block;
 }
 
-.seccion_info .izquierda .descargate{
+.seccion_info .izquierda .descargate {
     font-weight: 800;
     font-size: 1.4rem;
     color: var(--color_secundario);
@@ -518,7 +521,7 @@ color:  #000; HEX
     margin-bottom: 2.5rem;
 }
 
-.seccion_info .izquierda .descargar{
+.seccion_info .izquierda .descargar {
     background: var(--color_secundario);
     padding: 20px 40px;
     border: 2px solid;
@@ -533,19 +536,19 @@ color:  #000; HEX
     border-radius: 10px;
 }
 
-.seccion_info .izquierda .descargar:hover{
+.seccion_info .izquierda .descargar:hover {
     background-color: var(--color_principal);
     color: var(--color_secundario);
 }
 
-.seccion_info .derecha h2{
+.seccion_info .derecha h2 {
     margin-top: 13rem;
     display: flex;
     flex-direction: column;
     align-items: end;
 }
 
-.seccion_info .derecha h2 strong{
+.seccion_info .derecha h2 strong {
     background-color: var(--color_secundario);
     color: white;
     font-family: var(--font_principal);
@@ -558,7 +561,7 @@ color:  #000; HEX
     max-width: fit-content;
 }
 
-.seccion_info .derecha h4{
+.seccion_info .derecha h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -573,24 +576,146 @@ color:  #000; HEX
 
 /*------------------Clases de la sección de las localizaciones---------------------------------------------------------------*/
 .seccion_localizaciones {
+    margin-top: 10rem;
     background-color: var(--color_secundario);
-}
-
-.seccion_localizaciones .contenedor {
     color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 9rem;
+    padding-bottom: 10rem;
 }
 
-.seccion_localizaciones .contenedor div,
-.contenedor h3,
-.contenedor p {
-    font-size: 1.5rem;
-    display: inline;
+.seccion_localizaciones h2 {
+    text-transform: uppercase;
+    font-size: 2.7rem;
+    margin-bottom: 5rem;
+    padding-bottom: 0rem;
+}
+.seccion_localizaciones .localizaciones{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.seccion_localizaciones .localizaciones div{
+    padding: 2.4rem 1.5rem;
+    line-height: 2rem;
+}
+
+.seccion_localizaciones .localizaciones h3{
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    padding-bottom: 0rem;
+    margin: 0rem 0rem;    
+}
+
+.seccion_localizaciones .localizaciones p{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin: 0rem 0rem;    
 }
 
 /*------------------Clases de la sección contactar---------------------------------------------------------------------------*/
 .seccion_contactar {
     background-color: var(--color_principal);
+    color: white;
+    padding-top: 9rem;
+    padding-bottom: 12rem;
 }
+
+.seccion_contactar h3{
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 300;
+    font-family: inherit;
+    line-height: 1.2;
+    margin-top: 0rem;
+    margin-bottom: 2.2rem;
+}
+
+.seccion_contactar h2{
+    text-transform: uppercase;
+    font-size: 2.7rem;
+    padding-bottom: 1.5rem;
+}
+
+.seccion_contactar .bloques{
+    display: flex;
+    flex-direction: row;
+}
+
+.seccion_contactar .bloques .llamar{
+    flex: 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    background-color: white;    
+    border-radius: 0.25rem;
+    margin-right: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.seccion_contactar .bloques .escribir{
+    flex: 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    background-color: white;    
+    border-radius: 0.25rem;
+    margin-left: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+.seccion_contactar .bloques .icono{
+    padding: 0rem 0rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.seccion_contactar .bloques .numero{
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 0rem;
+    margin: 0rem 18rem 0rem 0rem;
+}
+
+.seccion_contactar .bloques .email{
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 0rem;
+    margin: 0rem 18rem 0rem 0rem;
+
+}
+
+.seccion_contactar .bloques p{
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color: var(--color_secundario);
+    letter-spacing: 0;
+    line-height: 26px;
+    font-weight: 800;
+    margin: 0rem 0rem;
+}
+
+.seccion_contactar .bloques a{
+    text-decoration: none;
+    color: var(--color_principal);
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin: 0rem 0rem;
+}
+.seccion_contactar .bloques a:hover{
+    text-decoration: underline;
+}
+
+/*------------------Clases de la sección footer------------------------------------------------------------------------------*/
+
 
 
 /* 
