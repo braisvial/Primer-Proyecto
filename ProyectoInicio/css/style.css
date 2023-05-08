@@ -1,3 +1,10 @@
+/*Orden de CSS:
+    1º :root
+    2º html, body, *
+    3º selectores de elementos (p, a, img,...)
+    Comentar cada sección (englobar clases)
+*/
+
 /*------------------Creación de variables usadas reiteradamente------------------------------------------------------------*/
 :root {
     --color_principal: #00e497;
@@ -8,20 +15,20 @@
 
 
 html {
-    font-size: 62.5%;
-    /*Relacion del rem modificada a 1 rem ~ 10 px (parte 1)*/
+    font-size: 62.5%;                                           /*Relacion del rem modificada a 1 rem ~ 10 px (parte 1)*/
+    box-sizing: border-box;                                     /*El tamaño del contenido se ajusta a lo establecido deformándolo si es necesario por los paddings y borders*/
+}
+
+*,*::after, *::before{                                          /*El primer asterisco seleciona a todo el contenido, el after es contenido añadido desde css*/
+    box-sizing: inherit;
 }
 
 /*------------------Creacion de la clase body donde almacenar todos los atributos comunos en toda la página----------------*/
 body {
-    font-size: 16px;
-    /*Relacion del rem modificada a 1 rem ~ 10 px (parte 2)*/
-    font-family: var(--font_principal);
-    /*Tipo de fuente*/
-    font-weight: 400;
-    /*Grosor de la fuente*/
-    color: var(--color_secundario);
-    /*Color de la fuente*/
+    font-size: 16px;                                            /*Relacion del rem modificada a 1 rem ~ 10 px (parte 2)*/
+    font-family: var(--font_principal);                         /*Tipo de fuente*/
+    font-weight: 400;                                           /*Grosor de la fuente*/
+    color: var(--color_secundario);                             /*Color de la fuente*/
 }
 
 /* 
@@ -70,10 +77,34 @@ color:  #000; HEX
     font-weight: bold;
 } */
 
+/*caniuse.com: página necesaria para saber si los diferentes navegadores aceptan las caracteristicas dadas a nuestra web*/
+/*cssmatic.com para estilos de gradientes, sombras...*/
+
+.ejercicio_box_model{
+    height: 500px;
+    margin: 100px;
+    padding: 20px;
+    border: 2px solid black;
+    background-image: linear-gradient(to bottom, red 10%, yellow 50%, purple 90%);
+    position: relative;
+    box-shadow: 22px -23px 16px 4px rgba(0,0,0,0.75);         /*Añade sombras al bloque*/
+
+}
+
+.ejercicio_box_model h2{                                        /*Añade el contenido antes del elemento, con after lo añade después*/
+    right: 0px;
+    bottom: 0px;
+    position: absolute; 
+}
+
+.ejercicio_box_model h2::before{                                /*Añade el contenido antes del elemento, con after lo añade después*/
+    content: "Añadido desde CSS, no se puede copiar";
+}
+
+
 /*------------------Creación de la clase contenedor--------------------------------------------------------------------------*/
 .contenedor {
-    width: 60%;
-    /*Ancho del contenedor*/
+    width: 60%;                                                 /*Ancho del contenedor*/
     /*margin: 0(top) auto(right) 0(botton) auto(left);
     margin: 0(top, botton) auto(right, left);
     margin-top:0; margin-right:auto...*/
@@ -84,71 +115,56 @@ color:  #000; HEX
 
 .header {
     display: flex;
-    justify-content: flex-end;
-    /*Alineación del texto a la derecha*/
-    padding-top: 1.5rem;
-    /*Tamaño superior del bloque header*/
-    padding-bottom: 2.4rem;
-    /*Tamaño inferior del bloque header*/
+    justify-content: flex-end;                                  /*Alineación del texto a la derecha*/
+    padding-top: 1.5rem;                                        /*Tamaño superior del bloque header*/
+    padding-bottom: 2.4rem;                                     /*Tamaño inferior del bloque header*/
 }
 
 .header a {
-    color: var(--color_principal);
-    /*Llamada de variable*/
-    text-decoration: none;
-    /*Subrayado del enlace deshabilitado*/
+    color: var(--color_principal);                              /*Llamada de variable*/
+    text-decoration: none;                                      /*Subrayado del enlace deshabilitado*/
     font-family: var(--font_principal);
     font-weight: 400;
 }
 
 .header .separador {
     margin-top: 0rem;
-    margin-left: 0.5rem;
-    /*Margen izquierdo*/
-    margin-right: 0.5rem;
-    /*Margen derecho*/
+    margin-left: 0.5rem;                                        /*Margen izquierdo*/
+    margin-right: 0.5rem;                                       /*Margen derecho*/
     /*margin: 0 0.5rem;*/
     color: var(--color_principal);
 }
 
 .header a:hover {
-    text-decoration: underline;
-    /*Habilitar subrayado*/
+    text-decoration: underline;                                 /*Habilitar subrayado*/
 }
 
 /*------------------Clases de imagen TuCarreraDigital y enlaces Cursos, Sobrenosotros e Informate---------------------------*/
 .cursos_sobre_informate {
-    display: flex;
-    /*Permite habilitar la distribución del bloque*/
+    display: flex;                                              /*Permite habilitar la distribución del bloque*/
     /*flex-direction: row, row-reverse, colummn o column-reverse;  No hace falta ponerlo porque los enlaces ya estan en row*/
 }
 
 .cursos_sobre_informate .img_tcd {
     display: flex;
-    flex: 34%;
-    /*Porcentaje de ocupación del bloque en el div*/
-    max-width: 34%;
-    /*Ancho del bloque en el div*/
-    justify-content: flex-start;
-    /*Justificación del bloque al inicio del mismo*/
+    flex: 34%;                                                  /*Porcentaje de ocupación del bloque en el div*/
+    max-width: 34%;                                             /*Ancho del bloque en el div*/
+    justify-content: flex-start;                                /*Justificación del bloque al inicio del mismo*/
 }
 
 .cursos_sobre_informate .menu {
     display: flex;
     flex: 66%;
     max-width: 66%;
-    justify-content: flex-end;
-    /*Justificación del bloque al final del mismo*/
-    align-items: center;
-    /*Alineacion del objeto al centro del bloque*/
+    justify-content: flex-end;                                  /*Justificación del bloque al final del mismo*/
+    align-items: center;                                        /*Alineacion del objeto al centro del bloque*/
 }
 
 .cursos_sobre_informate a {
     color: var(--color_secundario);
     font-size: 1.4rem;
     margin-left: 2.5rem;
-    font-weight: bold;
-    /*Fuente en negrita*/
+    font-weight: bold;                                          /*Fuente en negrita*/
     text-decoration: none;
 }
 
@@ -157,14 +173,11 @@ color:  #000; HEX
 }
 
 .cursos_sobre_informate .informate {
-    background-color: var(--color_principal);
-    /*Color del fondo del bloque*/
+    background-color: var(--color_principal);                   /*Color del fondo del bloque*/
     font-weight: bold;
     color: white;
-    border-radius: 20px;
-    /*Radio de las esquinas del bloque*/
-    padding: 1rem 1.4rem;
-    /*Relleno de arriba, abajo y los laterales del bloque*/
+    border-radius: 20px;                                        /*Radio de las esquinas del bloque*/
+    padding: 1rem 1.4rem;                                       /*Relleno de arriba, abajo y los laterales del bloque*/
     text-decoration: none;
 }
 
@@ -177,14 +190,10 @@ color:  #000; HEX
 
 /*------------------Clases primera seccion----------------------------------------------------------------------------------*/
 .primera_seccion {
-    background-image: url(/ProyectoInicio/img/11641891319_banner_zona_norte.png);
-    /*Imagen de fondo*/
-    background-size: cover;
-    /*La imagen ocupa toda la sección*/
-    background-repeat: no-repeat;
-    /*La imagen no se repite para ocupar toda la sección*/
-    padding-bottom: 18rem;
-    /*Relleno inferior del bloque*/
+    background-image: url(/ProyectoInicio/img/11641891319_banner_zona_norte.png);   /*Imagen de fondo*/
+    background-size: cover;                                     /*La imagen ocupa toda la sección*/
+    background-repeat: no-repeat;                               /*La imagen no se repite para ocupar toda la sección*/
+    padding-bottom: 18rem;                                      /*Relleno inferior del bloque*/
 }
 
 .primera_seccion .titulo {
@@ -193,8 +202,7 @@ color:  #000; HEX
     padding-top: 8rem;
     margin-bottom: 3.3rem;
     display: flex;
-    flex-direction: column;
-    /*Distribución del bloque en columna*/
+    flex-direction: column;                                     /*Distribución del bloque en columna*/
     flex: 66%;
     max-width: 66%;
 }
@@ -202,16 +210,13 @@ color:  #000; HEX
 .primera_seccion .titulo strong {
     background-color: white;
     font-family: var(--font_principal);
-    font-size: 4.7rem;
-    /*Tamaño de la fuente*/
+    font-size: 4.7rem;                                          /*Tamaño de la fuente*/
     font-weight: 800;
     margin-bottom: 10px;
-    line-height: 1.2;
-    /*Tamaño de la linea de texto*/
+    line-height: 1.2;                                           /*Tamaño de la linea de texto*/
     padding: 3px 15px;
     border-radius: 1rem;
-    max-width: fit-content;
-    /*El ancho del bloque se ajusta al contenido*/
+    max-width: fit-content;                                     /*El ancho del bloque se ajusta al contenido*/
 }
 
 .primera_seccion a {
@@ -220,8 +225,7 @@ color:  #000; HEX
     text-decoration: none;
     border-radius: 1rem;
     padding: 2.4rem 9.4rem;
-    text-transform: uppercase;
-    /*Texto transformado a mayúsculas*/
+    text-transform: uppercase;                                  /*Texto transformado a mayúsculas*/
     font-size: 1.4rem;
     font-weight: 700;
 }
@@ -229,10 +233,8 @@ color:  #000; HEX
 .boton:hover {
     background-color: white;
     color: var(--color_secundario);
-    border: 2px solid;
-    /*Tamaño del borde del bloque y opacidad*/
-    border-color: var(--color_secundario);
-    /*Color del border*/
+    border: 2px solid;                                          /*Tamaño del borde del bloque y opacidad*/
+    border-color: var(--color_secundario);                      /*Color del border*/
 }
 
 /*------------------Clases Logos--------------------------------------------------------------------------------------------*/
@@ -241,8 +243,7 @@ color:  #000; HEX
     background: white;
     border-radius: 12px;
     display: flex;
-    flex-direction: row;
-    /*Distribucion del bloque en fila*/
+    flex-direction: row;                                        /*Distribucion del bloque en fila*/
     padding-top: 2rem;
 }
 
@@ -250,8 +251,7 @@ color:  #000; HEX
     flex: 60%;
     max-width: 60%;
     display: flex;
-    align-items: center;
-    /*Alineación del objeto al centro*/
+    align-items: center;                                        /*Alineación del objeto al centro*/
     justify-content: center;
 }
 
@@ -326,8 +326,7 @@ color:  #000; HEX
 
 .seccion_inscribir .marketing {
     background-image: url(/ProyectoInicio/img/Curso-marketing-digital-norte.png);
-    background-size: contain;
-    /*La imagen se adapta para entrar en el bloque*/
+    background-size: contain;                                   /*La imagen se adapta para entrar en el bloque*/
     background-repeat: no-repeat;
     flex: 50%;
     max-width: 50%;
@@ -400,6 +399,18 @@ color:  #000; HEX
     background-color: var(--color_principal);
     border: 1px solid;
     border-color: white;
+}
+
+/*------------------Clases de la sección video-------------------------------------------------------------------------------*/
+.seccion_video{
+    margin-top: 15rem; 
+    margin-bottom: 7rem;
+    height: 62.5rem; 
+}
+
+.seccion_video iframe{
+    width: 100%;
+    height: 100%;
 }
 
 /*------------------Clases de la sección de interés--------------------------------------------------------------------------*/
@@ -578,7 +589,6 @@ color:  #000; HEX
 .seccion_localizaciones {
     margin-top: 10rem;
     background-color: var(--color_secundario);
-    color: white;
     display: flex;
     flex-direction: column;
     padding-top: 9rem;
@@ -587,6 +597,7 @@ color:  #000; HEX
 
 .seccion_localizaciones h2 {
     text-transform: uppercase;
+    color: white;
     font-size: 2.7rem;
     margin-bottom: 5rem;
     padding-bottom: 0rem;
@@ -595,6 +606,7 @@ color:  #000; HEX
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    margin-left: -1.5rem;
 }
 
 .seccion_localizaciones .localizaciones div{
@@ -604,6 +616,7 @@ color:  #000; HEX
 
 .seccion_localizaciones .localizaciones h3{
     text-transform: uppercase;
+    color: white;
     font-size: 1.7rem;
     padding-bottom: 0rem;
     margin: 0rem 0rem;    
@@ -611,6 +624,7 @@ color:  #000; HEX
 
 .seccion_localizaciones .localizaciones p{
     text-transform: uppercase;
+    color: white;   
     font-size: 1.4rem;
     margin: 0rem 0rem;    
 }
@@ -618,22 +632,22 @@ color:  #000; HEX
 /*------------------Clases de la sección contactar---------------------------------------------------------------------------*/
 .seccion_contactar {
     background-color: var(--color_principal);
-    color: white;
     padding-top: 9rem;
     padding-bottom: 12rem;
 }
 
 .seccion_contactar h3{
+    color: white;
     text-transform: uppercase;
     font-size: 1.7rem;
     font-weight: 300;
-    font-family: inherit;
     line-height: 1.2;
     margin-top: 0rem;
     margin-bottom: 2.2rem;
 }
 
 .seccion_contactar h2{
+    color: white;
     text-transform: uppercase;
     font-size: 2.7rem;
     padding-bottom: 1.5rem;
@@ -670,11 +684,11 @@ color:  #000; HEX
 }
 
 
-.seccion_contactar .bloques .icono{
+/* .seccion_contactar .bloques .icono{
     padding: 0rem 0rem;
     margin-left: 3rem;
     margin-right: 3rem;
-}
+} */
 
 .seccion_contactar .bloques .numero{
     display: flex;
@@ -682,6 +696,11 @@ color:  #000; HEX
     padding: 0rem 0rem;
     margin: 0rem 18rem 0rem 0rem;
 }
+
+.seccion_contactar .bloques .numero::before{
+    background: url(../img/ico-TLF.png);
+    max-height: 30rem;
+} /*~~~~~~~~~~~~~~revisar~~~~~~~~~~~~~~*/
 
 .seccion_contactar .bloques .email{
     display: flex;
