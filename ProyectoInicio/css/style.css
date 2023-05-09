@@ -21,7 +21,7 @@ html {
     box-sizing: border-box;                                                             /*El tamaño del contenido se ajusta a lo establecido deformándolo si es necesario por los paddings y borders*/
 }
 
-*,*::after, *::before{                                                                  /*El primer asterisco seleciona a todo el contenido, el after es contenido añadido desde css*/
+*,*::after, *::before{                                                                  /*El primer asterisco seleciona a todo el contenido, el after y el before es contenido añadido desde css*/
     box-sizing: inherit;
 }
 
@@ -614,10 +614,10 @@ color:  #000; HEX
     padding-bottom: 0rem;
 }
 .seccion_localizaciones .localizaciones{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    margin-left: -1.5rem;
+    display: grid;                                                                      /*Alinear contenedores dentro de un contenedor*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;                                             /*grid-template-columns: repeat(4, 1fr);*/
+    grid-template-rows: 1fr 1fr;                                                        /*grid-template: 1fr 1fr / 1fr 1fr 1fr 1f;  Primer las filas y luego las columnas*/
+    margin-left: -1.5rem;                                                               /*gap:15px; Aplica espacios entre las filas y las columnas*/
 }
 
 .seccion_localizaciones .localizaciones div{
@@ -764,6 +764,7 @@ footer .primero{
     flex-direction: row;
     margin-top: -3rem;
     margin-bottom: 3rem;
+    margin-left: 1.5rem;
 }
 
 footer .primero a{
@@ -790,7 +791,27 @@ footer .segundo a{
     font-size: 1.4rem;
     color: var(--color_secundario);
     margin-right: 5rem;
+}
 
+footer .segundo a:hover {
+    color: #17a2b8;
+}
+
+.boton_fijo{
+    position: fixed;
+    right: 0;
+    top:32rem;
+}
+
+.boton_to_top{
+    position: fixed;
+    right: 4rem;
+    bottom: 7.5rem;
+}
+
+.boton_to_top img{
+    width: 6rem;
+    height: 6rem;
 }
 
 
