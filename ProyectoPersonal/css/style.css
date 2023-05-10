@@ -1,28 +1,102 @@
-:root{
+/*-------------VARIABLES--------------------------------------------*/
 
+:root{
+--negro: black;
+--blanco: white;
+--gris: #2C2B2B;
 }
+
+/*-------------HTML-------------------------------------------------*/
 
 html{
-
+    font-size: 62.5%;
+    box-sizing: border-box;
 }
+
+/*-------------BODY-------------------------------------------------*/
 
 body{
-
+    font-size: 16px;
+    margin: 0 0;
 }
+
+/*-------------CABECERA---------------------------------------------*/
 
 header{
-
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px;  
 }
+
+.cabecera{
+    background-position: right;
+    background-color: black;
+    color: var(--blanco);
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+/*-------------PORTADA----------------------------------------------*/
 
 .portada{
-
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 0;    
+    margin: 0 0;
 }
+
+.portada .foto1{
+    background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/eldenring/background_c.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;    
+}
+
+.portada .foto2{
+    background-image: url(https://blog.es.playstation.com/tachyon/sites/14/2023/02/4a378eba9dda87005a13af74e8458d30e9e91992-scaled.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;    
+}
+
+.portada .foto3{
+    background-image: url(https://www.gameoverla.com/wp-content/uploads/2022/11/gameoverla-2.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;    
+}
+
+.portada .foto4{
+    background-image: url(https://ngpmedia.com/wp-content/uploads/2023/04/deadislandmain.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;    
+}
+
+.portada .foto5{
+    background-image: url(https://images8.alphacoders.com/129/thumb-1920-1292495.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;    
+}
+
+
+/*-------------PIE DE PÁGINA----------------------------------------*/
 
 footer{
 
 }
 
-
-/* --------------------------------------------------------------- */
+/*------------------------------------------------------------------*/
 
 

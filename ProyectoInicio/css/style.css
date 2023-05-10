@@ -115,6 +115,19 @@ color:  #000; HEX
     margin: 0 auto;
 }
 
+@media(max-width:1140px){
+    .contenedor{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media(max-width:768px){
+    .contenedor{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
 /*------------------Creacion de la clase header------------------------------------------------------------------------------------------------------------*/
 
 .header {
@@ -191,7 +204,36 @@ color:  #000; HEX
     background-color: #17a2b8;
 }
 
-
+@media(max-width:767px){
+    .cursos_sobre_informate {
+        display: flex;                                                                      
+        flex-wrap: wrap;                      
+    }
+    .cursos_sobre_informate .img_tcd {
+        display: flex;
+        flex: 90%;                                                                          
+        max-width: 90%;                                                                     
+        justify-content: center;  
+        margin-left: 1rem;                                                     
+    }
+    .cursos_sobre_informate .menu {
+        display: flex;
+        flex-direction: column;
+        flex: 100%;
+        max-width: 100%;                                                         
+        align-items: flex-start;                                                             
+    }
+    .cursos_sobre_informate .menu a{        
+        margin: 0;
+        padding: 1rem 0;
+        border-top: 1px solid var(--color_secundario);
+        display: block;
+    }
+    .cursos_sobre_informate .menu .informate{
+        padding: 1rem 1.4rem;
+        border: 0;
+    }
+}
 
 /*------------------Clases primera seccion-----------------------------------------------------------------------------------------------------------------*/
 
@@ -243,6 +285,21 @@ color:  #000; HEX
     border-color: var(--color_secundario);                                              /*Color del border*/
 }
 
+@media(max-width:1140px){
+    .primera_seccion .titulo{
+       max-width: 100%;
+    }
+    .primera_seccion .titulo strong{
+        font-size: 4rem;
+    }
+}
+@media(max-width:767px){
+    .primera_seccion a{
+        display: block;
+        text-align: center;
+    }
+}
+
 /*------------------Clases Logos---------------------------------------------------------------------------------------------------------------------------*/
 
 .seccion_logos .contenedor {
@@ -269,7 +326,25 @@ color:  #000; HEX
     align-items: center;
     justify-content: center;
 }
+.seccion_logos .contenedor img{
+    max-width: 100%;
+}
 
+@media(max-width:767px){
+    .seccion_logos .contenedor{
+        flex-wrap: wrap;
+    }
+    .seccion_logos .contenedor .logo_oficial{
+        flex: 100%;
+        max-width: 100%;
+    }
+    .seccion_logos .contenedor .logo_adecco{
+        flex: 100%;
+        max-width: 100%;
+        justify-content: center;
+        padding-top: 4rem;
+    }
+}
 /*------------------Clases de la sección de los cursos-----------------------------------------------------------------------------------------------------*/
 
 .seccion_cursos {
@@ -299,8 +374,10 @@ color:  #000; HEX
 .seccion_cursos .enlaces {
     padding-top: 4rem;
     padding-bottom: 6rem;
-    display: row;
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1rem;
 }
 
 .seccion_cursos a {
@@ -323,53 +400,44 @@ color:  #000; HEX
 
 /*------------------Clases de la sección de los bloques de inscribir---------------------------------------------------------------------------------------*/
 
-.seccion_inscribir .alineacion_inscribir {
-    padding-top: 5rem;
+.seccion_inscribir {    
     display: flex;
-    flex-direction: row;
-    padding-bottom: 6rem;
+    justify-content: space-between;
+    margin-top: 6rem;     
+}
+.seccion_inscribir div{
+    padding-top: 1rem 4rem;
     background-position: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 50%;
+    max-width: 50%;
+    border-radius: 10px;
 }
 
 .seccion_inscribir .marketing {
     background-image: url(/ProyectoInicio/img/Curso-marketing-digital-norte.png);
-    background-size: contain;                                                           /*La imagen se adapta para entrar en el bloque*/
-    background-repeat: no-repeat;
-    flex: 50%;
-    max-width: 50%;
-    min-height: 30rem;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
+    background-size: cover;                                                           /*La imagen se adapta para entrar en el bloque*/
+    background-repeat: no-repeat;  
+    margin-right: 1.5rem;  
 }
 
 .seccion_inscribir .programacion_web {
     background-image: url(/ProyectoInicio/img/Curso-programacion-web-full-stack-norte.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    flex: 50%;
-    max-width: 50%;
-    min-height: 30rem;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    margin-right: 1.5rem; 
 }
 
 .seccion_inscribir h2 {
     color: white;
     font-size: 2.5rem;
     text-transform: uppercase;
-    padding-top: 1rem;
-    padding-left: 5rem;
-    max-width: 70%;
+    margin-left: 5rem;
 }
 
-.seccion_inscribir .marketing .inscribirme {
+.seccion_inscribir a{
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.4rem;
@@ -381,24 +449,8 @@ color:  #000; HEX
     padding: 2rem 4.4rem;
     max-width: fit-content;
     margin-left: 5rem;
-    margin-top: 10rem;
-    margin-bottom: 5rem;
-}
-
-.seccion_inscribir .programacion_web .inscribirme {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    font-family: "DinBold", sans-serif;
-    font-weight: 700;
-    background-color: white;
-    color: var(--color_secundario);
-    border-radius: 10px;
-    padding: 2rem 4.4rem;
-    max-width: fit-content;
-    margin-left: 5rem;
-    margin-top: 7rem;
-    margin-bottom: 8.5rem;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
 }
 
 .seccion_inscribir .inscribirme:hover {
@@ -406,6 +458,22 @@ color:  #000; HEX
     background-color: var(--color_principal);
     border: 1px solid;
     border-color: white;
+}
+
+@media(max-width:767px){
+    .seccion_inscribir {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr; 
+        gap: 1rem;        
+    }
+    .seccion_inscribir div{
+        flex: 100%;
+        max-width: 100%;
+    }
+    .seccion_inscribir a{
+        display: block;
+    }
 }
 
 /*------------------Clases de la sección video-------------------------------------------------------------------------------------------------------------*/
