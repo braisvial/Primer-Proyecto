@@ -49,6 +49,7 @@ body{
 
 .portada{
     display: grid;
+    /* grid-template-columns: 10% 5% 20% 5% 20% 5% 20% 5% 10%; */
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
     position: relative;
@@ -58,113 +59,98 @@ body{
 }
 
 .portada .foto1{
+    /* grid-column: 1 / 3; */
     background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/eldenring/background_c.jpg);
     background-size: cover;
-    background-position: -37vw center;
+    background-position: -35.8vw center;
     background-repeat: no-repeat;
-    display: block;
-    height: 100%;
+    height: 100%; 
     filter: grayscale(100%);
-    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100% );
-
 }
 .portada .foto1:hover{
-    width: 140%;
-    clip-path: polygon(0% 0%, 90% 0%, 70% 100%, 0% 100% );
-    background-position: -33vw;
     z-index: 1000;
+    margin-right:-10vw;
     filter: none;
-    transition: width 0.8s, filter 1s;
-    transition: background-position 1s;    
+    background-position: -30.8vw;
+    transition-property: margin-right, filter, background-position;
+    transition-duration: 1s, 1s, 1s;
 }
 
 .portada .foto2{
-    background-image: url(https://blog.es.playstation.com/tachyon/sites/14/2023/02/4a378eba9dda87005a13af74e8458d30e9e91992-scaled.jpg);
+    /* grid-column: 2 / 5; */
+    background-image: url(https://www.gameoverla.com/wp-content/uploads/2022/11/gameoverla-2.jpg);
     background-size: cover;
-    background-position: -40vw center;
+    background-position: -42vw center;
     background-repeat: no-repeat;
-    display: block;
-    height: 100%;
-    filter: grayscale(100%); 
-    clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100% );
-    width: 170%;
-    margin-left: -35%;
+    height: 100%;   
+    filter: grayscale(100%);
 }
 .portada .foto2:hover{
-    width: 200%;
-    clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100% );
-    background-position: -30vw;
-    margin-left: -60%;
     z-index: 1000;
     filter: none;
-    transition: width 0.8s, filter 1s;
-    transition: background-position 1s;
+    margin-right:-10vw;
+    background-position: -37vw;
+    transition-property: margin-right, filter, background-position;
+    transition-duration: 1s, 1s, 1s;
 }
 
 .portada .foto3{
-    background-image: url(https://www.gameoverla.com/wp-content/uploads/2022/11/gameoverla-2.jpg);
+    /* grid-column: 4 / 7; */
+    background-image: url(https://media.revistagq.com/photos/6439162c8820974de0de678a/4:3/w_2279,h_1709,c_limit/Final-Fantasy-xvi.jpeg);
     background-size: cover;
-    background-position: -40vw center;
+    background-position: -30vw center;
     background-repeat: no-repeat;
-    display: block;
     height: 100%;
-    filter: grayscale(100%);  
-    clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100% );
-    width: 170%;
-    margin: 0 auto;
-    margin-left: -35%;
+    filter: grayscale(100%);
 }
 .portada .foto3:hover{
-    width: 200%;
-    clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100% );
-    background-position: -30vw;
-    margin-left: -60%;
     z-index: 1000;
     filter: none;
-    transition: width 0.8s, filter 1s;
+    background-position:-25vw;
+    margin:0 -5vw 0 -5vw;
+    transition-property: margin, filter, background-position;
+    transition-duration: 1s, 1s, 1s;
 }
 
 .portada .foto4{
+    /* grid-column: 6 / 9; */
     background-image: url(https://ngpmedia.com/wp-content/uploads/2023/04/deadislandmain.jpg);
     background-size: cover;
-    background-position: -37vw center;
+    background-position: -38vw center;
     background-repeat: no-repeat;
     display: block;
-    height: 100%;
-    filter: grayscale(100%);  
-    clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100% );  
-    width: 170%;
-    margin: 0 auto;
-    margin-left: -35%;
-    z-index: 3;
+    height: 100%;  
+    z-index: 4;
+    filter: grayscale(100%);
 }
 .portada .foto4:hover{
-    width: 200%;
-    clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100% );
-    background-position: -30vw;
-    margin-left: -60%;
     z-index: 1000;
     filter: none;
-    transition: width 0.8s, filter 1s;
+    margin-left:-10vw;
+    background-position: -33vw;
+    transition-property: margin-left, filter, background-position;
+    transition-duration: 1s, 1s, 1s;
 }
 
 .portada .foto5{
+    /* grid-column: 8 / 10; */
     background-image: url(https://images8.alphacoders.com/129/thumb-1920-1292495.jpg);
     background-size: cover;
-    background-position: -20vw center;
+    background-position: -25vw center;
     background-repeat: no-repeat;
     display: block;
-    height: 100%;
-    filter: grayscale(100%); 
-    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100% );
-    z-index: 10;
-    width: 170%;
-    max-width: 135%;
-    margin-left: -35%;
-    padding-right: -35%;
-    
-      
+    height: 100%;  
+    filter: grayscale(100%);
 }
+.portada .foto5:hover{
+    z-index: 1000;
+    filter: none;
+    margin-left:-10vw;
+    background-position: -20vw;
+    transition-property: margin-left, filter, background-position;
+    transition-duration: 1s, 1s, 1s;
+}
+
 
 
 /*-------------PIE DE PÁGINA----------------------------------------*/
