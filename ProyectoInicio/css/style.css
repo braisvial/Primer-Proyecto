@@ -3,6 +3,9 @@
     2º html, body, *
     3º selectores de elementos (p, a, img,...)
     Comentar cada sección (englobar clases)
+    @media():    PC-> 1140px
+                Tablet -> 768px
+                Movil -> 480px
 */
 
 /*------------------Creación de variables usadas reiteradamente------------------------------------------------------------*/
@@ -80,8 +83,64 @@ color:  #000; HEX
     font-weight: bold;
 } */
 
+.ejercicio_grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+.ejercicio_grid .num1{
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: red;
+    height: 500px;
+}
+.ejercicio_grid .num2{
+    grid-column: 3 / 5 ;
+    grid-row: 2 / 3;
+    background-color: blue ;
+    height: 500px;
+}
+.ejercicio_grid .num3{
+    grid-area: 1 / 4 / 2 / 5;
+    background-color: green;
+    height: 500px;
+}
+
+.ejercicio_grid2{
+    display: grid;
+    grid-template-columns: 10% 40% 20% 20% 10%;
+    grid-template-rows: 200px 600px 200px;
+}
+.ejercicio_grid2 .num4{
+    grid-area: 1 / 2 / 2 / 4;
+    background-color: red;
+}
+.ejercicio_grid2 .num5{
+    grid-area: 2 / 1 / 4 / 2;
+    background-color: blue ;
+}
+.ejercicio_grid2 .num6{
+    grid-area: 2 / 4 / 4 / 6;
+    background-color: green;
+}
+.ejercicio_grid2 .num7{
+    grid-area: 2 / 2 / 4 / 4;
+    background-color: yellow;
+}
+.ejercicio_grid2 .num8{
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: pink;
+}
+.ejercicio_grid2 .num9{
+    grid-area: 1 / 4 / 2 / 6;
+    background-color: orange;
+}
+
+
+
 /*caniuse.com: página necesaria para saber si los diferentes navegadores aceptan las caracteristicas dadas a nuestra web*/
 /*cssmatic.com para estilos de gradientes, sombras...*/
+
+
 
 .ejercicio_box_model{
     height: 500px;
@@ -489,6 +548,17 @@ color:  #000; HEX
     height: 100%;
 }
 
+@media(max-width:1140px){
+    .seccion_video{
+        height: 40rem;
+    }
+}
+
+@media(max-width:767px){
+    .seccion_video{
+        height: 20rem;
+    }
+}
 /*------------------Clases de la sección de interés--------------------------------------------------------------------------------------------------------*/
 
 .seccion_interes {
@@ -663,6 +733,35 @@ color:  #000; HEX
     font-weight: 1000;
 }
 
+@media(max-width:1140px){
+    .seccion_info{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    .seccion_info .izquierda{
+        max-width: 100%;
+    }
+    .seccion_info .derecha{
+        max-width: 100%;
+        align-items: center;
+    }
+}
+
+@media(max-width:767px){
+    .seccion_info .descargar{
+        max-width: 100%;
+        text-align: center;
+    }
+    .seccion_info .derecha h2{
+        max-width: 100%;
+        align-items: flex-start;
+    }
+    .seccion_info .derecha h2 strong{
+        max-width:100%;
+        text-align: left;
+    }
+}
 /*------------------Clases de la sección de las localizaciones---------------------------------------------------------------------------------------------*/
 
 .seccion_localizaciones {
@@ -706,6 +805,21 @@ color:  #000; HEX
     color: white;   
     font-size: 1.4rem;
     margin: 0rem 0rem;    
+}
+
+@media(max-width:1140px){
+    .seccion_localizaciones .localizaciones{
+        display: grid;                                                   
+        grid-template-columns: 1fr 1fr 1fr ;                                             
+        grid-template-rows: 1fr 1fr 1fr;
+}
+}
+@media(max-width:767px){
+    .seccion_localizaciones .localizaciones{
+        display: grid;                                                                      
+        grid-template-columns: 1fr;                                             
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
 }
 
 /*------------------Clases de la sección contactar---------------------------------------------------------------------------------------------------------*/
@@ -821,6 +935,27 @@ color:  #000; HEX
     margin-right: 3rem;
 } */
 
+@media(max-width:1140px){
+    .seccion_contactar .bloques{
+        display: flex;
+        flex-direction: column;
+    }
+    .seccion_contactar .bloques .llamar{
+        flex: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    .seccion_contactar .bloques .escribir{
+        flex: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+    .seccion_contactar .bloques .escribir a{
+        max-width: 60%;
+    }
+}
+
 /*------------------Clases de la sección footer-----------------------------------------------------------------------------------------------------------*/
 
 footer .contenedor{
@@ -865,6 +1000,27 @@ footer .segundo a:hover {
     color: #17a2b8;
 }
 
+@media(max-width:767px){
+    footer .primero{
+        display: flex;
+        flex-direction: column;
+    }
+    footer .primero a{
+        max-width: 100%;
+        margin-right: 0;
+    }
+    footer .segundo{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5rem;
+    }
+    footer .segundo a{
+        margin-bottom: 1rem;
+    }
+}
+
+/*---------------------------------------------------------------------------*/
+
 .boton_fijo{
     position: fixed;
     right: 0;
@@ -882,33 +1038,35 @@ footer .segundo a:hover {
     height: 6rem;
 }
 
-
-
-/* 
-@media (min-width:400px){
-
-    body{
-        background-color: purple;
+@media(max-width:767px){
+    .boton_fijo{
+        display: none;
     }
-    
+    .boton_to_top{
+        display: none;
+    }
 }
 
-@media (min-width:750px){
-
-    body{
-        background-color: yellow;
-    }
-
+/*---------------------------------------------------------------------*/
+.seccion_movil{
+    background-color: var(--color_principal);
+    padding: 1.6rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.seccion_movil p{
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 700;
 }
 
-@media (min-width:900px){
 
-    body{
-        background-color: red;
+@media(min-width:768px){
+    .seccion_movil{
+        display: none;
     }
-
 } 
-
-PC-> 1140px
-Tablet -> 768px
-Movil -> 480px */
