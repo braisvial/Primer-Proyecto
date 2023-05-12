@@ -31,19 +31,56 @@ body{
 
 
 .cabecera{
+    background-color: transparent;
+    z-index: 1200;
     max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 40% 1fr 1fr;
-    background-position: right;
-    background-color: transparent;
-    color: var(--blanco);
+    /* background-position: right; */
+    /* background-color: transparent; */
+    /* color: var(--blanco); */
     font-size: 1.8rem;
     font-weight: 800;
-    text-decoration: none;
+}
+
+.cabecera .logo{
+    grid-column: 1;
+}
+.cabecera .tienda{
+    background-color: aqua;
+    grid-column: 2;
+    /* padding-bottom: ; */
+    text-align: center;
+}
+
+.cabecera .noticias{
+    grid-column: 3;
+    padding: 0px 0px;
+    text-align: center;
+}
+.cabecera .faq{
+    display: inline;
+    grid-column: 4;
+    padding-right: 100px;
+    /* text-align: center; */
+}
+
+.cabecera .acerca{
+    grid-column: 5;
+    padding: 0px 10px;   
 }
 .cabecera .descargar{
-    grid-column: 7/8;
+    grid-column: 7;
+    text-align: center;
 }
+.cabecera .iniciarsesion{
+    background-color: blue;
+    grid-column: 8;
+    padding: 0px 0px;
+    text-align: center;
+}
+
+
 
 /*-------------PORTADA----------------------------------------------*/
 
@@ -172,7 +209,7 @@ body{
 
 footer{
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     /* grid-template-columns: 1fr 1fr 1fr; */
 }
 
@@ -182,6 +219,7 @@ footer a{
 }
 
 footer p{
+    grid-column: 1/4;
     text-align: center;
 }
 
