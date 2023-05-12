@@ -297,7 +297,7 @@ color:  #000; HEX
 /*------------------Clases primera seccion-----------------------------------------------------------------------------------------------------------------*/
 
 .primera_seccion {
-    background-image: url(/ProyectoInicio/img/11641891319_banner_zona_norte.png);       /*Imagen de fondo*/
+    background-image: url(../img/11641891319_banner_zona_norte.png);                    /*Imagen de fondo*/
     background-size: cover;                                                             /*La imagen ocupa toda la sección*/
     background-repeat: no-repeat;                                                       /*La imagen no se repite para ocupar toda la sección*/
     padding-bottom: 18rem;                                                              /*Relleno inferior del bloque*/
@@ -476,14 +476,14 @@ color:  #000; HEX
 }
 
 .seccion_inscribir .marketing {
-    background-image: url(/ProyectoInicio/img/Curso-marketing-digital-norte.png);
+    background-image: url(../img/Curso-marketing-digital-norte.png);
     background-size: cover;                                                           /*La imagen se adapta para entrar en el bloque*/
     background-repeat: no-repeat;  
     margin-right: 1.5rem;  
 }
 
 .seccion_inscribir .programacion_web {
-    background-image: url(/ProyectoInicio/img/Curso-programacion-web-full-stack-norte.png);
+    background-image: url(../img/Curso-programacion-web-full-stack-norte.png);
     background-size: cover;
     background-repeat: no-repeat;
     margin-right: 1.5rem; 
