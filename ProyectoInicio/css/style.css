@@ -665,7 +665,7 @@ color:  #000; HEX
     margin-left: 10px;
     width: 13px;
     height: 12px;
-    background: url(/ProyectoInicio/img/arrow-right-small-green.png);
+    background: url(../img/arrow-right-small-green.png);
     display: inline-block;
 }
 
