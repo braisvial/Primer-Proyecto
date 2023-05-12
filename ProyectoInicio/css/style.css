@@ -510,13 +510,12 @@ color:  #000; HEX
     margin-left: 5rem;
     margin-top: 8rem;
     margin-bottom: 4rem;
+    border: 1px solid white;
 }
 
 .seccion_inscribir .inscribirme:hover {
     color: white;
     background-color: var(--color_principal);
-    border: 1px solid;
-    border-color: white;
 }
 
 @media(max-width:767px){
