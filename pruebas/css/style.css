@@ -20,67 +20,93 @@ body{
     margin: 0 0;
 }
 
-/*-------------CABECERA---------------------------------------------*/
- .cabecera{
-    display:flex;
-    flex-direction: row;
+
+/*-------------PORTADA----------------------------------------------*/
+
+.portada{
+    position: relative;
     max-width: 100vw;
-    /* margin-bottom: -3.4rem; */
+    height: 100vh;
+}
+
+/*~~~~~~~~~~~~~CABECERA~~~~~~~~~~~~*/
+.portada .cabecera{
+    position: absolute;
+    top:0;
+    display: flex;
+    width: 100vw;
+    padding: 1.5rem 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3000;
  }
-.cabecera .izquierda{
+.portada .cabecera .izquierda{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex: 50%;
-    max-width: 50%;
+    flex: 60%;
+    max-width: 60%;
 }
-.cabecera .izquierda p{
-    margin-top: 0;
+.portada .izquierda a{
+    text-decoration: none;
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin: auto 5rem;
+    color: rgb(200, 200, 200);
 }
-.cabecera .derecha{
+.portada .cabecera .izquierda p{
+    align-items: center;
+    color: white;
+}
+.portada .cabecera .derecha{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     flex: 50%;
     max-width: 50%;
 }
-.cabecera .derecha a{
-    margin: 0 5rem;
+.portada .cabecera .derecha a{
+    text-decoration: none;
+    margin: auto 5rem;
+    color: rgb(200, 200, 200);
 }
 
-/*-------------PORTADA----------------------------------------------*/
+/*~~~~~~~~~~~~~FOTOS~~~~~~~~~~~~*/
 
-.portada{
+.fotos_portada{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
-    position: relative;
-    max-width: 100vw;
-    height: 100vh;
+    height: 100%;
 }
 
 /*~~~~~~~~~~~~~FOTO 1~~~~~~~~~~~~*/
 
+.portada{
+    /* z-index: -1; */
+}
 .portada .foto1{
     background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/eldenring/background_c.jpg);
     background-size: cover;
-    background-position: -37.2vw center;
+    /* background-position: -37.2vw center; */
+    background-position: 51% center;
     background-repeat: no-repeat;
-    height: 100vh; 
+    height: 100%; 
     filter: grayscale(100%);
 }
 .portada .foto1:hover{
     z-index: 1000;
-    margin-right:-10vw;
+    margin-right:-50%;
     filter: none;
-    background-position: -32.2vw;
-    transition-property: margin-right, filter, background-position;
-    transition-duration: 1s, 1s, 1s;
+    /* background-position: -32.2vw; */
+    transition-property: margin-right, filter/*, background-position*/;
+    transition-duration: 1s, 2s/*, 1s*/;
 }
 .portada .foto1 img{
-    width: 15vw;
-    display:block;
-    margin: 62vh auto auto auto;
+    width: 30rem;
+    display: block;
+    margin: 60rem auto auto auto;
+    /* display: fixed;
+    margin: 50% 50% auto auto; */
     opacity: 0%;
 }
 .portada .foto1:hover img{
@@ -92,44 +118,35 @@ body{
 .portada .foto1:hover ~ .foto2{
     z-index: 500;
     /* margin-right: -7.5vw; */
-    background-position: -42vw;
+    background-position: 58%;
     transition-property: /*margin-right,*/ background-position;
     transition-duration: 1s/*, 1.4s*/;
     transition-timing-function:linear;
     /* transition-delay: 0.2s; */
 }
-/* .portada .foto1:hover ~ .foto3{
-    z-index: 250;
-    margin-right: -2.5vw;
-    background-position: -27.5vw;
-    transition-property: margin-right, background-position;
-    transition-duration: 1s, 1.2s;
-    transition-timing-function:linear;
-    transition-delay: 0.4s;
-} */
 
 /*~~~~~~~~~~~~~FOTO 2~~~~~~~~~~~~*/
 
 .portada .foto2{
     background-image: url(https://www.gameoverla.com/wp-content/uploads/2022/11/gameoverla-2.jpg);
     background-size: cover;
-    background-position: -45vw center;
+    background-position: 60% center;
     background-repeat: no-repeat;
-    height: 100vh;   
+    height: 100%;   
     filter: grayscale(100%);
 }
 .portada .foto2:hover{
     z-index: 1000;
     filter: none;
-    margin-right:-10vw;
-    background-position: -40vw;
-    transition-property: margin-right, filter, background-position;
-    transition-duration: 2s, 2s, 2s;
+    margin-right:-50%;
+    /* background-position: -40vw; */
+    transition-property: margin-right, filter/*, background-position*/;
+    transition-duration: 1s, 2s/*, 2s*/;
 }
 .portada .foto2 img{
-    width: 12vw;
+    width: 25rem;
     display:block;
-    margin: 56vh auto auto auto;
+    margin: 53rem auto auto auto;
     opacity: 0%;
 }
 .portada .foto2:hover img{
@@ -141,44 +158,36 @@ body{
 .portada .foto2:hover ~ .foto3{
     z-index: 500;
     /* margin-right: -7.5vw; */
-    background-position: -25vw;
+    background-position: 55%;
     transition-property: /*margin-right,*/ background-position;
     transition-duration: /*1.2s,*/ 1s;
     transition-timing-function:linear;
     /* transition-delay: 0.2s; */
 }
-/* .portada .foto2:hover ~ .foto4{
-    z-index: 250;
-    margin-right: -2.5vw;
-    background-position: -35.5vw;
-    transition-property: margin-right, background-position;
-    transition-duration: 1.4s, 1.6s;
-    transition-timing-function:linear;
-    transition-delay: 0.4s;
-} */
 
 /*~~~~~~~~~~~~~FOTO 3~~~~~~~~~~~~*/
 
 .portada .foto3{
     background-image: url(https://media.revistagq.com/photos/6439162c8820974de0de678a/4:3/w_2279,h_1709,c_limit/Final-Fantasy-xvi.jpeg);
     background-size: cover;
-    background-position: -30vw center;
+    background-position: 60% center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
     filter: grayscale(100%);
 }
 .portada .foto3:hover{
     z-index: 1000;
     filter: none;
-    background-position:-25vw;
-    margin:0 -5vw 0 -5vw;
-    transition-property: margin, filter, background-position;
-    transition-duration: 2s, 2s, 2s;    
+    /* background-position:60%; */
+    margin:0 -25% 0 -25%;
+    transition-property: margin, filter, /*background-position*/;
+    transition-duration: 1s, 1s/*, 2s*/;
+    transition-timing-function:linear;    
 }
 .portada .foto3 img{
-    width: 15vw;
+    width: 30rem;
     display:block;
-    margin: 62vh auto auto auto;
+    margin: 60rem auto auto auto;
     opacity: 0%;
 }
 .portada .foto3:hover img{
@@ -199,7 +208,7 @@ body{
 .portada .foto3:hover ~ .foto4{
     z-index: 500;
     /* margin-right: -5vw; */
-    background-position: -36.5vw;
+    background-position: 48%;
     transition-property: /*margin-right,*/ background-position;
     transition-duration: /*1.2s,*/ 1s;
     transition-timing-function:linear;
@@ -211,25 +220,25 @@ body{
 .portada .foto4{
     background-image: url(https://ngpmedia.com/wp-content/uploads/2023/04/deadislandmain.jpg);
     background-size: cover;
-    background-position: -38vw center;
+    background-position: 55% center;
     background-repeat: no-repeat;
     display: block;
-    height: 100vh;  
+    height: 100%;  
     z-index: 4;
     filter: grayscale(100%);
 }
 .portada .foto4:hover{
     z-index: 1000;
     filter: none;
-    margin-left:-10vw;
-    background-position: -33vw;
-    transition-property: margin-left, filter, background-position;
-    transition-duration: 2s, 2s, 2s;
+    margin-left:-50%;
+    /* background-position: -33vw; */
+    transition-property: margin-left, filter/*, background-position*/;
+    transition-duration: 2s, 2s/*, 2s*/;
 }
 .portada .foto4 img{
-    width: 15vw;
+    width: 30rem;
     display:block;
-    margin: 60vh auto auto auto;
+    margin: 58rem auto auto auto;
     opacity: 0%;
 }
 .portada .foto4:hover img{
@@ -241,45 +250,36 @@ body{
 .portada .foto4:hover ~ .foto3{
     z-index: 500;
     /* margin-left: -7.5vw; */
-    background-position: -35vw;
+    background-position: 65%;
     transition-property: /*margin-left,*/ background-position;
     transition-duration: /*1.2s,*/ 1s;
     transition-timing-function:linear;
     /* transition-delay: 0.2s; */
 }
-/* .portada .foto4:hover ~ .foto2{
-    z-index: 250;
-    margin-left: -2.5vw;
-    background-position: -44.5vw;
-    transition-property: margin-left, background-position;
-    transition-duration: 1.4s, 1.6s;
-    transition-timing-function:linear;
-    transition-delay: 0.4s;
-} */
 
 /*~~~~~~~~~~~~~FOTO 5~~~~~~~~~~~~*/
 
 .portada .foto5{
     background-image: url(https://images8.alphacoders.com/129/thumb-1920-1292495.jpg);
     background-size: cover;
-    background-position: -26.5vw center;
+    background-position: 50% center;
     background-repeat: no-repeat;
     display: block;
-    height: 100vh;  
+    height: 100%;  
     filter: grayscale(100%);
 }
 .portada .foto5:hover{
     z-index: 1000;
     filter: none;
-    margin-left:-10vw;
-    background-position: -21.5vw;
-    transition-property: margin-left, filter, background-position;
-    transition-duration: 2s, 2s, 2s;
+    margin-left:-50%;
+    /* background-position: -21.5vw; */
+    transition-property: margin-left, filter/*, background-position*/;
+    transition-duration: 2s, 2s/*, 2s*/;
 }
 .portada .foto5 img{
-    width: 17vw;
+    width: 35rem;
     display:block;
-    margin: 60vh auto auto auto;
+    margin: 58rem auto auto auto;
     opacity: 0%;
 }
 .portada .foto5:hover img{
@@ -291,23 +291,12 @@ body{
 .portada .foto5:hover + .foto4{
     z-index: 500;
     /* margin-left: -7.5vw; */
-    background-position: -43vw;
+    background-position: 60%;
     transition-property: /*margin-right,*/ background-position;
     transition-duration: /*1.2s,*/ 1s;
     transition-timing-function:linear;
     /* transition-delay: 0.2s; */
 }
-/* .portada .foto5:hover ~ .foto3{
-    z-index: 250;
-    margin-right: -2.5vw;
-    background-position: -32.5vw;
-    transition-property: margin-left, background-position;
-    transition-duration: 1.4s, 1.6s;
-    transition-timing-function:linear;
-    transition-delay: 0.4s;
-} */
-
-
 
 /*-------------PIE DE PÁGINA----------------------------------------*/
 
