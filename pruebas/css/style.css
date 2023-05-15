@@ -1,9 +1,7 @@
 /*-------------VARIABLES--------------------------------------------*/
 
 :root{
---negro: black;
---blanco: white;
---gris: rgba(22, 22, 22, 0.952);
+    --fuente_header: 'Orbitron', sans-serif;    
 }
 
 /*-------------HTML-------------------------------------------------*/
@@ -35,7 +33,7 @@ body{
     top:0;
     display: flex;
     width: 100vw;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 3000;
  }
@@ -43,18 +41,15 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex: 60%;
-    max-width: 60%;
+    flex: 70%;
+    max-width: 70%;
 }
 .portada .izquierda a{
     text-decoration: none;
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: bold;
+    font-family: var(--fuente_header);
     margin: auto 5rem;
-    color: rgb(200, 200, 200);
-}
-.portada .cabecera .izquierda p{
-    align-items: center;
     color: white;
 }
 .portada .cabecera .derecha{
@@ -66,8 +61,11 @@ body{
 }
 .portada .cabecera .derecha a{
     text-decoration: none;
+    font-family: var(--fuente_header);
+    font-size: 2rem;
+    font-weight: bold;
     margin: auto 5rem;
-    color: rgb(200, 200, 200);
+    color: white;
 }
 
 /*~~~~~~~~~~~~~FOTOS~~~~~~~~~~~~*/
@@ -81,13 +79,9 @@ body{
 
 /*~~~~~~~~~~~~~FOTO 1~~~~~~~~~~~~*/
 
-.portada{
-    /* z-index: -1; */
-}
 .portada .foto1{
     background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/eldenring/background_c.jpg);
     background-size: cover;
-    /* background-position: -37.2vw center; */
     background-position: 51% center;
     background-repeat: no-repeat;
     height: 100%; 
@@ -97,16 +91,13 @@ body{
     z-index: 1000;
     margin-right:-50%;
     filter: none;
-    /* background-position: -32.2vw; */
-    transition-property: margin-right, filter/*, background-position*/;
-    transition-duration: 1s, 2s/*, 1s*/;
+    transition-property: margin-right, filter;
+    transition-duration: 2s, 2s;
 }
 .portada .foto1 img{
     width: 30rem;
     display: block;
     margin: 60rem auto auto auto;
-    /* display: fixed;
-    margin: 50% 50% auto auto; */
     opacity: 0%;
 }
 .portada .foto1:hover img{
@@ -117,12 +108,10 @@ body{
 }
 .portada .foto1:hover ~ .foto2{
     z-index: 500;
-    /* margin-right: -7.5vw; */
-    background-position: 58%;
-    transition-property: /*margin-right,*/ background-position;
-    transition-duration: 1s/*, 1.4s*/;
+    background-position: 50%;
+    transition-property: background-position;
+    transition-duration: 1s;
     transition-timing-function:linear;
-    /* transition-delay: 0.2s; */
 }
 
 /*~~~~~~~~~~~~~FOTO 2~~~~~~~~~~~~*/
@@ -130,7 +119,7 @@ body{
 .portada .foto2{
     background-image: url(https://www.gameoverla.com/wp-content/uploads/2022/11/gameoverla-2.jpg);
     background-size: cover;
-    background-position: 60% center;
+    background-position: 62.5% center;
     background-repeat: no-repeat;
     height: 100%;   
     filter: grayscale(100%);
@@ -224,7 +213,6 @@ body{
     background-repeat: no-repeat;
     display: block;
     height: 100%;  
-    z-index: 4;
     filter: grayscale(100%);
 }
 .portada .foto4:hover{
