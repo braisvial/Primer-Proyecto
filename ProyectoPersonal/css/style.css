@@ -92,7 +92,8 @@ body{
     margin-right:-50%;
     filter: none;
     transition-property: margin-right, filter;
-    transition-duration: 2s, 2s;
+    transition-duration: 1s, 1s;
+    transition-timing-function: steps(144);
 }
 .portada .foto1 img{
     width: 30rem;
@@ -293,10 +294,8 @@ body{
     bottom:0;    
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 3000;
-    
+    z-index: 3000;    
  }
-
  .portada .pie_pagina .contenedor{
     display: flex;
     flex-direction: column;
@@ -306,23 +305,49 @@ body{
  .portada .pie_pagina .logos_redes{
     margin: 1rem 1rem;
  }
+ .portada .pie_pagina .logos_redes a{
+    margin: 0 1rem 0 0;
+    text-decoration: none;
+ }
  .portada .pie_pagina .logos_redes .instagram img{
     width: 2%;
+    text-decoration: none;
  }
  .portada .pie_pagina .logos_redes .twitter img{
     width: 2%;
+    text-decoration: none;
  }
  .portada .pie_pagina .logos_redes .facebook img{
     width: 2%;
- }
- .portada .pie_pagina .texto_footer{
-    padding: 0.5rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
- }
-
- .portada .pie_pagina .texto_footer p{
+    text-decoration: none;
+ } 
+ .portada .pie_pagina .contenido{    
     color: white;
+    font-family: var(--fuente_header);
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 0;
+    border-top: 2px solid ;
+    border-image: linear-gradient(to left, black 0%, white 50%, black 100%) 1;
  }
+.portada .pie_pagina .contenedor .izquierda_footer{
+    display:flex;
+    flex: 70%;
+    width: 70%;
+}
+
+.portada .pie_pagina .contenedor .derecha_footer{
+    display:flex;
+    flex: 30%;
+    width: 30%;
+    justify-content: flex-end;
+}
+.portada .pie_pagina .contenedor .derecha_footer img{
+    width: 5rem;
+    height: 5rem;
+    margin: 0 2rem;
+}
 
 
  
