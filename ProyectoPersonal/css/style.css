@@ -51,6 +51,7 @@ body{
     font-family: var(--fuente_header);
     margin: auto 5rem;
     color: white;
+    opacity: 70%;
 }
 
 .logo_web img{
@@ -71,6 +72,7 @@ body{
     font-weight: bold;
     margin: auto 5rem;
     color: white;
+    opacity: 70%;
 }
 
 /*~~~~~~~~~~~~~FOTOS~~~~~~~~~~~~*/
@@ -316,17 +318,33 @@ body{
  .portada .pie_pagina .logos_redes .instagram img{
     width: 2%;
     text-decoration: none;
+    opacity: 50%;
+    transition: opacity 1s ease;
+ }
+ .portada .pie_pagina .logos_redes .instagram img:hover{
+    opacity: 100%;
  }
  .portada .pie_pagina .logos_redes .twitter img{
     width: 2%;
     text-decoration: none;
+    opacity: 50%;
+    transition: opacity 1s ease;
+ }
+ .portada .pie_pagina .logos_redes .twitter img:hover{
+    opacity: 100%;
  }
  .portada .pie_pagina .logos_redes .facebook img{
     width: 2%;
     text-decoration: none;
+    opacity: 50%;
+    transition: opacity 1s ease;
  } 
+ .portada .pie_pagina .logos_redes .facebook img:hover{
+    opacity: 100%;
+ }
  .portada .pie_pagina .contenido{    
     color: white;
+    opacity: 60%;
     font-family: var(--fuente_header);
     font-size: 12px;
     display: flex;
@@ -351,6 +369,11 @@ body{
     width: 5rem;
     height: 5rem;
     margin: 0 2rem;
+    opacity: 50%;
+    transition: opacity 1s ease;
+}
+.portada .pie_pagina .contenedor .derecha_footer .unreal img:hover{
+    opacity: 100%;    
 }
 
 
