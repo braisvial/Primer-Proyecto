@@ -52,6 +52,11 @@ body{
     margin: auto 5rem;
     color: white;
 }
+
+.logo_web img{
+    width: 8rem;
+    height: 8rem;
+}
 .portada .cabecera .derecha{
     display: flex;
     flex-direction: row;
@@ -92,7 +97,7 @@ body{
     margin-right:-50%;
     filter: none;
     transition-property: margin-right, filter;
-    transition-duration: 1s, 1s;
+    transition-duration: 1s, 2s;
     transition-timing-function: steps(144);
 }
 .portada .foto1 img{
@@ -129,9 +134,9 @@ body{
     z-index: 1000;
     filter: none;
     margin-right:-50%;
-    /* background-position: -40vw; */
-    transition-property: margin-right, filter/*, background-position*/;
-    transition-duration: 1s, 2s/*, 2s*/;
+    transition-property: margin-right, filter;
+    transition-duration: 1s, 2s;
+    transition-timing-function: steps(144);
 }
 .portada .foto2 img{
     width: 25rem;
@@ -168,11 +173,10 @@ body{
 .portada .foto3:hover{
     z-index: 1000;
     filter: none;
-    /* background-position:60%; */
     margin:0 -25% 0 -25%;
-    transition-property: margin, filter, /*background-position*/;
-    transition-duration: 1s, 1s/*, 2s*/;
-    transition-timing-function:linear;    
+    transition-property: margin, filter;
+    transition-duration: 1s, 2s;
+    transition-timing-function: steps(144);  
 }
 .portada .foto3 img{
     width: 30rem;
@@ -220,9 +224,9 @@ body{
     z-index: 1000;
     filter: none;
     margin-left:-50%;
-    /* background-position: -33vw; */
-    transition-property: margin-left, filter/*, background-position*/;
-    transition-duration: 2s, 2s/*, 2s*/;
+    transition-property: margin-left, filter;
+    transition-duration: 1s, 2s;
+    transition-timing-function: steps(144);
 }
 .portada .foto4 img{
     width: 30rem;
@@ -261,9 +265,9 @@ body{
     z-index: 1000;
     filter: none;
     margin-left:-50%;
-    /* background-position: -21.5vw; */
-    transition-property: margin-left, filter/*, background-position*/;
-    transition-duration: 2s, 2s/*, 2s*/;
+    transition-property: margin-left, filter;
+    transition-duration: 1s, 2s;
+    transition-timing-function: steps(144);
 }
 .portada .foto5 img{
     width: 35rem;
