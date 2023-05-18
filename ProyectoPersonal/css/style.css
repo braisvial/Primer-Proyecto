@@ -32,7 +32,7 @@ body{
     position: absolute;
     top:0;
     display: flex;
-    width: 100vw;
+    width: 100%;
     padding: 2rem 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 3000;
@@ -44,35 +44,91 @@ body{
     flex: 70%;
     max-width: 70%;
 }
-.portada .izquierda a{
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: var(--fuente_header);
-    margin: auto 5rem;
-    color: white;
-    opacity: 70%;
+.portada .izquierda .logo_web{
+    display: flex;
+    flex: 10%;
+    width: 10%;
+    margin-left: 5rem;
 }
-
 .logo_web img{
     width: 8rem;
     height: 8rem;
+    opacity: 70%;
+    transition-property: opacity, filter;
+    transition-duration: 1s, 1s;
+    transition-timing-function: ease; 
+}
+.logo_web img:hover{
+    opacity:100%;
+    filter: drop-shadow(5px 5px 10px red);
+}
+.portada .izquierda .enlaces{  
+    flex: 90%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 2fr;  
+    align-items: center;  
+    text-align: center;
+}
+.portada .izquierda .enlaces a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: var(--fuente_header);
+    color: white;
+    opacity: 70%;
+    transition: opacity 1s ease;
+    transition: font-size 1s ease;
+}
+.portada .izquierda .tienda:hover{
+    opacity:100%;
+    font-size: 2rem;
+}
+.portada .izquierda .noticias:hover{
+    opacity:100%;
+    font-size: 2rem;
+}
+.portada .izquierda .faq:hover{
+    opacity:100%;
+    font-size: 2rem;
+}
+.portada .izquierda .acerca:hover{
+    opacity:100%;
+    font-size: 2rem;
 }
 .portada .cabecera .derecha{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 30% 30% ;
     justify-content: flex-end;
     flex: 50%;
     max-width: 50%;
+    align-items: center;  
+    text-align: center;
 }
 .portada .cabecera .derecha a{
     text-decoration: none;
     font-family: var(--fuente_header);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
+    text-transform: uppercase;
     margin: auto 5rem;
     color: white;
     opacity: 70%;
+    transition: opacity 1s ease;
+    transition: font-size 1s ease;
+    
+}
+.portada .derecha .descargar{
+    grid-column: 2/3;
+}
+.portada .derecha .descargar:hover{
+    opacity:100%;
+    font-size: 2rem;
+}
+.portada .derecha .iniciar_sesion:hover{
+    opacity:100%;
+    font-size: 2rem;
 }
 
 /*~~~~~~~~~~~~~FOTOS~~~~~~~~~~~~*/
@@ -82,6 +138,7 @@ body{
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
     height: 100%;
+    max-width: 100vw;
 }
 
 /*~~~~~~~~~~~~~FOTO 1~~~~~~~~~~~~*/
@@ -369,6 +426,18 @@ body{
     width: 5rem;
     height: 5rem;
     margin: 0 2rem;
+}
+.portada .pie_pagina .contenedor .derecha_footer .logo_footer img{
+    opacity: 50%;
+    transition-property: opacity, filter;
+    transition-duration: 1s, 1s;
+    transition-timing-function: ease; 
+}
+.portada .pie_pagina .contenedor .derecha_footer .logo_footer img:hover{
+    opacity: 100%;
+    filter: drop-shadow(5px 5px 10px red);
+}
+.portada .pie_pagina .contenedor .derecha_footer .unreal img{
     opacity: 50%;
     transition: opacity 1s ease;
 }
