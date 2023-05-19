@@ -8,12 +8,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de GameClub</title>
 
-    <link rel="preload" href="" as="style">
-    <link href="" rel="stylesheet">
+    <link rel="preload" href="/ProyectoPersonal/css/style_acerca.css" as="style">
+    <link href="/ProyectoPersonal/css/style_acerca.css" rel="stylesheet">
 
 </head>
 
 <body>
+
+    <header class="cabecera">
+
+        <div class="izquierda">
+            <div class="logo_web">
+                    <a href="/ProyectoPersonal/index.html">
+                        <img src="./img/logo_gameclub.png" alt="logo">
+                    </a>
+            </div>
+
+            <div class="enlaces">
+            <a href="/ProyectoPersonal/tienda.html" class="tienda">Tienda</a>
+            <a href="/ProyectoPersonal/noticias.html" class="noticias">Noticias</a>
+            <a href="/ProyectoPersonal/faq.html" class="faq">Preguntas Frecuentes</a>
+            <a href="/ProyectoPersonal/acerca.html" class="acerca">Acerca de GameClub</a>
+            </div>                
+        </div>
+
+        <div class="derecha">
+
+                <a href="" class="descargar">
+                    <img src="./img/download.svg"> 
+                    <p>Descargar</p>
+                </a>
+
+                <a href="" class="iniciar_sesion">
+                    <img src="./img/user_login.svg">
+                    <p>Iniciar Sesión</p>
+                </a>
+
+        </div>
+
+    </header>
 
     <section class="seccion_acerca">
 
@@ -130,41 +163,39 @@
     
 </body>
 
-<footer>
-
-    <section class="contenido_footer">
-
-        <div class="footer_izq">
-            <p>© 2023, GameClub, Inc. Todos los derechos reservados.</p>
-        </div>
-
-        <div class="enlaces_izq">
-
-            <a href="">Términos de servicio</a>
-            
-            <a href="">Política de privacidad</a>
-        
-            <a href="">Política de reembolso</a>
-
-            <a href="">Seguridad de la cuenta</a>
-
-        </div>
-
-        <div class="logos_derecha">
-
-            <a href="/ProyectoPersonal/index.html">
-                <img src="/ProyectoPersonal/img/logo_gameclub.png">
+<footer class="pie_pagina">
+    <div class="contenedor_footer">
+        <div class="logos_redes">
+            <a href="https://www.instagram.com/" class="instagram">
+                <img src="./img/instagram.png">
             </a>
-
-            <a href="">
-                <img src="/ProyectoPersonal/img/unreal.png">
+            <a href="https://twitter.com/?lang=es" class="twitter">
+                <img src="./img/twitter.png">
             </a>
-
+            <a href="https://es-es.facebook.com/" class="facebook">
+                <img src="./img/facebook.png">
+            </a>
         </div>
-
-    </section>
-
-
+        <div class="contenido">
+            <div class="footer_izq">
+                <p>© 2023, GameClub, Inc. Todos los derechos reservados.</p>
+                <div class="enlaces_izq">
+                    <a href="">Términos de servicio</a>                
+                    <a href="">Política de privacidad</a>            
+                    <a href="">Política de reembolso</a>    
+                    <a href="">Seguridad de la cuenta</a>    
+                </div>
+            </div>        
+            <div class="logos_derecha">
+                <a class="logo_gamclub" href="/ProyectoPersonal/index.html">
+                    <img src="/ProyectoPersonal/img/logo_gameclub.png">
+                </a>
+                <a class="logo_unreal" href="https://www.unrealengine.com/en-US/unreal-engine-5">
+                    <img src="/ProyectoPersonal/img/unreal.png">
+                </a>
+            </div>
+        </div>
+    </div>
 </footer>
 
 </html>

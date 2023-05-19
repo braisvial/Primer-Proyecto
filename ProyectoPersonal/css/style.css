@@ -1,7 +1,9 @@
 /*-------------VARIABLES--------------------------------------------*/
 
 :root{
-    --fuente_header: 'Orbitron', sans-serif;    
+    --fuente_header: 'Orbitron', sans-serif; 
+    --color_principal: rgb(123, 104, 238); 
+    --color_secundario: #2a2a2a;   
 }
 
 /*-------------HTML-------------------------------------------------*/
@@ -33,7 +35,7 @@ body{
     top:0;
     display: flex;
     width: 100%;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 3000;
  }
@@ -60,7 +62,7 @@ body{
 }
 .logo_web img:hover{
     opacity:100%;
-    filter: drop-shadow(5px 5px 10px red);
+    filter: drop-shadow(5px 5px 10px var(--color_principal));
 }
 .portada .izquierda .enlaces{  
     flex: 90%;
@@ -99,37 +101,87 @@ body{
 }
 .portada .cabecera .derecha{
     display: grid;
-    grid-template-columns: 50% 1fr 1fr ;
+    grid-template-columns: 45% 1fr 1fr ;
     justify-content: flex-end;
     flex: 50%;
     max-width: 50%;
     align-items: center;  
     text-align: center;
 }
-.portada .cabecera .derecha a{
+.derecha .descargar{
+    grid-column: 2/3;
+}
+.derecha .descargar{
+    display:flex; 
     text-decoration: none;
+    justify-content: center;
+}
+.derecha .descargar img{
+    margin-right: 1rem;
+    height: 1.7rem;
+    opacity: 70%;
+    transition-property: opacity height;
+    transition-duration: 1s, 1s;
+    transition-timing-function: ease;
+}
+.derecha .descargar p{    
+    text-transform: uppercase;
     font-family: var(--fuente_header);
     font-size: 1.5rem;
     font-weight: bold;
-    text-transform: uppercase;
     color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 0;
+    opacity: 70%;   
+    transition-property: opacity font-size;
+    transition-duration: 1s, 1s;
+    transition-timing-function: ease;
+}
+.derecha .descargar:hover p{
+    opacity:100%;
+    font-size: 2rem;
+}
+.derecha .descargar:hover img{
+    opacity:100%;
+    height: 2.3rem;
+}
+.derecha .iniciar_sesion{
+    display:flex; 
+    text-decoration: none;
+    justify-content: center;
+}
+.derecha .iniciar_sesion img{
+    margin-right: 1rem;
+    height: 1.7rem;
     opacity: 70%;
-    transition: opacity 1s ease;
-    transition: font-size 1s ease;
-    
+    transition-property: opacity height;
+    transition-duration: 1s, 1s;
+    transition-timing-function: ease;
 }
-.portada .derecha .descargar{
-    grid-column: 2/3;
-}
-.portada .derecha .descargar:hover{
-    opacity:100%;
-    font-size: 2rem;
-}
-.portada .derecha .iniciar_sesion:hover{
-    opacity:100%;
-    font-size: 2rem;
+.derecha .iniciar_sesion p{    
+    text-transform: uppercase;
+    font-family: var(--fuente_header);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 0;
+    opacity: 70%;   
+    transition-property: opacity font-size;
+    transition-duration: 1s, 1s;
+    transition-timing-function: ease;
 }
 
+.derecha .iniciar_sesion:hover p{
+    opacity:100%;
+    font-size: 2rem;
+}
+.derecha .iniciar_sesion:hover img{
+    opacity:100%;
+    height: 2.3rem;
+}   
 /*~~~~~~~~~~~~~FOTOS~~~~~~~~~~~~*/
 
 .fotos_portada{
@@ -434,7 +486,7 @@ body{
 }
 .portada .pie_pagina .contenedor .derecha_footer .logo_footer img:hover{
     opacity: 100%;
-    filter: drop-shadow(5px 5px 10px red);
+    filter: drop-shadow(5px 5px 10px var(--color_principal));
 }
 .portada .pie_pagina .contenedor .derecha_footer .unreal img{
     opacity: 50%;
