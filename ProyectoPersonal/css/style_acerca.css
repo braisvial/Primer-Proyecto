@@ -24,7 +24,7 @@ body{
 /*-------------CONTENEDOR-------------------------------------------*/
 
 .contenedor{
-    max-width: 80%;
+    max-width: 60%;
     margin: 0 auto;
 }
 
@@ -272,8 +272,13 @@ body{
     margin-top: 1rem;
  }
 
-.pie_pagina .contenido .logos_derecha img{
+ .pie_pagina .contenido .logos_derecha img{
     width: 5rem;
     height: 5rem;
     margin: 0 2rem;
+    transition: opacity 1s ease;
+    opacity: 50%;
+}
+.pie_pagina .contenido .logos_derecha img:hover{
+    opacity: 100%;
 }

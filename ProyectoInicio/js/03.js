@@ -20,10 +20,10 @@ console.log(producto.precio);
 producto.precio = 500;                                  //Modificar una propiedad dentro de un objeto
 console.log(`${producto.precio}`); 
 
-producto.categoria = "relojes";                       //Añadir una nueva propiedad dentro del objeto
+producto.categoria = "relojes";                         //Añadir una nueva propiedad dentro del objeto
 console.table(producto);
 
-delete producto.disponible;                            //Eliminar una propiedad del objeto
+delete producto.disponible;                             //Eliminar una propiedad del objeto
 console.table(producto); 
 
 //-----Crear/Eliminar variables a partir de propiedades-----
@@ -64,6 +64,8 @@ console.log(`La playa ${nombre} situada en ${ubicacion} tiene una temperatura de
 playa.temperatura_agua = 25;                            //Modificar una propiedad
 console.log(playa.temperatura_agua)
 
+//-----CONGELAR OBJETOS-----
+
 Object.freeze(playa);                                   //No se pueda añadir, eliminar o modificas propiedades del objeto
 // playa.sombrillas = false;
 console.table(playa)
@@ -73,7 +75,7 @@ Object.seal(playa);                                     //No se pueda añadir o 
 
 //-----CREAR COPIAS DE OBJETOS-----
 
-let nuevo_producto = {...producto,...playa}             //Crea un nuevo objeto copiando otros objetos
+let nuevo_producto = {...producto,...playa}             //Crea un nuevo objeto copiando otros objetos, SPREAD OPERATOR
 console.table(nuevo_producto)
 
 //-----EJERCICIO-----
