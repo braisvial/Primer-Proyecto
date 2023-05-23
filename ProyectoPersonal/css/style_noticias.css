@@ -309,6 +309,7 @@ body{
     padding: 0.5rem 0;
     border-top: 2px solid ;
     border-image: linear-gradient(to left, black 0%, white 50%, black 100%) 1;
+    margin-bottom: 1.5rem;
  }
  .pie_pagina .contenido .footer_izq{
     display: flex;

@@ -19,7 +19,7 @@ console.table(meses);
 let dia_semana = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"];
 console.table(dia_semana)   
 
-let mezcla_datos = ["dato1", 100, true, null, [1, 2, 3], objeto = {propiedad:"valor"} ];
+let mezcla_datos = ["dato1", 100, true, null, [1, 2, 3], objeto = {propiedad:"valor"} ];        //Un array puede tener diferentes tipos de datos dentro
 console.table(mezcla_datos);
 
 console.log(mezcla_datos[4]);                               //Visualizar un elemento del array
@@ -52,9 +52,10 @@ dia_semana.forEach(function(dia){
 
 numeros[5] = 60;                            //Añadimos un nuevo valor a un índice vacío
 numeros[3] = 70;                            //Modificamos el valor del indice seleccionado
+numeros.length;                             //Número de elementos del array
 numeros.push(80)                            
 numeros.push(90, 100, 110)                  //Añade uno o varios elementos al final del array
-numeros.unshift(-30, -20, -10)              //Añade valores al principio del array y desplaza los elementos tandtos indices como nuevos elementos
+numeros.unshift(-30, -20, -10)              //Añade valores al principio del array y desplaza los elementos tantos índices como nuevos elementos
 numeros.pop()                               //Elimina el último elemento del array
 numeros.shift()                             //Elimina el primer elemento del array
 numeros.splice(2, 3)                        //Elimina 3 elementos desde el índice 2
