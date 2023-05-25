@@ -1,4 +1,4 @@
-//-----FUNCIONES-----
+//-----FUNCIONES-----\\
 
 /*Formas de crear funciones:
     Declaración de la función
@@ -6,7 +6,7 @@
     Iife
 */
 
-//DECLARACIÓN DE LA FUNCIÓN
+//-----DECLARACIÓN DE LA FUNCIÓN-----\\
 function sumar(n1, n2){                                 //Argumento de la función
     console.log(n1 + n2);                               //Cuerpo de la función
 }
@@ -15,14 +15,14 @@ sumar(10, 20);                                          //Llamada a la función 
 sumar(20.35, 252.2);
 
 
-//EXPRESIÓN DE LA FUNCIÓN
+//-----EXPRESIÓN DE LA FUNCIÓN-----\\
 let sumar2 = function(n1, n2){
     console.log(n1 + n2);
 }
 
 sumar2(3, 12.5);
 
-//IIFE
+//-----IIFE-----\\
 (function(){                                            //Se crea y llama al momento
     console.log("Esto es una funcion mediante IIFE")
 })();
@@ -267,23 +267,134 @@ function redondear(numero){
 console.log(redondear(4.2))
 
 //-----EJERCICIO-----
-//----- -----
+//-----Eliminar espacios en blanco al inicio y al final de un string-----
 
+function no_espacios(string){
+    return string.trim()
+}
 
-
-//-----EJERCICIO-----
-//----- -----
-
-
-
-//-----EJERCICIO-----
-//----- -----
-
-
+console.log(no_espacios(" esto es una cadena de texto "))
 
 //-----EJERCICIO-----
+//-----Reemplazar una palabra por otra en un string-----
 
+function reemplazar(cadena, palabra1, palabra2){
+    return cadena.replace(palabra1, palabra2)
+}
 
+let cadena_texto = "esto es una cadena de texto"
+console.log(reemplazar(cadena_texto, "una cadena de texto", "un string"))
 
 //-----EJERCICIO-----
+//-----Comprobar si es mayor de edad-----
 
+function mayor_edad(edad){
+    if (edad >= 18){
+        return "Es mayor de edad"
+    }
+    else{
+        return "No es mayor de edad"
+    }
+}
+
+console.log(mayor_edad(19))
+
+//-----EJERCICIO-----
+//-----Obtener los primeros n caracteres de un string-----
+
+function n_caracteres(string, n){
+    return string.slice(0, n)
+}
+
+console.log(n_caracteres("esto es una cadena de texto", 13))
+
+//-----EJERCICIO-----
+//-----Obtener los últimos n caracteres de un string-----
+
+function n_ultimos(string, n){
+    return string.slice(string.length - n)
+}
+
+console.log(n_ultimos("esto es una cadena de texto", 14))
+
+//-----EJERCICIO-----
+//-----Comprobar si un número es par o impar-----
+
+function par_impar(num){
+    if (num % 2 === 0){
+        return `${num} es un número par`
+    }
+    else{
+        return `${num} es un número impar`
+    }
+}
+
+console.log(par_impar(21))
+
+//-----EJERCICIO-----
+//-----Concatenar 2 strings y convertir a mayúsculas-----
+
+function concatenar_mayus(texto1, texto2){
+    let nuevo_texto = texto1 + texto2;
+    return nuevo_texto.toUpperCase()
+}
+
+let texto_1 = "Esto es una cadena de texto";
+let texto_2 = " y esto es otra cadena de texto";
+console.log(concatenar_mayus(texto_1, texto_2))
+
+//-----EJERCICIO-----
+//-----Comprobar si una variable es un boolean-----
+
+function tipo_bool(dato){
+    return typeof dato === "boolean"
+}
+
+un_dato = true;
+console.log(tipo_bool(un_dato))
+
+//-----EJERCICIO-----
+//-----Pasar de minutos a segundos-----
+
+function min_seg(){
+    let seg = date.getMinutes() * 60;
+    return seg
+}
+
+console.log(`${date.getMinutes()} son ${min_seg()} segundos`)
+
+
+
+//-----MÉTODOS DE PROPIEDAD-----\\
+
+//Son funciones que se aplican a objetos como una propiedad\\
+
+const reproductor = {
+    reproducir: function (nc){
+        console.log(`Reproduciendo canción con ID: ${nc}`)
+    },
+    pausar: function (){
+        console.log(`Pausando`)
+    },
+    crea_playlist: function(nombre){
+        console.log(`Creando PlayList: ${nombre}`)
+    }
+}
+
+console.log(reproductor.reproducir(16))
+
+reproductor.borrar_cancion = function(nc){
+    console.log(`Borrando canción con ID: ${nc}`)
+}
+
+
+
+//-----FUNCIONES DE FLECHA / ARROW FUNCTION-----\\
+
+/* Expresion funcion -> let nombre = function(argumento1, argumento2){
+                                     console.log(argumento1)
+                        }                                               */
+
+/* Arrow function -> let nombre = argumento1 => console.log(argumento1); 
+                     let nombre = (argumento1 = 10) => console.log(argumento1); 
+                     let nombre = (argumento1, argumento2) => console.log(argumento1 + argumneto2); */
