@@ -53,8 +53,8 @@ body {
 }
 
 .logo_web img {
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     opacity: 70%;
     transition-property: opacity, filter;
     transition-duration: 1s, 1s;
