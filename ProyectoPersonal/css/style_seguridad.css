@@ -17,13 +17,20 @@ html {
 
 body {
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0 0;
     background-color: var(--color_principal);
 }
 
+/*-------------CONTENEDOR-------------------------------------------*/
+
+.contenedor {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
 /*-------------CABECERA---------------------------------------------*/
 .cabecera {
-    position: fixed;
     display: flex;
     width: 100%;
     padding: 1rem 0;
@@ -81,14 +88,9 @@ body {
     transition: font-size 1s ease;
 }
 
-.izquierda .enlaces .tienda {
-    display: block;
+.izquierda .tienda:hover {
     opacity: 100%;
     font-size: 2rem;
-    padding-top: 0.9rem;
-    padding-bottom: 0.9rem;
-    border-bottom: 3px solid rgb(123, 104, 238);
-
 }
 
 .izquierda .noticias:hover {
@@ -200,144 +202,22 @@ body {
     height: 2.3rem;
 }
 
-/*-------------CONTENEDOR-------------------------------------------*/
-
-.contenedor {
-    max-width: 60%;
-    margin-left: 50rem;
+/*--------------BODY-------------------------------------------------*/
+.asegurando{
+    margin: 5rem auto;
 }
 
-/*-------------SECCIÓN BÚSQUEDA-------------------------------------*/
-.buscador{
-    display: flex;
-    justify-content: flex-end;
+h1{
+    text-align: center;
+    text-transform: uppercase;
 }
-.bloque_buscador {
-    margin-top: 10rem;
-    height: 5rem;
-    width: 20%;
-    display: block;
-    margin-right: 2rem;
+h3{
+    text-transform: uppercase;
+}
+p{
+    color: rgb(30, 30, 30);
 }
 
-.bloque_buscador .input_buscador {
-    
-    background-color: var(--color_secundario);
-    display: grid;
-    grid-template-columns: 10% 90%;
-    width: 100%;
-    align-items: center;
-    padding: 1rem 1rem;
-    border-radius: 3rem;
-    gap: 1rem;
-}
-
-.bloque_buscador .input_buscador input {
-    background-color: var(--color_secundario);
-    color: white;
-    margin-right: 3rem;
-    border-color: transparent;
-    font-size: 2rem;
-    font-family: var(--fuente_header);
-    outline: 0;
-}
-
-/*-------------SECCIÓN CATÁLOGO-------------------------------------*/
-
-.catalogo {
-    margin-top: 3rem;
-    margin-bottom: 10rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
-}
-
-.catalogo .juego{
-    display: flex;
-    flex-direction: row;
-    border: 2px solid var(--color_secundario);
-    border-radius: 12px;
-    cursor: pointer;
-}
-
-.catalogo .juego .caratula{
-    flex: 60%;
-    width: 20rem;
-    height: 25rem;
-    margin-right: 2rem;
-}
-
-.catalogo .juego .caratula img{
-    object-fit: cover;
-    width:100%;
-    height:100%;
-    border-radius: 10px; 
-}
-
-.catalogo .juego .texto{
-    flex: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.catalogo .juego .texto .titulo{
-    flex:50%;
-    height:50%;
-    display: flex;
-    align-items: center;
-}
-
-.catalogo .juego .texto .precio{
-    flex:50%;
-    height:50%;
-    display: flex;
-    align-items: center;
-}
-
-/*-------------SECCIÓN FILTROS--------------------------------------*/
-
-.filtros{
-    position: fixed;
-    left: 0;
-    top:0;
-    background-image: linear-gradient(to right, var(--color_secundario) 10%, #797979 80%,  var(--color_principal) 100%);
-    width: 40rem;
-    height: 100%;
-    color: white;
-    z-index: -1;
-}
-
-.filtros h2{
-    margin-left: 5rem;
-    margin-top: 10rem;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.filtros h3{
-    margin-left: 5rem;
-    margin-top: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.filtros label{
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    margin-left: 5rem;
-    margin-top: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-}
-
-.filtros div{
-    margin-bottom: 3rem;
-}
-
-.filtros button{
-    margin-left: 12rem;
-    margin-top: 2rem;
-}
 
 /*-------------PIE DE PÁGINA----------------------------------------*/
 

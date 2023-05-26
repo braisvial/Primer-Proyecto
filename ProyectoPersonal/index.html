@@ -48,23 +48,23 @@
                     <img src="./img/download.svg">
                     <p>Descargar</p>
                 </a>
-                <a href="" class="iniciar_sesion">
+                <div class="iniciar_sesion" onclick="mostrarPopUp()">
                     <img src="./img/user_login.svg">
                     <p>Iniciar Sesión</p>
-                </a>
+                </div>
             </div>
         </div>
 
         <div class="pie_pagina">
             <div class="contenedor">
                 <div class="logos_redes">
-                    <a href="https://www.instagram.com/" class="instagram">
+                    <a href="https://www.instagram.com/ " target="_blank" class="instagram">
                         <img src="./img/instagram.png">
                     </a>
-                    <a href="https://twitter.com/?lang=es" class="twitter">
+                    <a href="https://twitter.com/?lang=es" target="_blank" class="twitter">
                         <img src="./img/twitter.png">
                     </a>
-                    <a href="https://es-es.facebook.com/" class="facebook">
+                    <a href="https://es-es.facebook.com/" target="_blank" class="facebook">
                         <img src="./img/facebook.png">
                     </a>
                 </div>
@@ -82,7 +82,7 @@
                         <a class="logo_footer">
                             <img src="./img/logo_gameclub.svg">
                         </a>
-                        <a href="https://www.unrealengine.com/en-US/unreal-engine-5" class="unreal">
+                        <a href="https://www.unrealengine.com/en-US/unreal-engine-5" target="_blank" class="unreal">
                             <img src="./img/unreal.png">
                         </a>
                     </div>
@@ -91,6 +91,13 @@
         </div>
     </section>
 
+    <div id="miPopUp" class="pop-up">
+        <h2>Título del pop-up</h2>
+        <p>Contenido del pop-up</p>
+        <button onclick="cerrarPopUp()">Cerrar</button>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
