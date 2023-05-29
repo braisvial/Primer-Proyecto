@@ -397,4 +397,71 @@ reproductor.borrar_cancion = function(nc){
 
 /* Arrow function -> let nombre = argumento1 => console.log(argumento1); 
                      let nombre = (argumento1 = 10) => console.log(argumento1); 
-                     let nombre = (argumento1, argumento2) => console.log(argumento1 + argumneto2); */
+                     let nombre = (argumento1, argumento2) => console.log(argumento1 + argumneto2); 
+En una función de flecha, si queremos devolver una valor no hace falta poner el return */
+
+
+//-----EJERCICIO-----
+
+function suma_declaracion(n1, n2, n3){
+    console.log(n1 + n2 + n3) 
+}
+suma_declaracion(1, 2, 3);
+
+let suma_expresion = function(n1, n2, n3){
+    console.log(n1 + n2 + n3) 
+}
+suma_expresion(1, 2, 3)
+
+let suma_flecha = (n1, n2, n3) => console.log(n1 + n2 + n3) 
+suma_flecha(1, 2, 3)
+
+//-----EJERCICIO-----
+
+function buscar_declaracion(array, elemento){
+    console.log(array.includes(elemento))
+}
+buscar_declaracion(dias_semana, "miércoles")
+
+let  buscar_expresion = function(array, elemento) {
+    console.log(array.includes(elemento))
+}
+buscar_expresion(dias_semana, "miércoles")
+
+let  buscar_flecha = (array, elemento) => console.log(array.includes(elemento))
+buscar_flecha(dias_semana, "miércoles")
+
+//-----EJERCICIO-----
+
+function mayor_declaracion(num1, num2){
+    if (num1 > num2){
+        valor = `${num1} es el valor mayor`
+    }
+    else{
+        valor = `${num2} es el valor mayor`
+    }
+    console.log(valor)    
+}
+mayor_declaracion(5, 10)
+
+let mayor_expresion = function(num1, num2){
+    if (num1 > num2){
+        valor = `${num1} es el valor mayor`
+    }
+    else{
+        valor = `${num2} es el valor mayor`
+    }
+    console.log(valor)    
+}
+mayor_expresion(5, 10)
+
+let mayor_flecha = (num1, num2)=>{
+    if (num1 > num2){
+        valor = `${num1} es el valor mayor`
+    }
+    else{
+        valor = `${num2} es el valor mayor`
+    }
+    console.log(valor)    
+}
+mayor_flecha(5, 10)

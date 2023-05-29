@@ -52,7 +52,7 @@
     </section>
 
     <section class="contenedor catalogo">
-        <div class="juego">
+        <div class="juego" onclick="mostrar_popup_juego(this)">
             <div class="caratula"><img
                     src="https://cdn1.epicgames.com/b4565296c22549e4830c13bc7506642d/offer/TETRA_PREORDER_STANDARD%20EDITION_EPIC_Store_Portrait_1200x1600-1200x1600-ca8b802ff13813c37a44ebf68d0946a2.png?h=480&quality=medium&resize=1&w=360">
             </div>
@@ -525,6 +525,19 @@
             </div>
         </div>
     </footer>
+
+
+    <div class="popup_juego" id="popup_juego">
+        <div class="popup_contenido_juego">
+            <span class="boton_cerrar_juego" onclick="cerrar_popup_juego()"></span>
+            <img src="" alt="" id="imagen_juego">
+            <h2 id="titulo_juego"></h2>
+            <p id="precio_juego"></p>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>
