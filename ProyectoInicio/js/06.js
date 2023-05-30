@@ -104,10 +104,11 @@ function rol_case(rol) {
 
 rol_case("gestor")
 
-//-----EJERCICIO-----
 
-function metodo_pago(metodo){
-    switch (metodo){
+//-----SWITCH CASE-----\\
+
+function metodo_pago(metodo) {
+    switch (metodo) {
         case "Tarjeta":
             console.log(`Método de pago seleccionado: Tarjeta`)
             break;
@@ -126,3 +127,148 @@ function metodo_pago(metodo){
 }
 
 metodo_pago("Bizum")
+
+//-----EJERCICIO-----
+
+function multiplicar_if(num) {
+    let valor = num * num;
+    if (valor === 100) {
+        console.log(`El número obtenido al multiplicar ${num} por si mismo es 100`)
+    }
+    else if (valor === 200) {
+        console.log(`El número obtenido al multiplicar ${num} por si mismo es 200`)
+    }
+    else {
+        console.log(`El número obtenido al multiplicar ${num} por si mismo no cumple ninguna de las condiciones`)
+    }
+}
+
+multiplicar_if(10)
+
+function multiplicar_case(num) {
+    let valor = num * num;
+    switch (valor) {
+        case 100:
+            console.log(`El número obtenido al multiplicar ${num} por si mismo es 100`)
+            break;
+        case 400:
+            console.log(`El número obtenido al multiplicar ${num} por si mismo es 400`)
+            break;
+        default:
+            console.log(`El número obtenido al multiplicar ${num} por si mismo no cumple ninguna de las condiciones`)
+            break;
+    }
+}
+
+multiplicar_case(20)
+
+
+//-----BUCLE FOR-----\\
+
+for (let i = 0; i <= 10; i++) {
+    console.log(i);
+}
+
+
+for (let n = 0; n <= 20; n += 5) {
+    console.log(n)
+}
+
+for (let k = 0; k <= 10; k += 3) {
+    console.log(k)
+    console.log(10 - k)
+}
+
+
+//-----BUCLE WHILE-----\\
+
+let i = 0;
+while (i <= 10) {
+    console.log(i)
+    i++
+}
+
+//-----BUCLE DO WHILE-----\\
+
+let j = 0;
+do {
+    console.log(j)
+    j++
+} while (j <= 10)
+
+
+//-----EJERCICIO-----
+
+let n1 = 0;
+while (n1 <= 50){
+    if(n1 % 2 === 0){
+        console.log(n1)
+    }
+    n1++
+}
+
+
+//-----FOR EACH / MAP-----\\
+
+let carrito = [
+    objeto1 ={
+        nombre:"pc",
+        precio:1000
+    },
+    objeto2 ={
+        nombre:"movil",
+        precio:300
+    },
+    objeto3 ={
+        nombre:"tablet",
+        precio:400
+    },
+    objeto4 ={
+        nombre:"monitor",
+        precio:200
+    }
+]
+
+for(let i = 0; i < carrito.length; i++){
+    console.log(carrito[i])
+}                                                                   //Recorrer el array con un bucle for
+
+carrito.forEach(function(producto){
+    console.log(producto, producto.nombre)
+})                                                                  //Recorre el array con el metodo foreach u mostramos por pantalla
+
+let recorrer = producto => console.log(producto, producto.nombre)
+carrito.forEach(recorrer)                                           //Recorre el array con el foreach con funcion flecha
+
+let nuevo_carrito = carrito.map(producto => producto.nombre)        //El map hace lo mismo que el foreach pero se utiliza para copiar en un nuevo array
+console.log(nuevo_carrito)                                          //En la funcion de flecha se hace un return de la propiedad nombre
+
+
+//-----EJERCICIO-----
+// Mostrar la propiedad precio del array carrito con while, for y do while
+
+let x = 0;
+while(x < carrito.length){
+    console.log(carrito[x].nombre, carrito[x].precio)
+    x++
+}
+
+let y = 0;
+do{
+    console.log(carrito[y].nombre, carrito[y].precio)
+    y++
+}while(y < carrito.length)
+
+
+for( let z= 0; z < carrito.length; z++){
+    console.log(carrito[z].nombre, carrito[z].precio)
+}
+
+//-----EJERCICIO-----
+
+
+
+//-----EJERCICIO-----
+
+
+//-----EJERCICIO-----

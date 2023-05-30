@@ -8,6 +8,11 @@ function cerrarPopUp() {
   popUp.style.display = "none";
 }
 
+function mostrarMenu() {
+  var menuDesplegable = document.querySelector('.desplegable');
+  menuDesplegable.style.display = (menuDesplegable.style.display === 'block') ? 'none' : 'block';
+}
+
 function togglePopup() {
   var popup = document.getElementById("popup");
   popup.classList.toggle("active");
