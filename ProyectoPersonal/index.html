@@ -44,16 +44,16 @@
                 </div>
             </div>
             <div class="derecha">
-                <a href="" class="descargar">
+                <div class="descargar" onclick="mostrar_descargar()">
                     <img src="./img/download.svg">
                     <p>Descargar</p>
-                </a>
-                <div class="iniciar_sesion" onclick="mostrarPopUp()">
+                </div>
+                <div class="iniciar_sesion" onclick="mostrar_login()">
                     <img src="./img/user_login.svg">
                     <p>Iniciar Sesión</p>
                 </div>
             </div>
-            <div class="menu" onclick="mostrarMenu()">
+            <div class="menu" onclick="mostrar_menu()">
                 <img src="./img/menu.svg">
             </div>
             <div class="desplegable">
@@ -61,6 +61,15 @@
                 <a href="./noticias.html" class="noticias">Noticias</a>
                 <a href="./faq.html" class="faq">Preguntas Frecuentes</a>
                 <a href="./acerca.html" class="acerca">Acerca de GameClub</a>
+                <a>___________________</a>
+                <div class="desplegable_descargar" onclick="mostrar_descargar()">
+                    <img src="./img/download.svg">
+                    <p>Descargar</p>
+                </div>
+                <div class="desplegable_iniciar_sesion" onclick="mostrar_login()">
+                    <img src="./img/user_login.svg">
+                    <p>Iniciar Sesión</p>
+                </div>
             </div>
         </div>
 
@@ -100,7 +109,7 @@
         </div>
     </section>
 
-    <div id="miPopUp" class="pop-up">
+    <div id="login_popup" class="login_popup">
         <div class="contenido_popup">
             <h1>Iniciar sesión</h1>
             <form>
@@ -108,9 +117,19 @@
                 <input type="password" placeholder="Contraseña" required>
                 <button type="submit">Iniciar sesión</button>
             </form>
-            <span class="cerrar" onclick="cerrarPopUp()"></span>
+            <span class="cerrar" onclick="cerrar_login()"></span>
         </div>
-        
+    </div>
+
+    <div id="descargar_popup" class="descargar_popup">
+        <div id="player">
+            <iframe id="video_frame" width="800" height="500" src="https://www.youtube.com/embed/hNSQ-DPTMa4?autoplay=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <span class="cerrar_descargar" onclick="cerrar_descargar()"></span>
     </div>
 
     <script src="js/script.js"></script>

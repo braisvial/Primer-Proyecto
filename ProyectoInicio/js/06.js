@@ -249,19 +249,19 @@ console.log(nuevo_carrito)                                          //En la func
 
 let x = 0;
 while(x < carrito.length){
-    console.log(carrito[x].nombre, carrito[x].precio)
+    console.log(`Precio del artículo ${carrito[x].nombre}: ${carrito[x].precio}€ hecho con while`)
     x++
 }
 
 let y = 0;
 do{
-    console.log(carrito[y].nombre, carrito[y].precio)
+    console.log(`Precio del artículo ${carrito[y].nombre}: ${carrito[y].precio}€ hecho con do while`)
     y++
 }while(y < carrito.length)
 
 
 for( let z= 0; z < carrito.length; z++){
-    console.log(carrito[z].nombre, carrito[z].precio)
+    console.log(`Precio del artículo ${carrito[z].nombre}: ${carrito[z].precio}€ hecho con for`)
 }
 
 //-----EJERCICIO-----

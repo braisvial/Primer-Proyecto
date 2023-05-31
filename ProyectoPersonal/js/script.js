@@ -1,14 +1,58 @@
-function mostrarPopUp() {
-  let popUp = document.getElementById("miPopUp");
+function mostrar_login() {
+  let popUp = document.getElementById("login_popup");
   popUp.style.display = "block";
 }
 
-function cerrarPopUp() {
-  let popUp = document.getElementById("miPopUp");
+function cerrar_login() {
+  let popUp = document.getElementById("login_popup");
   popUp.style.display = "none";
 }
 
-function mostrarMenu() {
+function mostrar_descargar() {
+  let popUp = document.getElementById("descargar_popup");
+  popUp.style.display = "block";
+}
+
+var player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video_frame', {
+        height: '500',
+        width: '800',
+        videoId: 'hNSQ-DPTMa4',
+        playerVars: {
+            'autoplay': 0,
+            'controls': 0,
+            'rel': 0,
+            'showinfo': 0,
+            'modestbranding': 1
+        },
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+}
+
+function onPlayerReady(event) {
+    event.target.playVideo();
+}
+
+function abrir_descargar() {
+    
+    var popup = document.getElementById('descargar_popup');
+    popup.style.display = 'block';
+    player.seekTo(0);
+    player.playVideo();
+}
+
+function cerrar_descargar() {
+    player.stopVideo();
+
+    var popup = document.getElementById('descargar_popup');
+    popup.style.display = 'none';
+}
+
+function mostrar_menu() {
   var menuDesplegable = document.querySelector('.desplegable');
   menuDesplegable.style.display = (menuDesplegable.style.display === 'block') ? 'none' : 'block';
 }
