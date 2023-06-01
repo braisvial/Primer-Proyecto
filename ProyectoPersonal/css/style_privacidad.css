@@ -202,6 +202,101 @@ body {
     height: 2.3rem;
 }
 
+/*---------------------MENU DESPLEGABLE 1140px-------------*/
+
+.menu{
+    display:none;
+}
+.desplegable{
+    display: none;
+    max-width: 50%;
+    height: 100%;
+    /* position: absolute; */
+    /* Posiciona el menú debajo del icono */
+    top: 100%; 
+    /* right: 0; */
+    /* z-index: 1; */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.desplegable a{
+    display: block;
+    text-align: right;
+    margin-right: 1rem;
+    margin-left: 2rem;
+    text-transform: uppercase;
+    font-family: var(--fuente_header);
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    opacity: 70%;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.desplegable a:hover{
+    opacity:100%
+}
+
+.desplegable_descargar {
+    display: flex;
+    text-decoration: none;
+    justify-content: right;
+    cursor: pointer;
+    padding: 1rem 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.desplegable_descargar img {
+    margin-right: 1rem;
+    height: 1.8rem;
+    opacity: 70%;
+}
+
+.desplegable_descargar p {
+    text-transform: uppercase;
+    font-family: var(--fuente_header);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 0;
+    opacity: 70%;
+}
+
+.desplegable_iniciar_sesion {
+    display: flex;
+    text-decoration: none;
+    justify-content: right;
+    cursor: pointer;
+    padding: 1rem 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.desplegable_iniciar_sesion img {
+    margin-right: 1rem;
+    height: 1.5rem;
+    opacity: 70%;
+}
+
+.desplegable_iniciar_sesion p {
+    text-transform: uppercase;
+    font-family: var(--fuente_header);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 0;
+    /* margin-bottom: 0; */
+    /* padding: 0 0; */
+    opacity: 70%;
+}
+
 /*---------------------BODY----------------------------*/
 
 .privacidad{
@@ -321,4 +416,38 @@ p{
 
 .pie_pagina .contenido .logos_derecha img:hover {
     opacity: 100%;
+}
+
+/*-------------MEDIA QUERY------------------------------------------*/
+/*-----CABECERA-----*/
+@media(max-width:1140px){
+
+    /* .cabecera{} */
+
+    .enlaces a {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        margin-right: 4rem;
+        align-items: center;
+        cursor: pointer;
+    }
+    .menu img {
+        width: 5rem;
+        height: 5rem;
+        opacity: 70%;
+    }
+    .derecha .descargar{
+        display: none;
+    }
+    .derecha .iniciar_sesion{
+        display: none;
+    }
+
+    /*-----FOOTER-----*/
+
+    .pie_pagina{
+        display:flex
+    }
 }

@@ -29,17 +29,34 @@
             </div>
         </div>
         <div class="derecha">
-
-            <a href="" class="descargar">
+            <div class="descargar" onclick="mostrar_descargar()">
                 <img src="./img/download.svg">
                 <p>Descargar</p>
-            </a>
-
-            <a href="" class="iniciar_sesion">
+            </div>
+            <div class="iniciar_sesion" onclick="mostrar_login()">
                 <img src="./img/user_login.svg">
                 <p>Iniciar Sesión</p>
-            </a>
+            </div>
         </div>
+        <div class="menu" onclick="mostrar_menu()">
+            <img src="./img/menu.svg">
+        </div>
+        <div class="desplegable">
+            <a href="./tienda.html" class="tienda">Tienda</a>
+            <a href="./noticias.html" class="noticias">Noticias</a>
+            <a href="./faq.html" class="faq">Preguntas Frecuentes</a>
+            <a href="./acerca.html" class="acerca">Acerca de GameClub</a>
+            <a>___________________</a>
+            <div class="desplegable_descargar" onclick="mostrar_descargar()">
+                <img src="./img/download.svg">
+                <p>Descargar</p>
+            </div>
+            <div class="desplegable_iniciar_sesion" onclick="mostrar_login()">
+                <img src="./img/user_login.svg">
+                <p>Iniciar Sesión</p>
+            </div>
+        </div>
+    </div>
     </header>
 
     <section class="contenedor privacidad"> 
@@ -292,7 +309,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>
