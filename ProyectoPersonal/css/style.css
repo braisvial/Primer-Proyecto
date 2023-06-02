@@ -26,7 +26,7 @@ body {
 
 .portada {
     position: relative;
-    max-width: 100vw;
+    max-width: 100%;
     height: 100vh;
 }
 
@@ -774,6 +774,10 @@ button {
 /*-------------MEDIA QUERY------------------------------------------*/
 @media(max-width:1140px) {
 
+    .portada {
+        height: auto;
+        max-width: 100vw;
+    }
     /*-----CABECERA-----*/
     .enlaces a {
         display: none;
@@ -805,9 +809,7 @@ button {
     .fotos_portada {
         display: flex;
         flex-direction: column;
-        position: relative;
-        height: 100vh;
-        overflow-y: scroll;
+        
     }
 
     .fotos_portada img .grayscale {
@@ -818,7 +820,7 @@ button {
     /*---------------------------------------------------------*/
     .portada .foto1 {
         background-position: center;
-        height: 100%;
+        height: 100vh;
         filter: none;
     }
 
@@ -832,19 +834,19 @@ button {
     .portada .foto1 img {
         opacity: 100%;
         height: 5%;
-        width: auto;
+        
     }
 
     /*---------------------------------------------------------*/
     .portada .foto2 {
         background-position: center;
-        height: 100%;
+        height: 100vh;
         filter: none;
     }
 
     .portada .foto2:hover {
         background-position: center;
-        height: 100%;
+        height: 100vh;
         filter: none;
         margin-right: 0;
     }
@@ -852,7 +854,7 @@ button {
     .portada .foto2 img {
         opacity: 100%;
         height: 20%;
-        width: auto;
+      
     }
 
     /*---------------------------------------------------------*/
@@ -872,7 +874,7 @@ button {
     .portada .foto3 img {
         opacity: 100%;
         height: 5%;
-        width: auto;
+      
     }
 
     /*---------------------------------------------------------*/
@@ -892,7 +894,7 @@ button {
     .portada .foto4 img {
         opacity: 100%;
         height: 10%;
-        width: auto;
+    
     }
 
     /*---------------------------------------------------------*/
@@ -912,7 +914,6 @@ button {
     .portada .foto5 img {
         opacity: 100%;
         height: 10%;
-        width: auto;
     }
 
 
@@ -933,63 +934,37 @@ button {
     }
 
     .pie_pagina_media .logos_redes_media a {
-        margin: 0 rem 0 0;
+        margin: 1rem 1rem;
         text-decoration: none;
     }
 
-    .pie_pagina_media .logos_redes_media .instagram img {
-        width: 2%;
-        text-decoration: none;
-    }
-
-    .pie_pagina_media .logos_redes_media .twitter img {
-        width: 2%;
-        text-decoration: none;
-    }
-
-    .pie_pagina_media .logos_redes_media .facebook img {
-        width: 2%;
-        text-decoration: none;
+    .pie_pagina_media .logos_redes_media img{
+        width: 2rem;
     }
 
     .pie_pagina_media .contenido_media {
-        display: flex;
-        flex-direction: column;
         padding: 0.5rem 0;
         border-top: 2px solid;
         border-image: linear-gradient(to left, black 0%, white 50%, black 100%) 1;
         margin-bottom: 1.5rem;
-    }
-
-    .pie_pagina_media .contenido_media .footer_izq_media {
         display: flex;
-        flex-direction: column;
-        margin-top: 1rem;
+        flex-direction: column
     }
 
-    .pie_pagina_media .contenido_media .footer_izq_media p {
+    .pie_pagina_media .contenido_media p {
         color: white;
         opacity: 60%;
         font-family: var(--fuente_header);
         font-size: 12px;
     }
 
-    .pie_pagina_media .contenido_media .footer_izq_media a {
-        color: white;
-        opacity: 60%;
-        font-family: var(--fuente_header);
-        font-size: 12px;
-        text-decoration: none;
-        margin-right: 1rem;
-    }
-
-    .pie_pagina_media .contenido_media .logos_derecha_media {
+    .pie_pagina_media .logos_pagina_media {
         display: flex;
         justify-content: center;
         margin-top: 2rem;
     }
 
-    .pie_pagina_media .contenido_media .logos_derecha_media img {
+    .pie_pagina_media .logos_pagina_media img {
         width: 5rem;
         height: 5rem;
         margin: 0 2rem;

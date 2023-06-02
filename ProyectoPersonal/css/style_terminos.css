@@ -289,7 +289,7 @@ body {
 .desplegable_iniciar_sesion p {
     text-transform: uppercase;
     font-family: var(--fuente_header);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: white;
     margin-top: 0;
