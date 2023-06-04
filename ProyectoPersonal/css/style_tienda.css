@@ -35,8 +35,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex: 70%;
-    max-width: 70%;
+    flex: 80%;
+    max-width: 80%;
 }
 
 .izquierda .logo_web {
@@ -63,10 +63,10 @@ body {
 .izquierda .enlaces {
     flex: 90%;
     width: 90%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr 2fr;
+    display: flex;
     align-items: center;
-    text-align: center;
+    margin-left: 5rem;
+    justify-content: space-between;
 }
 
 .izquierda .enlaces a {
@@ -78,7 +78,8 @@ body {
     color: white;
     opacity: 70%;
     transition: opacity 1s ease;
-    transition: font-size 1s ease;
+    transition: margin-bottom 1s ease;
+    
 }
 
 .izquierda .enlaces .tienda {
@@ -93,23 +94,26 @@ body {
 
 .izquierda .noticias:hover {
     opacity: 100%;
-    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
 }
 
 .izquierda .faq:hover {
     opacity: 100%;
-    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
 }
 
 .izquierda .acerca:hover {
     opacity: 100%;
-    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
 }
 
 .cabecera .derecha {
-    display: grid;
-    grid-template-columns: 1fr 30% 30%;
-    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: right;
     flex: 50%;
     max-width: 50%;
     align-items: center;
@@ -117,20 +121,19 @@ body {
 }
 
 .derecha .descargar {
-    grid-column: 2/3;
-}
-
-.derecha .descargar {
     display: flex;
     text-decoration: none;
     justify-content: center;
+    cursor: pointer;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 
 .derecha .descargar img {
     margin-right: 1rem;
     height: 1.7rem;
     opacity: 70%;
-    transition-property: opacity height;
+    transition-property: opacity margin-bottom;
     transition-duration: 1s, 1s;
     transition-timing-function: ease;
 }
@@ -145,32 +148,35 @@ body {
     margin-bottom: 0;
     padding: 0 0;
     opacity: 70%;
-    transition-property: opacity font-size;
+    transition-property: opacity margin-bottom;
     transition-duration: 1s, 1s;
     transition-timing-function: ease;
 }
 
 .derecha .descargar:hover p {
     opacity: 100%;
-    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
 }
 
 .derecha .descargar:hover img {
     opacity: 100%;
-    height: 2.3rem;
+    margin-bottom: 1rem;
 }
 
 .derecha .iniciar_sesion {
     display: flex;
     text-decoration: none;
     justify-content: center;
+    cursor: pointer;
+    margin-right: 5rem;
 }
 
 .derecha .iniciar_sesion img {
     margin-right: 1rem;
     height: 1.7rem;
     opacity: 70%;
-    transition-property: opacity height;
+    transition-property: opacity margin-bottom;
     transition-duration: 1s, 1s;
     transition-timing-function: ease;
 }
@@ -185,19 +191,20 @@ body {
     margin-bottom: 0;
     padding: 0 0;
     opacity: 70%;
-    transition-property: opacity font-size;
+    transition-property: opacity margin-bottom;
     transition-duration: 1s, 1s;
     transition-timing-function: ease;
 }
 
 .derecha .iniciar_sesion:hover p {
     opacity: 100%;
-    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
 }
 
 .derecha .iniciar_sesion:hover img {
     opacity: 100%;
-    height: 2.3rem;
+    margin-bottom: 1rem;
 }
 
 /*---------------------MENU DESPLEGABLE 1140px-------------*/
@@ -586,3 +593,40 @@ body {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+
+/*-------------MEDIA QUERY------------------------------------------*/
+/*-----CABECERA-----*/
+@media(max-width:1140px){
+
+    .enlaces a {
+        display: none;
+    }
+
+    .izquierda .enlaces .tienda{
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        margin-right: 4rem;
+        align-items: center;
+        cursor: pointer;
+    }
+    .menu img {
+        width: 6rem;
+        height: 6rem;
+        opacity: 70%;
+    }
+    .derecha .descargar{
+        display: none;
+    }
+    .derecha .iniciar_sesion{
+        display: none;
+    }
+
+    /*-----FOOTER-----*/
+
+    .pie_pagina{
+        display:flex
+    }
+}
