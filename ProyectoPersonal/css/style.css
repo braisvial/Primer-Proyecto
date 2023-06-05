@@ -76,7 +76,6 @@ body {
     display: flex;
     align-items: center;
     margin-left: 5rem;
-
 }
 
 .portada .izquierda .enlaces a {
@@ -90,6 +89,7 @@ body {
     transition: opacity 1s ease;
     transition: margin-bottom 1s ease;
     margin-right: 5rem;
+    padding: 0.5rem;
 }
 
 .portada .izquierda .tienda:hover {
@@ -133,6 +133,7 @@ body {
     cursor: pointer;
     margin-left: 5rem;
     margin-right: 5rem;
+    padding: 0.5rem;
 }
 
 .derecha .descargar img {
@@ -176,6 +177,7 @@ body {
     justify-content: center;
     cursor: pointer;
     margin-right: 5rem;
+    padding: 0.5rem;
 }
 
 .derecha .iniciar_sesion img {
@@ -951,7 +953,6 @@ button {
     .pie_pagina_media .logos_redes_media a {
         margin: auto 2rem;
         text-decoration: none;
-        
     }
 
     .pie_pagina_media .logos_redes_media img{

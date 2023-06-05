@@ -86,7 +86,7 @@ body {
     opacity: 70%;
     transition: opacity 1s ease;
     transition: margin-bottom 1s ease;
-    
+    padding: 0.5rem;
 }
 
 .izquierda .tienda:hover {
@@ -130,6 +130,7 @@ body {
     cursor: pointer;
     margin-left: 5rem;
     margin-right: 5rem;
+    padding: 0.5rem;
 }
 
 .derecha .descargar img {
@@ -173,6 +174,7 @@ body {
     justify-content: center;
     cursor: pointer;
     margin-right: 5rem;
+    padding: 0.5rem;
 }
 
 .derecha .iniciar_sesion img {
@@ -419,9 +421,20 @@ p{
     opacity: 100%;
 }
 
+.pie_pagina_media {
+    display: none;
+}
+
 /*-------------MEDIA QUERY------------------------------------------*/
-/*-----CABECERA-----*/
+
 @media(max-width:1140px){
+
+    .contenedor {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    /*-----CABECERA-----*/
 
     .enlaces a {
         display: none;
@@ -446,7 +459,74 @@ p{
 
     /*-----FOOTER-----*/
 
-    .pie_pagina{
-        display:flex
+    .pie_pagina {
+        display: none;
+    }
+
+    .pie_pagina_media {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color_secundario);
+    }
+
+    .pie_pagina_media .logos_redes_media {
+        display: flex;
+        justify-content: center;
+        margin: 3rem auto;
+    }
+
+    .pie_pagina_media .logos_redes_media a {
+        margin: auto 5%;
+        text-decoration: none;
+    }
+
+    .pie_pagina_media .logos_redes_media img {
+        width: 4rem;
+        height: auto;
+    }
+
+    .pie_pagina_media .contenido_media {
+        padding: 1rem 5rem;
+        border-top: 2px solid;
+        border-image: linear-gradient(to left, black 0%, white 50%, black 100%) 1;
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pie_pagina_media .contenido_media p {
+        color: white;
+        opacity: 60%;
+        font-family: var(--fuente_header);
+        font-size: 15px;
+    }
+
+    .pie_pagina_media .enlaces_media {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .pie_pagina_media .enlaces_media a {
+        color: white;
+        opacity: 60%;
+        font-family: var(--fuente_header);
+        font-size: 15px;
+        text-decoration: none;
+        margin-bottom: 1rem;
+        text-decoration: underline;        
+    }
+
+    .pie_pagina_media .logos_media {
+        display: flex;
+        justify-content: center;
+        margin: 2rem auto;
+    }
+
+    .pie_pagina_media .logos_media img {
+        width: 5rem;
+        height: 5rem;
+        margin: 0 2rem;
     }
 }

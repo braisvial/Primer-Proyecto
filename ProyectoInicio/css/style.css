@@ -249,17 +249,17 @@ color:  #000; HEX
     text-decoration: underline;
 }
 
-.cursos_sobre_informate .informate {
+.informate {
     background-color: var(--color_principal);                                           /*Color del fondo del bloque*/
     font-weight: bold;
-    color: white;
+    color: white !important;
     border-radius: 20px;                                                                /*Radio de las esquinas del bloque*/
     padding: 1rem 1.4rem;                                                               /*Relleno de arriba, abajo y los laterales del bloque*/
     text-decoration: none;
 }
 
-.cursos_sobre_informate .informate:hover {
-    text-decoration: none;
+.informate:hover {
+    text-decoration: none !important;
     background-color: #17a2b8;
 }
 
