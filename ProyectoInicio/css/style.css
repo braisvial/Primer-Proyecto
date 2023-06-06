@@ -337,7 +337,7 @@ color:  #000; HEX
     font-weight: 700;
 }
 
-.boton:hover {
+.primera_seccion a:hover {
     background-color: white;
     color: var(--color_secundario);
     border: 2px solid;                                                                  /*Tamaño del borde del bloque y opacidad*/

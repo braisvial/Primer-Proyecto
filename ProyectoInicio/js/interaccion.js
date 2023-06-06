@@ -95,4 +95,95 @@ enlaces_js5.appendChild(nueva_localizacion)
 nueva_localizacion.appendChild(titulo_localizacion)
 nueva_localizacion.appendChild(parrafo_localizacion)
 
+//-----EJERCICIO-----
 
+const nuevo_boton = document.createElement("A")
+nuevo_boton.href = "#"
+nuevo_boton.textContent= "Ciudades"
+// nuevo_boton.classList.add("boton")
+
+const enlaces_js6 = document.querySelector(".primera_seccion .contenedor")
+enlaces_js6.appendChild(nuevo_boton)
+
+
+//-----EVENTOS EN JAVASCRIPT-----\\
+
+window.addEventListener("load", function(){                      //Evento que puede ser load, click, scroll...
+    console.log("Se ha cargado el html")
+})
+
+window.addEventListener("DOMContentLoaded" ,function(){
+    console.log("Se ha cargado el html")
+})
+
+//-----SCROLL-----\\
+
+document.addEventListener("scroll", function(){
+    console.log("Scrolling")
+})
+
+//-----EVENTOS A ELEMENTOS DEL HTML-----\\
+
+const boton_notificacion = document.querySelector("#boton")
+
+boton_notificacion.addEventListener("click", function(evento){
+    console.log(evento)
+    console.log("Mostrando Notificación")
+})
+
+const nombre = document.querySelector("#nombre")
+
+// nombre.addEventListener("change", function(){
+//     console.log("Escribiendo nombre...")
+// })
+
+nombre.addEventListener("input", function(evento){
+    console.log("Escribiendo nombre con input...")
+    console.log(evento)
+    console.log(evento.target.value)
+})
+
+const email = document.querySelector("#email")
+
+email.addEventListener("input", function(evento){
+    console.log("Escribiendo email con input...")
+    console.log(evento)
+    console.log(evento.target.value)
+})
+
+const mensaje = document.querySelector("#mensaje")
+
+mensaje.addEventListener("input", function(evento){
+    console.log("Escribiendo mensaje con input...")
+    console.log(evento)
+    console.log(evento.target.value)
+})
+
+const datos = {
+    nombre: "",
+    email: "",
+    mensaje: ""
+}
+
+function leer_texto(evento){
+    datos[evento.target.id] = evento.target.value
+    console.log(datos)
+}
+
+
+//-----SUBMIT-----
+
+const formulario = document.querySelector("form")
+
+formulario.addEventListener("submit", function(evento){
+    evento.preventDefault()
+    console.log("Enviado formulario...")
+})
+
+
+/*-----COMO ORGANIZAR CÓDIGO JAVASCRIPT-----\\
+
+    1º VARIABLES
+    2º EVENTOS
+    3º FUNCIONES
+*/

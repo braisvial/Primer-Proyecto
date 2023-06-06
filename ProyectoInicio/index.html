@@ -17,15 +17,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">     <!-- Fuente descargada desde google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+    <!-- Fuente descargada desde google fonts -->
 
     <link rel="preload" href="css/normalize.css" as="style">
-    <link href="css/normalize.css" rel="stylesheet">                                                <!--Precarga y enlace del archivo normalize.css con el index.html, este archivo añadido
+    <link href="css/normalize.css" rel="stylesheet">
+    <!--Precarga y enlace del archivo normalize.css con el index.html, este archivo añadido
                                                                                                     se hace siempre, se descarga desde normalize.css y se crea otro archivo .css
                                                                                                     Permite que mi web sea reconocida en todos los navegadores-->
 
     <link rel="preload" href="css/style.css" as="style">
-    <link href="css/style.css" rel="stylesheet">                                                     <!--Precarga y enlace del archivo style.css con el index.html, siempre los 2 link juntos -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--Precarga y enlace del archivo style.css con el index.html, siempre los 2 link juntos -->
 </head>
 
 <body>
@@ -72,8 +75,8 @@
     <button id="boton">Ver notificación</button>
 
     <!-----------------Cabecera-------------------------------------------------------------------------------------->
-    <header class="header contenedor">                                                              <!--Cabecera, se añade la clase contenedor para el ancho-->
-        <a href="#">Login Alumnos</a>                                                               <!--Enlace, asterisco para botón-->
+    <header class="header contenedor"> <!--Cabecera, se añade la clase contenedor para el ancho-->
+        <a href="#">Login Alumnos</a> <!--Enlace, asterisco para botón-->
         <p class="separador">|</p>
         <a href="#">Login Empresas</a>
     </header>
@@ -82,7 +85,8 @@
     <nav class="cursos_sobre_informate contenedor">
         <div class="img_tcd">
             <a href="#">
-                <img src="./img/Tu-carrera-digital-general.png" alt="Cursos digitales">               <!--src: dirección del archivo img, alt: referenciar la imagen-->
+                <img src="./img/Tu-carrera-digital-general.png" alt="Cursos digitales">
+                <!--src: dirección del archivo img, alt: referenciar la imagen-->
             </a>
         </div>
         <div class="menu">
@@ -139,14 +143,14 @@
 
     <!-----------------Sección bloques para inscribirse------------------------------------------------------------->
     <section class="contenedor seccion_inscribir">
-            <div class="marketing">
-                <h2>Marketing digital</h2>
-                <a href="#" class="inscribirme">Inscribirme</a>
-            </div>
-            <div class="programacion_web">
-                <h2>Programación web full stack</h2>
-                <a href="#" class="inscribirme">Inscribirme</a>
-            </div>
+        <div class="marketing">
+            <h2>Marketing digital</h2>
+            <a href="#" class="inscribirme">Inscribirme</a>
+        </div>
+        <div class="programacion_web">
+            <h2>Programación web full stack</h2>
+            <a href="#" class="inscribirme">Inscribirme</a>
+        </div>
     </section>
 
 
@@ -338,7 +342,7 @@
     <section class="boton_fijo">
         <a href="">
             <img src="img/CTA-informate.png">
-        </a>       
+        </a>
     </section>
 
     <section class="boton_to_top">
@@ -348,41 +352,45 @@
     </section>
 
 
-<!-----------------Formulario de contacto--------------------------------------------------------------------------------->
-    <!-- <form> 
-        Agrupar todos los elementos del formulario en una caja
+    <!-----------------Formulario de contacto--------------------------------------------------------------------------------->
+    <form>
+        <!-- Agrupar todos los elementos del formulario en una caja -->
         <fieldset>
             <h3>
-                <legend>Título del formulario</legend> Título del formulario
+                <legend>Título del formulario</legend> <!--Título del formulario-->
             </h3>
 
-            <div> Crear una etiqueta con input
+            <div> <!-- Crear una etiqueta con input -->
                 <div>
                     <label>Nombre</label>
-                    <input type="text" placeholder="Tu nombre">
+                    <input id="nombre" type="text" placeholder="Tu nombre">
                 </div>
-                Creamos divisiones para cada etiqueta con su input
-                <div>
+                <!-- Creamos divisiones para cada etiqueta con su input -->
+                <!-- <div>
                     <label>Apellidos</label>
-                    <input type="text" placeholder="Tus apellidos">
-                </div>
-                Tipo texto para Nombre y Apellidos
-                <div>
+                    <input id="apellidos" type="text" placeholder="Tus apellidos">
+                </div> -->
+                <!-- Tipo texto para Nombre y Apellidos -->
+                <!-- <div>
                     <label>Teléfono</label>
-                    <input type="tel" placeholder="Tu teléfono">
-                </div>
-                Tipo tel para Teléfono
+                    <input id="telefono" type="tel" placeholder="Tu teléfono">
+                </div> -->
+                <!-- Tipo tel para Teléfono -->
                 <div>
                     <label>Email</label>
-                    <input type="email" placeholder="Tu email">
+                    <input id="email" type="email" placeholder="Tu email">
                 </div>
-                Tipo email para Email
+                <!-- Tipo email para Email -->
+                <div>
+                    <label>Mensaje</label>
+                    <textarea id="mensaje" type="text" placeholder="Tu mensaje"> </textarea>
+                </div>
             </div>
 
             <input type="submit" value="Enviar la información">
-            Crear botón para enviar el formulario
+            <!-- Crear botón para enviar el formulario -->
         </fieldset>
-    </form> -->
+    </form>
 
     <section class="seccion_movil">
         <p>Infórmate</p>

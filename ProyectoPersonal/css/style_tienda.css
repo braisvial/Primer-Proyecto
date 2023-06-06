@@ -211,10 +211,11 @@ body {
 
 /*---------------------MENU DESPLEGABLE 1140px-------------*/
 
-.menu{
-    display:none;
+.menu {
+    display: none;
 }
-.desplegable{
+
+.desplegable {
     display: none;
     position: absolute;
     top: 8rem;
@@ -223,7 +224,7 @@ body {
     background-color: var(--color_secundario);
 }
 
-.desplegable a{
+.desplegable a {
     display: block;
     text-align: right;
     margin-right: 1rem;
@@ -238,8 +239,8 @@ body {
     margin-right: 2rem;
 }
 
-.desplegable a:hover{
-    opacity:100%
+.desplegable a:hover {
+    opacity: 100%
 }
 
 .desplegable_descargar {
@@ -301,10 +302,11 @@ body {
 }
 
 /*-------------SECCIÓN BÚSQUEDA-------------------------------------*/
-.buscador{
+.buscador {
     display: flex;
     justify-content: flex-end;
 }
+
 .bloque_buscador {
     margin-top: 10rem;
     height: 5rem;
@@ -314,7 +316,7 @@ body {
 }
 
 .bloque_buscador .input_buscador {
-    
+
     background-color: var(--color_secundario);
     display: grid;
     grid-template-columns: 10% 90%;
@@ -345,7 +347,7 @@ body {
     gap: 3rem;
 }
 
-.catalogo .juego{
+.catalogo .juego {
     display: flex;
     flex-direction: row;
     border: 2px solid var(--color_secundario);
@@ -353,21 +355,21 @@ body {
     cursor: pointer;
 }
 
-.catalogo .juego .caratula{
+.catalogo .juego .caratula {
     flex: 60%;
     width: 20%;
     height: 30rem;
     margin-right: 2rem;
 }
 
-.catalogo .juego .caratula img{
+.catalogo .juego .caratula img {
     object-fit: cover;
-    width:100%;
-    height:100%;
-    border-radius: 10px; 
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
-.catalogo .juego .texto{
+.catalogo .juego .texto {
     flex: 40%;
     display: flex;
     flex-direction: column;
@@ -375,46 +377,46 @@ body {
     /* font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace; */
 }
 
-.catalogo .juego .texto .titulo{
-    flex:50%;
-    height:50%;
+.catalogo .juego .texto .titulo {
+    flex: 50%;
+    height: 50%;
     display: flex;
     align-items: center;
 }
 
-.catalogo .juego .texto .precio{
-    flex:50%;
-    height:50%;
+.catalogo .juego .texto .precio {
+    flex: 50%;
+    height: 50%;
     display: flex;
     align-items: center;
 }
 
 /*-------------SECCIÓN FILTROS--------------------------------------*/
 
-.filtros{
+.filtros {
     position: fixed;
     left: 0;
-    top:0;
-    background-image: linear-gradient(to right, var(--color_secundario) 10%, #797979 80%,  var(--color_principal) 100%);
+    top: 0;
+    background-image: linear-gradient(to right, var(--color_secundario) 10%, #797979 80%, var(--color_principal) 100%);
     width: 40rem;
     height: 100%;
     color: white;
     z-index: -1;
 }
 
-.filtros h2{
+.filtros h2 {
     margin-left: 5rem;
     margin-top: 10rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.filtros h3{
+.filtros h3 {
     margin-left: 5rem;
     margin-top: 1rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.filtros label{
+.filtros label {
     display: flex;
     flex-direction: row;
     text-align: left;
@@ -424,11 +426,11 @@ body {
     font-size: 1.2rem;
 }
 
-.filtros div{
+.filtros div {
     margin-bottom: 3rem;
 }
 
-.filtros button{
+.filtros button {
     margin-left: 12rem;
 }
 
@@ -601,15 +603,15 @@ body {
 
 /*-------------MEDIA QUERY------------------------------------------*/
 
-@media(max-width:1140px){
+@media(max-width:1140px) {
 
     /*-----CABECERA-----*/
-    
+
     .enlaces a {
         display: none;
     }
 
-    .izquierda .enlaces .tienda{
+    .izquierda .enlaces .tienda {
         display: none;
     }
 
@@ -619,15 +621,18 @@ body {
         align-items: center;
         cursor: pointer;
     }
+
     .menu img {
         width: 6rem;
         height: 6rem;
         opacity: 70%;
     }
-    .derecha .descargar{
+
+    .derecha .descargar {
         display: none;
     }
-    .derecha .iniciar_sesion{
+
+    .derecha .iniciar_sesion {
         display: none;
     }
 
@@ -689,7 +694,7 @@ body {
         font-size: 15px;
         text-decoration: none;
         margin-bottom: 1rem;
-        text-decoration: underline;        
+        text-decoration: underline;
     }
 
     .pie_pagina_media .logos_media {
@@ -702,5 +707,64 @@ body {
         width: 5rem;
         height: 5rem;
         margin: 0 2rem;
+    }
+
+    /*-----FILTROS Y BÚSQUEDA-----*/
+
+    .filtros {
+        display: none;
+    }
+
+    /*-----CATÁLOGO-----*/
+
+    .contenedor {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .catalogo {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        
+    }
+
+    .catalogo .juego {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .catalogo .juego .caratula{
+        flex:60%;
+        height: 20rem;
+        width: 100%;
+        margin-right: 0rem;
+    }
+
+    .catalogo .juego .caratula img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+}
+
+/*-----------BUSCADOR----------*/
+
+.bloque_buscador {
+    margin-top: 10rem;
+    height: 7rem;
+    width: 30%;
+    display: block;
+    margin-right: 2rem;
+}
+
+@media(max-width:480px){
+    .catalogo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
     }
 }
