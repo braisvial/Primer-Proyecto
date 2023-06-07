@@ -1,37 +1,48 @@
 //-----Buscador tienda-----\\
 
-const buscador = document.querySelector("#buscador")
+const buscador = document.querySelector("#buscador")                //Selecionar el buscador
 
-buscador.addEventListener("input", buscar(evento))
+buscador.addEventListener("keydown", function(evento) {             //Evento del input que hace la función buscar cuando le doy al enter
+  if (evento.key === "Enter") {
+    buscar(evento);
+  }
+})                          
 
-function buscar(evento) {
-  let titulo = document.querySelectorAll("H2")
-  let titulo_buscador = evento.target.value
+function buscar(evento) {                                           //Funcion buscador
+  let titulo = document.querySelectorAll("H2")                      //Seleccionar todos los h2
+  let titulo_buscador = evento.target.value.toLowerCase().trim()    //Modificar el valor del input a minúsculas y sin espacios
 
-  let titulo_minus = trim(titulo.toLowerCase())
-  let titulo_buscador_minus = trim(titulo_buscador.toLowerCase())
+  let titulos_encontrados = []                                      //Crear array donde guardar los títulos encontrados
 
-  let i = 0
-  let final = false
+  for (let i = 0; i < titulo.length; i++){                          //Recorrer todos los h2
 
-  elementos = titulo.length
-  do {
-    if (titulo_minus[i] === titulo_buscador_minus){
-        //Almacenar objeto en array para luego mostrar 
-        i++
+    let titulo_actual = titulo[i].textContent.toLowerCase().trim()  //Guardar el nueva variable el valor del h2 en minúsculas y sin espacios
+
+    if (titulo_actual.includes(titulo_buscador)){                   //Si el input está en el h2 actual...
+      titulos_encontrados.push(titulo[i])                           //Almacenar título en el array para luego mostrar
     }
-    else{
-      if (i === elementos -1){
-        final = true
-        //Mostrar notificación: "Objeto no encontrado"
-        i ++
-      }
-    }
-  } while (!final)
+  } 
 
-  //Mostrar array con los objetos encontrados mediante buscador
+  if (titulos_encontrados.length > 0){                              //Si se han guardado títulos en el array...(length > 0)
+    console.log(titulos_encontrados)                                //Mostrar títulos encontrados mediante buscador
+  }
+  else{
+    mostrar_notificacion("No se ha encontrado el título");                    //Notificar que no se ha encontrado título
+  }
 }
 
+function mostrar_notificacion(mensaje) {
+  const notificacion = document.createElement("div");
+  notificacion.textContent = mensaje;
+  notificacion.classList.add("notificacion");
+
+  document.body.appendChild(notificacion);
+
+  // Eliminar la notificación después de 3 segundos
+  setTimeout(() => {
+    notificacion.remove();
+  }, 3000);
+}
 
 // function togglePopup() {
 //   var popup = document.getElementById("popup");
