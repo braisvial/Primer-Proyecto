@@ -733,7 +733,7 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
-        margin-bottom: 10%;   
+        margin-bottom: 10%;
     }
 
     .catalogo .juego {
@@ -744,7 +744,7 @@ body {
         /* align-items: center; */
     }
 
-    .catalogo .juego .caratula{
+    .catalogo .juego .caratula {
         flex: 50%;
         width: 100%;
         height: auto;
@@ -789,7 +789,7 @@ body {
     margin-right: 2rem;
 }
 
-@media(max-width:480px){
+@media(max-width:480px) {
     .catalogo {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -813,17 +813,19 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 9999;
     animation: fadeOut 3s ease-in;
-  }
-  
-  @keyframes fadeOut {
+}
+
+@keyframes fadeOut {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
+
     50% {
-      opacity: 0.5;
+        opacity: 0.5;
     }
+
     100% {
-      opacity: 0;
-      transform: translateY(-20px);
+        opacity: 0;
+        transform: translateY(-20px);
     }
-  }
+}
