@@ -26,6 +26,7 @@ body {
 .contenedor {
     max-width: 80%;
     margin: 0 auto;
+    position: relative;
 }
 
 /*-------------CABECERA---------------------------------------------*/
@@ -387,6 +388,31 @@ body {
     cursor: pointer;
 }
 
+/*-------------VOLVER ARRIBA----------------------------------------*/
+
+.volver_arriba {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    /* width: fit-content; */
+    margin-top: -6.7rem;
+    cursor: pointer;
+}
+
+.volver_arriba p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.volver_arriba img{
+    height: 3rem;
+    margin-right: 1rem;
+}
 
 /*-------------PIE DE PÁGINA----------------------------------------*/
 

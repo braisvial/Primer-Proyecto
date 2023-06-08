@@ -1,4 +1,4 @@
-//-----Buscador tienda-----\\
+//-----BUSCADOR TIENDA-----\\
 
 const buscador = document.querySelector("#buscador")                //Selecionar el buscador
 
@@ -27,7 +27,7 @@ function buscar(evento) {                                           //Funcion bu
     console.log(titulos_encontrados)                                //Mostrar títulos encontrados mediante buscador
   }
   else{
-    mostrar_notificacion("No se ha encontrado el título");                    //Notificar que no se ha encontrado título
+    mostrar_notificacion("No se ha encontrado el título");          //Notificar que no se ha encontrado título
   }
 }
 
@@ -43,6 +43,43 @@ function mostrar_notificacion(mensaje) {
     notificacion.remove();
   }, 3000);
 }
+
+//-----VER MÁS-----\\
+
+// window.addEventListener('DOMContentLoaded', function () {
+//   let catalogo = document.getElementById('catalogo');
+//   let juegos = catalogo.querySelectorAll('.juego');
+//   let boton_ver_mas = document.getElementById('ver_mas');
+
+//   let juegos_visibles = 9;                                          // Número inicial de divs visibles
+//   let juegos_por_clic = 9;                                          // Número de divs a mostrar por clic en "ver_más"
+//   let indice = 9;                                                   // Índice del primer div oculto
+
+//   let numero_divs = juegos.length;                                  // Número de divs totales
+
+//   for (let i = 0; i < juegos.length; i++) {                         // Ocultar todos los div "juego"
+//     juegos[i].style.display = 'none';
+//   }
+
+//   for (let i = 0; i < juegos_visibles; i++) {                       // Mostrar los primeros 9 divs por defecto
+//     juegos[i].style.display = 'flex';
+//   }
+
+//   function mostrar_mas_juegos() {                                   // Función para mostrar los siguientes divs al hacer clic en "Ver más"
+//       for (let i = 0; i < juegos_por_clic; i++) {
+//           if (juegos[i + indice]) {                                 // Se asegura de que hay un div que mostrar
+//             juegos[i + indice].style.display = 'flex';              // Muestra el div
+//           }
+//       }
+//       indice += juegos_por_clic;                                    // Aumentar el índice en 5 para el próximo bloque de 5 divs
+
+//       if (indice >= numero_divs) {                                  // Si se llega al último div...
+//           boton_ver_mas.style.display = 'none';                     // Ocultar el botón si se han mostrado todos los divs
+//       }
+//   }
+
+//   boton_ver_mas.addEventListener('click', mostrar_mas_juegos);      // Agregar el evento click al botón "Ver más"
+// });
 
 // function togglePopup() {
 //   var popup = document.getElementById("popup");
