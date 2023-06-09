@@ -1,0 +1,136 @@
+{
+    "noticias":[
+        {
+            "img": "https://i.blogs.es/e4a3fd/final/1366_2000.jpeg",
+            "title": "¿Te abruma que el combate Final Fantasy XVI sea tan diferente al resto de la saga? El RPG de acción tiene una solución para quienes no lo vean claro",
+            "description": "El modo de dificultad Historia está diseñado para quienes quieran centrarse en la trama, reduciendo la dificultad de los combates y simplificando los controles.",
+            "link": "https://www.3djuegos.com/juegos/final-fantasy-xvi/noticias/te-abruma-que-combate-final-fantasy-xvi-sea-diferente-al-resto-saga-rpg-accion-tiene-solucion-para-quienes-no-vean-claro"
+          },
+          {
+            "img": "https://i.blogs.es/b554e6/darkest-dungeon_resena-opinion-analisis-opinion/1366_2000.jpeg",
+            "title": "La secuela de uno de los RPG más oscuros y difíciles es un juego valiente, pero no siempre mejor que el original. Análisis de Darkest Dungeon 2",
+            "description": "Hay muchos cambios en esta secuela que se agradecen para no repetir fórmula, pero el resultado es algo menos atractivo que su primera parte.",
+            "link": "https://www.3djuegos.com/juegos/darkest-dungeon-ii/analisis/secuela-uno-rpg-oscuros-dificiles-juego-valiente-no-siempre-mejor-que-original-analisis-darkest-dungeon-2"
+          },
+          {
+            "img": "https://i.blogs.es/03929c/elden/1366_2000.jpeg",
+            "title": "Mientras muchos no entienden su historia, otros lo premian como el videojuego mejor escrito del año. Otro triunfo más para Elden Ring",
+            "description": "El título de FromSoftware se alza con un Premio Nébula 2023 por el trabajo de Hidetaka Miyazaki y George R.R. Martin en la escritura.",
+            "link": "https://www.3djuegos.com/juegos/elden-ring/noticias/muchos-no-entienden-su-historia-otros-premian-como-videojuego-mejor-escrito-ano-otro-triunfo-para-elden-ring"
+          },
+          {
+            "img": "https://i.blogs.es/5cd72c/dead-island/1366_2000.jpeg",
+            "title": "\"Era demasiado complejo\": Los creadores de Dead Island 2 explican los problemas que retrasaron nueve años el lanzamiento",
+            "description": "La cada vez mayor complejidad de los videojuegos puede hacer que lo de Dead Island 2 deje de ser una anécdota y se convierta en habitual.",
+            "link": "https://www.3djuegos.com/juegos/dead-island-2/noticias/era-demasiado-complejo-creadores-dead-island-2-explican-problemas-que-retrasaron-nueve-anos-lanzamiento-como-afectan-a-toda-industria-videojuego"
+          },
+          {
+            "img": "https://i.blogs.es/c98f1d/star-wars-jedi-survivor-respawn-entertainment-ea-2/1366_2000.jpeg",
+            "title": "El éxito de Star Wars Jedi: Survivor frente a Fallen Order evidencia una tendencia cada vez más común: Los jugadores prefieren comprar en digital",
+            "description": "Aunque el rendimiento comercial por ventas físicas dejaba el nuevo proyecto de Respawn por debajo de la primera aventura de Cal Kestis, las cifras mejoran notablemente si contamos lo digital.",
+            "link": "https://www.3djuegos.com/juegos/star-wars-jedi-survivor/noticias/exito-star-wars-jedi-survivor-frente-a-fallen-order-evidencia-tendencia-cada-vez-comun-jugadores-prefieren-comprar-digital"
+          },
+          {
+            "img": "https://i.blogs.es/196400/1366_2000---2023-02-25t161255.651/1366_2000.jpeg",
+            "title": "Baldur's Gate 3 aumenta sus requisitos en PC: necesitarás una buena gráfica y mucho espacio en tu disco duro para jugar en la calidad recomendada",
+            "description": "Necesitarás una RTX 2060 Super y más de 150 GB de espacio en tu disco duro para disfrutar de Baldur's Gate 3 en la calidad recomendada.",
+            "link": "https://www.3djuegos.com/juegos/baldurs-gate-3/noticias/baldurs-gate-3-aumenta-sus-requisitos-pc-necesitaras-buena-grafica-mucho-espacio-tu-disco-duro-para-jugar-calidad-recomendada"
+          },
+          {
+            "img": "https://i.blogs.es/e259be/hogwartsss/1366_2000.jpeg",
+            "title": "Se descubre contenido eliminado de Hogwarts Legacy donde podíamos hacer bullying, emborracharnos y muchas más cosas",
+            "description": "Los archivos internos del juego muestran opciones descartadas por parte de Avalanche Software para su RPG de mundo abierto de Harry Potter.",
+            "link": "https://www.3djuegos.com/juegos/hogwarts-legacy/noticias/se-descubre-contenido-eliminado-hogwarts-legacy-donde-podiamos-hacer-bullying-emborracharnos-muchas-cosas"
+          },
+          {
+            "img": "https://i.blogs.es/6ab8a9/resi/1366_2000.jpeg",
+            "title": "Resident Evil 4 Remake culmina por todo lo alto un año histórico y nunca antes visto para Capcom",
+            "description": "La compañía japonesa ha firmado récord en cuanto a ventas en el último año fiscal, con 41,7 millones de juegos vendidos.",
+            "link": "3djuegos.com/juegos/resident-evil-4-remake/noticias/resident-evil-4-remake-culmina-todo-alto-ano-historico-nunca-antes-visto-para-capcom"
+          },
+          {
+            "img": "https://i.blogs.es/587bcb/dead-space-3/1366_2000.jpeg",
+            "title": "Su desarrollo fue una pesadilla por culpa de un enemigo, pero ahora es uno de los mejores juegos de terror de la historia: Así se vivió el mayor problema de Dead Space",
+            "description": "Son criaturas legendarias en la entrega, pero los Tentáculos de Arrastre también son recordados por protagonizar uno de los momentos más difíciles para sus autores.",
+            "link": "https://www.3djuegos.com/juegos/dead-space/noticias/enemigo-dead-space-que-casi-se-carga-su-desarrollo"
+          },
+          {
+            "img": "https://i.blogs.es/5a114e/atomic-heart-mundfish-focus-entertainment/1366_2000.jpeg",
+            "title": "Atomic Heart ha rendido mejor de lo esperado, y no es la única razón por la que su editora cierra el año fiscal con buenas noticias",
+            "description": "El rendimiento comercial del shooter, así como de otros juegos, ha ayudado a que Focus Entertainment finalice este periodo de tiempo con un máximo histórico de ingresos.",
+            "link": "https://www.3djuegos.com/juegos/atomic-heart/noticias/atomic-heart-ha-rendido-mejor-esperado-no-unica-razon-que-su-editora-cierra-ano-fiscal-buenas-noticias"
+          },
+          {
+            "img": "https://i.blogs.es/312187/hi-fi-rush-tango-gameworks-bethesda/1366_2000.jpeg",
+            "title": "Xbox desmiente los últimos rumores sobre Hi-Fi RUSH y asegura que \"no podríamos estar más contentos\" con su nivel de ventas",
+            "description": "Durante las últimas horas, se ha extendido un rumor que hablaba de un rendimiento comercial supuestamente bajo.",
+            "link": "https://www.3djuegos.com/juegos/hi-fi-rush/noticias/xbox-desmiente-ultimos-rumores-hi-fi-rush-asegura-que-no-podriamos-estar-contentos-su-nivel-ventas"
+          },
+          {
+            "img": "https://i.blogs.es/c9db3c/wo-long/1366_2000.jpeg",
+            "title": "Fue señalado como la copia de Sekiro, pero ya son millones de personas las que han jugado en menos de dos meses a Wo Long Fallen Dynasty",
+            "description": "El título de acción del Team Ninja ha vendido más de un millón de unidades y reunido a 3,8 millones de jugadores.",
+            "link": "https://www.3djuegos.com/juegos/wo-long-fallen-dynasty/noticias/fue-senalado-como-copia-sekiro-millones-personas-que-han-jugado-dos-meses-a-wo-long-fallen-dynasty"
+          },
+          {
+            "img": "https://i.blogs.es/6a8455/monster-hunter-wild-hearts/1366_2000.jpeg",
+            "title": "Como fan de Monster Hunter, nunca pensé que diría esto, pero Wild Hearts me está gustando bastante",
+            "description": "Lo nuevo de los padres de Dynasty Warriors viene pisando más fuerte de lo que parece: lejos de ser un \"Monster Hunter x Fortnite\" tiene sus propios aportes.",
+            "link": "https://www.3djuegos.com/juegos/wild-hearts/noticias/como-fan-monster-hunter-nunca-pense-que-diria-esto-wild-hearts-me-esta-gustando-bastante"
+          },
+          {
+            "img": "https://i.blogs.es/76f6c7/stray/1366_2000.jpeg",
+            "title": "Uno de los juegos favoritos de la gente, considerado de los mejores de 2022, se lanzará en más consolas. Xbox prepara la llegada de Stray",
+            "description": "El título de BlueTwelve Studios protagonizado por un simpático gato en un mundo ciberpunk ha pasado la clasificación por edades en ESRB. el organismo estadounidense indica que se lanzará pronto en Xbox One y Xbox Series X y S.",
+            "link": "https://www.3djuegos.com/juegos/stray/noticias/uno-juegos-favoritos-gente-considerado-mejores-2022-se-lanzara-consolas-xbox-prepara-llegada-stray"
+          },
+          {
+            "img": "https://i.blogs.es/76c03e/far-cry/1366_2000.jpeg",
+            "title": "Uno de los mundos abiertos más locos de los últimos años sorprende como el juego más vendido de Steam, pero hay una razón detrás del éxito de Far Cry 6",
+            "description": "El juego de Ubisoft goza de una suculenta rebaja del 75 % en su precio en la tienda de PC de Valve, pero el motivo de su éxito es que acaba de publicarse en Steam.",
+            "link": "https://www.3djuegos.com/juegos/far-cry-6/noticias/uno-mundos-abiertos-locos-ultimos-anos-sorprende-como-juego-vendido-steam-hay-razon-detras-exito-far-cry-6"
+          },
+          {
+            "img": "https://i.blogs.es/adc9ff/1366_2000---2023-05-21t122902.009/1366_2000.jpeg",
+            "title": "\"Que los jugadores se caguen en los pantalones\": La próxima actualización de Dying Light 2 va a ser \"aún más terrorífica\"",
+            "description": "Techland está preparando la segunda expansión de Dying Light 2 para lanzarla a finales de año, pero antes habrá algunos cambios importantes en el juego",
+            "link": "https://www.3djuegos.com/juegos/dying-light-2-stay-human/noticias/que-jugadores-se-caguen-pantalones-proxima-actualizacion-dying-light-2-va-a-ser-terrorifica"
+          },
+          {
+            "img": "https://i.blogs.es/461c4b/marvels-midnight-suns/1366_2000.jpeg",
+            "title": "Marvel's Midnight Suns cancela su versión de Nintendo Switch y fecha su lanzamiento en PS4 y Xbox One",
+            "description": "Las consolas de Xbox y PlayStation recibirán el título de Firaxis Games el próximo 11 de mayo, coincidiendo con el estreno de su cuarto DLC.",
+            "link": "https://www.3djuegos.com/juegos/marvels-midnight-suns/noticias/marvels-midnight-suns-cancela-su-version-nintendo-switch-fecha-su-lanzamiento-ps4-xbox-one"
+          },
+          {
+            "img": "https://i.blogs.es/9cb3ad/marvel-s-spider-man/1366_2000.png",
+            "title": "Marvel's Spider-Man 2: los 5 desafíos para convertirse en uno de los grandes videojuegos de 2023",
+            "description": "Nos adentramos en el desarrollo de Insomniac Games para PS5 en busca de las claves que pueden convertirlo en uno de los grandes juegos del año.",
+            "link": "https://www.3djuegos.com/juegos/marvels-spider-man-2/noticias/marvels-spider-man-2-5-desafios-para-convertirse-uno-grandes-videojuegos-2023"
+          },
+          {
+            "img": "https://i.blogs.es/juegos/17429/steelrising/fotos/noticias/steelrising-5667376.jpg",
+            "title": "La protagonista de Steelrising, al detalle: así es la autómata del RPG de acción creado por los autores de Greedfall",
+            "description": "El título de Spiders fecha el lanzamiento de su juego ambientado en la Revolución Francesa para el próximo 8 de septiembre.",
+            "link": "https://www.3djuegos.com/juegos/steelrising/noticias/la-protagonista-de-steelrising-al-detalle-asi-es-la-220523-122179"
+          },
+          {
+            "img": "https://i.blogs.es/9da471/one-piece-odyssey-reunion-of-memories/1366_2000.jpeg",
+            "title": "One Piece Odyssey recupera a dos grandes villanos del manganime con el tráiler de su primer DLC, Reunion of Memories",
+            "description": "Los Sombrero de Paja revivirán aventuras pasadas en esta expansión que ya está disponible en PS4, PS5, Xbox Series y PC.",
+            "link": "https://www.3djuegos.com/juegos/one-piece-odyssey/noticias/one-piece-odyssey-recupera-a-dos-grandes-villanos-manganime-trailer-su-primer-dlc-reunion-of-memories"
+          },
+          {
+            "img": "https://i.blogs.es/8bc5e5/lies_of_p-5556695/1366_2000.jpeg",
+            "title": "Lies of P, el soulslike de Pinocho inspirado en Bloodborne, ya tiene fecha de lanzamiento y lo acompaña con un nuevo tráiler cinemático",
+            "description": "A falta de conocer el día exacto, Round 8 ha anunciado que esta obra llegará en agosto de este mismo año.",
+            "link": "https://www.3djuegos.com/juegos/lies-of-p/noticias/lies-of-p-soulslike-pinocho-inspirado-bloodborne-tiene-fecha-lanzamiento"
+          },
+          {
+            "img": "https://i.blogs.es/66d104/a-plague-tale-requiem-asobo-studio-focus-entertainment/1366_2000.jpeg",
+            "title": "Uno de los juegos de acción y aventuras más bonitos del momento recibe parche de 60 FPS en PS5 y Xbox Series. El modo rendimiento aterriza en A Plague Tale: Requiem",
+            "description": "Además, los jugadores de PC tienen opciones adicionales para optimizar el rendimiento gráfico en sus sistemas.",
+            "link": "https://www.3djuegos.com/juegos/a-plague-tale-requiem/noticias/uno-juegos-accion-aventuras-bonitos-momento-recibe-parche-60-fps-ps5-xbox-series-modo-rendimiento-aterriza-a-plague-tale-requiem"
+          }
+    ]
+}
