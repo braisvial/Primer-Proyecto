@@ -12,6 +12,7 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    height: 100%;
 }
 
 /*-------------BODY-------------------------------------------------*/
@@ -20,6 +21,7 @@ body {
     font-size: 16px;
     margin: 0 0;
     background-color: var(--color_principal);
+    height: 100%;
 }
 
 /*-------------CABECERA---------------------------------------------*/
@@ -338,67 +340,62 @@ body {
     outline: 0;
 }
 
+.principal {
+    display:flex;
+    min-height: 57.1%;
+}
 /*-------------SECCIÓN CATÁLOGO-------------------------------------*/
 
 .catalogo {
+    flex: 80%;
+    width: 80%;
     margin-top: 3rem;
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-}
-
-.juego {
+    grid-template-columns: repeat(3, 1fr); /* Cambio en la propiedad grid-template-columns */
+    gap: 3rem;
+  }
+  
+  .juego {
     display: flex;
-    flex-direction: row;
+    align-items: center; /* Alinear verticalmente los elementos */
+    height: 30vh; /* Establecer una altura fija para cada juego */
     border: 2px solid var(--color_secundario);
     border-radius: 12px;
     cursor: pointer;
-}
-
-.catalogo .juego .caratula {
-    flex: 60%;
-    width: 20%;
+  }
+  
+  .catalogo .juego .caratula {
+    flex: 50%; /* Cambio en la propiedad flex */
     height: 100%;
-    /* margin-right: 0rem; */
-}
-
-.catalogo .juego .caratula img {
-    object-fit: cover;
-    width: 100%;
+    overflow: hidden;
+  }
+  
+  .catalogo .juego .caratula img {
     height: 100%;
+    width: 100%; /* Ajustar la imagen al ancho del contenedor */
+    object-fit: cover; /* Ajustar la imagen sin deformarla */
     border-radius: 10px;
-}
-
-.catalogo .juego .texto {
-    flex: 60%;
+  }
+  
+  .catalogo .juego .texto {
+    flex: 50%; /* Cambio en la propiedad flex */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 0 auto;
     font-size: 100%;
-    /* font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace; */
-}
-
-.catalogo .juego .texto .titulo {
-    flex: 50%;
-    height: 50%;
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.catalogo .juego .texto .precio {
-    flex: 50%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+  }
+  
+  .catalogo .juego .texto .titulo {
+    margin-bottom: 0.5rem; /* Añadir un margen inferior al título */
+  }
+  
+  .catalogo .juego .texto .precio {
+    font-weight: bold; /* Añadir negrita al precio */
+  }
+  
 
 /*-------------BOTÓN VER MÁS--------------------------------------*/
 .bloque_ver_mas {
@@ -406,6 +403,7 @@ body {
     justify-content: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    margin-left: 15%;
 }
 
 .ver_mas {
@@ -418,47 +416,122 @@ body {
     cursor: pointer;
 }
 
+/*-------------VOLVER----------------------------------------*/
+
+.volver {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+.volver p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 0;
+}
+
+.volver img{
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+/*-------------VOLVER ARRIBA----------------------------------------*/
+
+.volver_arriba {
+    display: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 3%;
+    margin-top: -7rem;
+    cursor: pointer;
+}
+
+.volver_arriba p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.volver_arriba img{
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+
 /*-------------SECCIÓN FILTROS--------------------------------------*/
 
 .filtros {
+    flex:20%;
+    width: 20%;
     position: fixed;
     left: 0;
     top: 0;
     background-image: linear-gradient(to right, var(--color_secundario) 10%, #797979 80%, var(--color_principal) 100%);
-    width: 40rem;
-    height: 100%;
+    height: 100vh;    
+    z-index: -1;     
+}
+
+.contenido_filtros{
+    display: flex;
+    flex-direction: column;  
     color: white;
-    z-index: -1;
+    margin-top: 30%;
+    margin-bottom: 30%; 
+    height: 60%;
 }
 
 .filtros h2 {
-    margin-left: 5rem;
-    margin-top: 10rem;
+    margin-left: 30%;
+    margin-bottom: 1rem;
+    font-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
+}
+.generos {    
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    
+}
+.tematicas {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+.edades {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
 }
 
 .filtros h3 {
-    margin-left: 5rem;
-    margin-top: 1rem;
+    font-size: 80%;
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .filtros label {
     display: flex;
     flex-direction: row;
     text-align: left;
-    margin-left: 5rem;
     margin-top: 0;
+    margin-left: 1rem;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-}
-
-.filtros div {
-    margin-bottom: 3rem;
+    font-size: 80%;
 }
 
 .filtros button {
-    margin-left: 12rem;
+    margin-left: 10%;
+    width: fit-content;
+    margin-bottom: 30%;
 }
 
 /*-------------PIE DE PÁGINA----------------------------------------*/
