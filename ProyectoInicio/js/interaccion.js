@@ -16,7 +16,7 @@ TODOS INICIAN CON DOCUMENT*/
     DOCUMENT HACE REFERENCIA A TODO EL DOCUMENTO HTML*/
 
 
-const selector_h1 = document.querySelector(".titulo")
+zº
 
 console.log(selector_h1)
 

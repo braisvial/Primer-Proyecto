@@ -4,6 +4,7 @@
     --fuente_header: 'Orbitron', sans-serif;
     --color_principal: rgb(123, 104, 238);
     --color_secundario: #2a2a2a;
+    --color_terciario: #808080;
 }
 
 /*-------------HTML-------------------------------------------------*/
@@ -420,6 +421,80 @@ p{
 
 .pie_pagina_media {
     display: none;
+}
+
+/*-------------POP-UP LOGIN----------------------------------------*/
+
+.login_popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color_terciario);
+    opacity: 90%;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+.contenido_popup {
+    background-color: var(--color_terciario);
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.contenido_popup h1 {
+    color: var(--color_secundario);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login_popup input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-color: var(--color_secundario);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--color_principal);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.cerrar:before,
+.cerrar:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    height: 2px;
+    background-color: #000;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cerrar:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 /*-------------MEDIA QUERY------------------------------------------*/

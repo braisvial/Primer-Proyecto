@@ -144,18 +144,15 @@
         <div class="contenido_popup">
             <h1>Iniciar sesión</h1>
             <form>
-                <input type="text" placeholder="Nombre de usuario" required>
-                <input type="password" placeholder="Contraseña" required>
-                <button type="submit">Iniciar sesión</button>
+                <input id="usuario" type="text" placeholder="Nombre de usuario" required>
+                <input id="contraseña" type="password" placeholder="Contraseña" required>
+                <button id="iniciar">Iniciar sesión</button>
             </form>
             <span class="cerrar" onclick="cerrar_login()"></span>
         </div>
     </div>
 
     <div id="descargar_popup" class="descargar_popup">
-        <div id="player">
-            
-        </div>
         <span class="cerrar_descargar" onclick="cerrar_descargar()"></span>
     </div>
 

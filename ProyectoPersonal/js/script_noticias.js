@@ -4,6 +4,7 @@ const buscador = document.querySelector("#buscador")                            
 const boton_volver_arriba = document.querySelector(".volver_arriba")                // Elemento Volver Arriba
 const boton_ver_mas = document.getElementById('ver_mas');                           // Elemento Ver Más                     
 const boton_volver = document.querySelector(".volver")                              // Elemento Volver
+const ver_mas = document.querySelector(".ver_mas")
 
 //-----BUSCADOR NOTICIAS-----\\
 
@@ -42,6 +43,8 @@ function buscar(evento) {                                                       
             divs_noticias[i].style.display = 'flex';                                // Mostrar los  5 primeros divs como si no hubiera pasado nada
         }
         mostrar_notificacion("No se ha encontrado la noticia");                     // Notificar que no se ha encontrado título
+        ver_mas.style.display = "flex";
+        boton_volver.style.display = "none";
     }
     else {
         boton_volver_arriba.style.display = "none"                                  // Ocultar el botón para volver arriba

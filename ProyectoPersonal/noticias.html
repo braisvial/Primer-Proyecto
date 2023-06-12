@@ -30,14 +30,14 @@
         </div>
 
         <div class="derecha">
-            <a href="" class="descargar">
+            <div class="descargar" onclick="mostrar_descargar()">
                 <img src="./img/download.svg">
                 <p>Descargar</p>
-            </a>
-            <a href="" class="iniciar_sesion">
+            </div>
+            <div class="iniciar_sesion" onclick="mostrar_login()">
                 <img src="./img/user_login.png">
                 <p>Iniciar Sesión</p>
-            </a>
+            </div>
         </div>
 
         <div class="menu" onclick="mostrar_menu()">
@@ -464,6 +464,17 @@
         </div>
     </footer>
 
+    <div id="login_popup" class="login_popup">
+        <div class="contenido_popup">
+            <h1>Iniciar sesión</h1>
+            <form>
+                <input type="text" placeholder="Nombre de usuario" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <span class="cerrar" onclick="cerrar_login()"></span>
+        </div>
+    </div>
     
 
     <script src="js/script.js"></script>
