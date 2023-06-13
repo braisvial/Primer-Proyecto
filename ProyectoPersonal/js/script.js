@@ -39,18 +39,61 @@ function cerrar_descargar() {
 }
 
 //-----MENU DESPLEGABLE-----\\
+
 function mostrar_menu() {
   var menu_desplegable = document.querySelector('.desplegable');
   menu_desplegable.style.display = (menu_desplegable.style.display === 'block') ? 'none' : 'block';
 }
 
-//--------IMAGENES---------\\
-// function desplegar(){
-//   let n = document.querySelector("fotos_portada");
-//   n.mouseover
-// }
+//-----MOVIMIENTO PORTADA-----\\
+const portada = document.querySelector(".fotos_portada")
 
-// let algo = document.querySelector("fotos_portada");
-// algo.addEventListener("mouseover", (evento) => {
-//   console.log(target.style.color = "red")
-// })
+const foto1 = portada.querySelector(".foto1");
+foto1.addEventListener('mouseover', () => {
+  portada.style.gridTemplateColumns = "2fr 1fr 1fr 1fr 1fr";
+  foto1.style.filter = "none"
+}); 
+foto1.addEventListener('mouseout', () => {
+  portada.style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr";
+  foto1.style.filter= "grayscale(100%)"
+});
+
+const foto2 = portada.querySelector(".foto2");
+foto2.addEventListener('mouseover', () => {
+  portada.style.gridTemplateColumns = "1fr 2fr 1fr 1fr 1fr";
+  foto2.style.filter = "none"
+}); 
+foto2.addEventListener('mouseout', () => {
+  portada.style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr";
+  foto2.style.filter= "grayscale(100%)"
+});
+
+const foto3 = portada.querySelector(".foto3");
+foto3.addEventListener('mouseover', () => {
+  portada.style.gridTemplateColumns = "1fr 1fr 2fr 1fr 1fr";
+  foto3.style.filter = "none"
+}); 
+foto3.addEventListener('mouseout', () => {
+  portada.style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr";
+  foto3.style.filter= "grayscale(100%)"
+});
+
+const foto4 = portada.querySelector(".foto4");
+foto4.addEventListener('mouseover', () => {
+  portada.style.gridTemplateColumns = "1fr 1fr 1fr 2fr 1fr";
+  foto4.style.filter = "none"
+}); 
+foto4.addEventListener('mouseout', () => {
+  portada.style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr";
+  foto4.style.filter= "grayscale(100%)"
+});
+
+const foto5 = portada.querySelector(".foto5");
+foto5.addEventListener('mouseover', () => {
+  portada.style.gridTemplateColumns = "1fr 1fr 1fr 1fr 2fr";
+  foto5.style.filter = "none"
+}); 
+foto5.addEventListener('mouseout', () => {
+  portada.style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr";
+  foto5.style.filter= "grayscale(100%)"
+});

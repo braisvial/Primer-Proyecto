@@ -326,9 +326,9 @@ body {
 .fotos_portada {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    /* grid-template-rows: 1fr; */
     height: 100%;
     max-width: 100%;
+    transition: grid-template-columns 1s ease-in-out;
 }
 
 /*~~~~~~~~~~~~~FOTO 1~~~~~~~~~~~~*/
@@ -340,15 +340,7 @@ body {
     background-repeat: no-repeat;
     height: 100%;
     filter: grayscale(100%);
-}
-
-.portada .foto1:hover {
-    z-index: 1000;
-    margin-right: -50%;
-    filter: none;
-    transition-property: margin-right, filter;
-    transition-duration: 1s, 2s;
-    transition-timing-function: steps(144);
+    transition: filter 1s ease-in-out;
 }
 
 .portada .foto1 img {
@@ -365,14 +357,6 @@ body {
     transition-timing-function: linear;
 }
 
-/* .portada .foto1:hover~.foto2 {
-    z-index: 500;
-    background-position: 50%;
-    transition-property: background-position;
-    transition-duration: 1s;
-    transition-timing-function: linear;
-} */
-
 /*~~~~~~~~~~~~~FOTO 2~~~~~~~~~~~~*/
 
 .portada .foto2 {
@@ -382,15 +366,7 @@ body {
     background-repeat: no-repeat;
     height: 100%;
     filter: grayscale(100%);
-}
-
-.portada .foto2:hover {
-    z-index: 1000;
-    filter: none;
-    margin-right: -50%;
-    transition-property: margin-right, filter;
-    transition-duration: 1s, 2s;
-    transition-timing-function: steps(144);
+    transition: filter 1s ease-in-out;
 }
 
 .portada .foto2 img {
@@ -407,14 +383,6 @@ body {
     transition-timing-function: linear;
 }
 
-/* .portada .foto2:hover~.foto3 {
-    z-index: 500;
-    background-position: 55%;
-    transition-property: background-position;
-    transition-duration: 1s;
-    transition-timing-function: linear;
-} */
-
 /*~~~~~~~~~~~~~FOTO 3~~~~~~~~~~~~*/
 
 .portada .foto3 {
@@ -424,15 +392,7 @@ body {
     background-repeat: no-repeat;
     height: 100%;
     filter: grayscale(100%);
-}
-
-.portada .foto3:hover {
-    z-index: 1000;
-    filter: none;
-    margin: 0 -25% 0 -25%;
-    transition-property: margin, filter;
-    transition-duration: 1s, 2s;
-    transition-timing-function: steps(144);
+    transition: filter 1s ease-in-out;
 }
 
 .portada .foto3 img {
@@ -449,22 +409,6 @@ body {
     transition-timing-function: linear;
 }
 
-/* .portada .foto3:hover~.foto2 {
-    z-index: 500;
-    background-position: -42.5vw;
-    transition-property: background-position;
-    transition-duration: 1s;
-    transition-timing-function: linear;
-}
-
-.portada .foto3:hover~.foto4 {
-    z-index: 500;
-    background-position: 48%;
-    transition-property: background-position;
-    transition-duration: 1s;
-    transition-timing-function: linear;
-    } */
-
 /*~~~~~~~~~~~~~FOTO 4~~~~~~~~~~~~*/
 
 .portada .foto4 {
@@ -475,15 +419,7 @@ body {
     display: block;
     height: 100%;
     filter: grayscale(100%);
-}
-
-.portada .foto4:hover {
-    z-index: 1000;
-    filter: none;
-    margin-left: -50%;
-    transition-property: margin-left, filter;
-    transition-duration: 1s, 2s;
-    transition-timing-function: steps(144);
+    transition: filter 1s ease-in-out;
 }
 
 .portada .foto4 img {
@@ -500,14 +436,6 @@ body {
     transition-timing-function: linear;
 }
 
-/* .portada .foto4:hover~.foto3 {
-    z-index: 500;
-    background-position: 65%;
-    transition-property: background-position;
-    transition-duration: 1s;
-    transition-timing-function: linear;
-} */
-
 /*~~~~~~~~~~~~~FOTO 5~~~~~~~~~~~~*/
 
 .portada .foto5 {
@@ -518,15 +446,7 @@ body {
     display: block;
     height: 100%;
     filter: grayscale(100%);
-}
-
-.portada .foto5:hover {
-    z-index: 1000;
-    filter: none;
-    margin-left: -50%;
-    transition-property: margin-left, filter;
-    transition-duration: 1s, 2s;
-    transition-timing-function: steps(144);
+    transition: filter 1s ease-in-out;
 }
 
 .portada .foto5 img {
@@ -540,14 +460,6 @@ body {
     opacity: 100%;
     transition-property: opacity;
     transition-duration: 2s;
-    transition-timing-function: linear;
-}
-
-.portada .foto5:hover+.foto4 {
-    z-index: 500;
-    background-position: 60%;
-    transition-property: background-position;
-    transition-duration: 1s;
     transition-timing-function: linear;
 }
 
@@ -669,7 +581,7 @@ body {
 /*-------------POP-UP LOGIN----------------------------------------*/
 
 .login_popup {
-    display: flex;
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
