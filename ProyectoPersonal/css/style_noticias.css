@@ -403,7 +403,7 @@ body {
     cursor: pointer;
 }
 
-.volver p{
+.volver p {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -411,7 +411,7 @@ body {
     margin: 0 0;
 }
 
-.volver img{
+.volver img {
     height: 3rem;
     margin-right: 1rem;
 }
@@ -429,14 +429,14 @@ body {
     cursor: pointer;
 }
 
-.volver_arriba p{
+.volver_arriba p {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 20px;
 }
 
-.volver_arriba img{
+.volver_arriba img {
     height: 3rem;
     margin-right: 1rem;
 }
@@ -627,6 +627,39 @@ button {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+/* -----NOTIFICACIÓN BUSCADOR----- */
+
+.notificacion {
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    padding: 5rem 10rem;
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    animation: fadeOut 3s ease-in-out;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
 /*-------------MEDIA QUERY------------------------------------------*/
 
 @media(max-width:1140px) {
@@ -767,36 +800,37 @@ button {
         margin-right: 2rem;
         max-width: 100%;
     }
-}
 
-/*-----NOTIFICACIÓN BUSCADOR-----*/
+    /*-----NOTIFICACIÓN BUSCADOR-----*/
 
-.notificacion {
-    position: fixed;
-    top: 50%;
-    right: 40%;
-    padding: 5rem 10rem;
-    background-color: #333;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
-    animation: fadeOut 3s ease-in;
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
+    .notificacion {
+        position: fixed;
+        top: 50%;
+        right: 20%;
+        left: 20%;
+        padding: 5rem 10rem;
+        background-color: #333;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        animation: fadeOut 3s ease-in;
     }
 
-    50% {
-        opacity: 0.5;
-    }
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
 
-    100% {
-        opacity: 0;
-        transform: translateY(-20px);
+        50% {
+            opacity: 0.5;
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
     }
 }

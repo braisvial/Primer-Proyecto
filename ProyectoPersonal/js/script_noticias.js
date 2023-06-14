@@ -11,9 +11,8 @@ const ver_mas = document.querySelector(".ver_mas")
 buscador.addEventListener("keydown", function (evento) {                            // Evento del input que hace la función buscar cuando le doy al enter
     if (evento.key === "Enter") {
         buscar(evento);                                                             // Llamar a la función de buscador
-        buscador.value = ""                                                         // Vaciar el contenido del input
+        buscador.value = "";                                                         // Vaciar el contenido del input
     }
-
 })
 
 function buscar(evento) {                                                           // Funcion buscador
@@ -62,7 +61,7 @@ function mostrar_notificacion(mensaje) {                                        
 
     setTimeout(() => {                                                              // Eliminar la notificación después de 3 segundos
         notificacion.remove();
-    }, 3000);
+    }, 2900);
 }
 
 //-----VER MÁS-----\\
@@ -108,7 +107,7 @@ window.addEventListener('DOMContentLoaded', function () {
 //-----VOLVER ARRIBA-----\\
 
 function volver_arriba() {                                                          // Pulsar el botón volver arriba
-    window.scrollTo({                                                   
+    window.scrollTo({
         top: 0,                                                                     // Subir ventana arriba
         behavior: "smooth"                                                          // Desplazamiento suave
     })
