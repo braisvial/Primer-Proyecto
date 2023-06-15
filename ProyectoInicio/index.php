@@ -1,3 +1,9 @@
+<?php
+
+require "consultas.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -32,6 +38,32 @@
 </head>
 
 <body>
+
+    <h1> Vamos a poner debajo mis servicios con php </h1>
+    <?php
+
+       while ($servicios= mysqli_fetch_assoc($consulta)){
+    ?> 
+        <div>
+            <h3>
+                <?php
+                    echo ($servicios["nombre"])
+                ?>
+            </h3>
+        </div>
+        <div>
+            <p>
+                <?php
+                    echo($servicios["precio"])
+                ?>
+            </p>
+        </div>
+
+    <?php
+        }
+    ?>
+
+
     <!-- <h1>Primer Título</h1>  Título de mayor importancia, solo puede haber uno
     <h5>Hola Mundo</h5> Titulo de memor importancia, puede haber varios del mismo número (h2, h3, h4, h5, h6)
 
