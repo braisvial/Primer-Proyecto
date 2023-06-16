@@ -46,6 +46,7 @@ function mostrar_menu() {
 }
 
 //-----MOVIMIENTO PORTADA-----\\
+
 const portada = document.querySelector(".fotos_portada")
 
 const foto1 = portada.querySelector(".foto1");

@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda - GameClub</title>
 
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link href="css/normalize.css" rel="stylesheet">
+
     <link rel="preload" href="css/style_tienda.css" as="style">
     <link href="css/style_tienda.css" rel="stylesheet">
 
@@ -76,17 +79,15 @@
 
                 <div class="generos">
                     <h3>Géneros:</h3>
-                    <label><input type="checkbox" name="genero" value="accion"> Acción</label>
-                    <label><input type="checkbox" name="genero" value="aventura"> Aventura</label>
-                    <label><input type="checkbox" name="genero" value="estrategia"> Estrategia</label>
-                    <label><input type="checkbox" name="genero" value="rpg"> RPG</label>
-                    <label><input type="checkbox" name="genero" value="disparos"> Disparos</label>
-                    <label><input type="checkbox" name="genero" value="plataformas"> Plataformas</label>
-                    <label><input type="checkbox" name="genero" value="hack_and_slash"> Hack and Slash</label>
-                    <label><input type="checkbox" name="genero" value="lucha_artes_marciales"> Lucha y Artes
-                        Marciales</label>
-                    <label><input type="checkbox" name="genero" value="cartas_mesa"> Cartas y Mesa</label>
-                    <label><input type="checkbox" name="genero" value="cartas_mesa"> Carreras</label>
+                    <label><input type="checkbox" class="check" id="genero_accion" value="accion"> Acción</label>
+                    <label><input type="checkbox" class="check" id="genero_aventura" value="aventura"> Aventura</label>
+                    <label><input type="checkbox" class="check" id="genero_estrategia" value="estrategia"> Estrategia</label>
+                    <label><input type="checkbox" class="check" id="genero_rpg" value="rpg"> RPG</label>
+                    <label><input type="checkbox" class="check" id="genero_disparos" value="disparos"> Disparos</label>
+                    <label><input type="checkbox" class="check" id="genero_plataformas" value="plataformas"> Plataformas</label>
+                    <label><input type="checkbox" class="check" id="genero_hack-and-slash" value="h&s"> Hack and Slash</label>
+                    <label><input type="checkbox" class="check" id="genero_lucha" value="lucha"> Lucha y Artes Marciales</label>              
+                    <label><input type="checkbox" class="check" id="genero_carreras" value="carreras"> Carreras</label>
                 </div>
 
                 <div class="tematicas">
@@ -99,12 +100,12 @@
                     <label><input type="checkbox" name="tematica" value="supervivencia"> Supervivencia</label>
                 </div>
 
-                <button type="button">Aplicar Filtros</button>
+                <button type="button" id = "boton_filtros">Aplicar Filtros</button>
             </div>
         </div>
 
         <div class="contenedor catalogo" id="catalogo">
-            <div class="juego" onclick="mostrar_popup_juego(this)">
+            <div class="juego">
                 <div class="caratula"><img
                         src="https://cdn1.epicgames.com/b4565296c22549e4830c13bc7506642d/offer/TETRA_PREORDER_STANDARD%20EDITION_EPIC_Store_Portrait_1200x1600-1200x1600-ca8b802ff13813c37a44ebf68d0946a2.png?h=480&quality=medium&resize=1&w=360">
                 </div>
@@ -856,8 +857,8 @@
 
 
     <div class="popup_juego" id="popup_juego">
-        <div class="popup_contenido_juego">
-            <span class="boton_cerrar_juego" onclick="cerrar_popup_juego()"></span>
+        <span class="boton_cerrar_juego" onclick="cerrar_popup_juego()"></span>
+        <div class="popup_contenido_juego">            
             <img src="" alt="" id="imagen_juego">
             <h2 id="titulo_juego"></h2>
             <p id="precio_juego"></p>

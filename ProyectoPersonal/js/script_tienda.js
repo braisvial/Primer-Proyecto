@@ -10,8 +10,8 @@ const boton_volver = document.querySelector(".volver")                          
 
 buscador.addEventListener("keydown", function (evento) {                            // Evento del input que hace la función buscar cuando le doy al enter
   if (evento.key === "Enter") {
-      buscar(evento);                                                             // Llamar a la función de buscador
-      buscador.value = "";                                                         // Vaciar el contenido del input
+    buscar(evento);                                                             // Llamar a la función de buscador
+    buscador.value = "";                                                         // Vaciar el contenido del input
   }
 })
 
@@ -46,7 +46,6 @@ function buscar(evento) {                                           //Funcion bu
     boton_volver.style.display = "none";
   }
   else {
-    // div_volver_arriba.style.display = "none"                                  // Ocultar el botón para volver arriba
     boton_volver_arriba.style.display = "none"                                  // Ocultar el botón para volver arriba
     boton_ver_mas.style.display = "none"                                        // Ocultar el botón Ver más
     boton_volver.style.display = "flex"                                         // Mostrar el botón Volver
@@ -85,8 +84,8 @@ function volver() {                                                             
 //-----VER MÁS-----\\
 
 window.addEventListener('DOMContentLoaded', function () {
-  let catalogo = document.querySelector('.catalogo');                             // Seleccionar el elemento padre noticias
-  let juegos = catalogo.querySelectorAll('.juego');                      // Selecionar todas las noticias
+  let catalogo = document.querySelector('.catalogo');                             // Seleccionar el elemento padre catalogo
+  let juegos = catalogo.querySelectorAll('.juego');                      // Selecionar todas los juegos
 
 
 
@@ -95,7 +94,7 @@ window.addEventListener('DOMContentLoaded', function () {
   let indice = 9;                                                                 // Índice del primer div oculto
   let numero_divs = juegos.length;                                         // Número de divs totales
 
-  for (let i = 0; i < juegos.length; i++) {                                // Ocultar todos los div "noticia"
+  for (let i = 0; i < juegos.length; i++) {                                // Ocultar todos los div "juego"
     juegos[i].style.display = 'none';
   }
 
@@ -122,3 +121,337 @@ window.addEventListener('DOMContentLoaded', function () {
 
   boton_ver_mas.addEventListener('click', mostrar_mas_noticias);                  // Agregar el evento click al botón "Ver más"
 });
+
+
+//-----FILTROS-----\\
+
+boton_filtros = document.querySelector("#boton_filtros")
+
+filtro_accion = document.querySelector("#genero_accion")
+let valor_accion = ""
+
+filtro_accion.addEventListener('click', function () {
+  if (filtro_accion.checked) {
+    filtro_rpg.checked = false
+    filtro_aventura.checked = false
+    filtro_estrategia.checked = false
+    filtro_disparos.checked = false
+    filtro_plataformas.checked = false
+    filtro_hands.checked = false
+    filtro_lucha.checked = false
+    filtro_carreras.checked = false
+    valor_accion = "accion"
+  } else {
+    valor_accion = ""
+  }
+})
+
+filtro_rpg = document.querySelector("#genero_rpg")
+let valor_rpg = ""
+
+filtro_rpg.addEventListener('click', function () {
+  if (filtro_rpg.checked) {
+    filtro_accion.checked = false
+
+    filtro_aventura.checked = false
+    filtro_estrategia.checked = false
+    filtro_disparos.checked = false
+    filtro_plataformas.checked = false
+    filtro_hands.checked = false
+    filtro_lucha.checked = false
+    filtro_carreras.checked = false
+    valor_rpg = "rpg"
+  } else {
+    valor_rpg = ""
+  }
+})
+
+filtro_aventura = document.querySelector("#genero_aventura")
+let valor_aventura = ""
+
+filtro_aventura.addEventListener('click', function () {
+  if (filtro_aventura.checked) {
+    filtro_accion.checked = false
+    filtro_rpg.checked = false
+
+    filtro_estrategia.checked = false
+    filtro_disparos.checked = false
+    filtro_plataformas.checked = false
+    filtro_hands.checked = false
+    filtro_lucha.checked = false
+    filtro_carreras.checked = false
+    valor_aventura = "aventura"
+  } else {
+    valor_aventura = ""
+  }
+})
+
+filtro_estrategia = document.querySelector("#genero_estrategia")
+let valor_estrategia = ""
+
+filtro_estrategia.addEventListener('click', function () {
+  if (filtro_estrategia.checked) {
+    filtro_accion.checked = false
+    filtro_rpg.checked = false
+    filtro_aventura.checked = false
+
+    filtro_disparos.checked = false
+    filtro_plataformas.checked = false
+    filtro_hands.checked = false
+    filtro_lucha.checked = false
+    filtro_carreras.checked = false
+    valor_estrategia = "estrategia"
+  } else {
+    valor_estrategia = ""
+  }
+})
+
+filtro_disparos = document.querySelector("#genero_disparos")
+let valor_disparos = ""
+
+filtro_disparos.addEventListener('click', function () {
+  if (filtro_disparos.checked) {
+    filtro_accion.checked = false
+    filtro_rpg.checked = false
+    filtro_aventura.checked = false
+    filtro_estrategia.checked = false
+
+    filtro_plataformas.checked = false
+    filtro_hands.checked = false
+    filtro_lucha.checked = false
+    filtro_carreras.checked = false
+    valor_disparos = "disparos"
+  } else {
+    valor_disparos = ""
+  }
+})
+
+filtro_plataformas = document.querySelector("#genero_plataformas")
+let valor_plataformas = ""
+
+filtro_plataformas.addEventListener('click', function () {
+  if (filtro_plataformas.checked) {
+    filtro_accion.checked = false
+    filtro_rpg.checked = false
+    filtro_aventura.checked = false
+    filtro_estrategia.checked = false
+    filtro_disparos.checked = false
+
+    filtro_hands.checked = false
+    filtro_lucha.checked = false
+    filtro_carreras.checked = false
+    valor_plataformas = "plataformas"
+  } else {
+    valor_plataformas = ""
+  }
+})
+
+filtro_hands = document.querySelector("#genero_hack-and-slash")
+let valor_hands = ""
+
+filtro_hands.addEventListener('click', function () {
+  if (filtro_hands.checked) {
+    filtro_accion.checked = false
+    filtro_rpg.checked = false
+    filtro_aventura.checked = false
+    filtro_estrategia.checked = false
+    filtro_disparos.checked = false
+    filtro_plataformas.checked = false
+
+    filtro_lucha.checked = false
+    filtro_carreras.checked = false
+    valor_hands = "h&s"
+  } else {
+    valor_hands = ""
+  }
+})
+
+filtro_lucha = document.querySelector("#genero_lucha")
+let valor_lucha = ""
+
+filtro_lucha.addEventListener('click', function () {
+  if (filtro_lucha.checked) {
+    filtro_accion.checked = false
+    filtro_rpg.checked = false
+    filtro_aventura.checked = false
+    filtro_estrategia.checked = false
+    filtro_disparos.checked = false
+    filtro_plataformas.checked = false
+    filtro_hands.checked = false
+
+    filtro_carreras.checked = false
+    valor_lucha = "lucha"
+  } else {
+    valor_lucha = ""
+  }
+})
+
+filtro_carreras = document.querySelector("#genero_carreras")
+let valor_carreras = ""
+
+filtro_carreras.addEventListener('click', function () {
+  if (filtro_carreras.checked) {
+    filtro_accion.checked = false
+    filtro_rpg.checked = false
+    filtro_aventura.checked = false
+    filtro_estrategia.checked = false
+    filtro_disparos.checked = false
+    filtro_plataformas.checked = false
+    filtro_hands.checked = false
+    filtro_lucha.checked = false
+    valor_carreras = "carreras"
+  } else {
+    valor_carreras = ""
+  }
+})
+
+
+boton_filtros.addEventListener("click", filtrar)
+
+function filtrar() {
+
+  boton_ver_mas.style.display = "none"
+  boton_volver.style.display = "flex"
+
+  let catalogo = document.querySelector('.catalogo');
+  const juegos = catalogo.querySelectorAll(".juego")
+  const etiquetas = catalogo.querySelectorAll("LABEL")
+
+  if (filtro_accion.checked) {
+    for (let i = 0; i < juegos.length; i++) {
+      juegos[i].style.display = 'none';
+    }
+    for (let i = 0; i < juegos.length; i++) {
+      let etiqueta_actual = etiquetas[i].textContent
+      if (etiqueta_actual.includes(valor_accion)) {
+        juegos[i].style.display = 'flex';
+      }
+    }
+  }
+
+  if (filtro_rpg.checked) {
+    for (let i = 0; i < juegos.length; i++) {
+      juegos[i].style.display = 'none';
+    }
+    for (let i = 0; i < juegos.length; i++) {
+      let etiqueta_actual = etiquetas[i].textContent
+      if (etiqueta_actual.includes(valor_rpg)) {
+        juegos[i].style.display = 'flex';
+      }
+    }
+  }
+
+  if (filtro_aventura.checked) {
+    for (let i = 0; i < juegos.length; i++) {
+      juegos[i].style.display = 'none';
+    }
+    for (let i = 0; i < juegos.length; i++) {
+      let etiqueta_actual = etiquetas[i].textContent
+      if (etiqueta_actual.includes(valor_aventura)) {
+        juegos[i].style.display = 'flex';
+      }
+    }
+  }
+
+  if (filtro_estrategia.checked) {
+    for (let i = 0; i < juegos.length; i++) {
+      juegos[i].style.display = 'none';
+    }
+    for (let i = 0; i < juegos.length; i++) {
+      let etiqueta_actual = etiquetas[i].textContent
+      if (etiqueta_actual.includes(valor_estrategia)) {
+        juegos[i].style.display = 'flex';
+      }
+    }
+  }
+
+  if (filtro_disparos.checked) {
+    for (let i = 0; i < juegos.length; i++) {
+      juegos[i].style.display = 'none';
+    }
+    for (let i = 0; i < juegos.length; i++) {
+      let etiqueta_actual = etiquetas[i].textContent
+      if (etiqueta_actual.includes(valor_disparos)) {
+        juegos[i].style.display = 'flex';
+      }
+    }
+  }
+
+  if (filtro_plataformas.checked) {
+    for (let i = 0; i < juegos.length; i++) {
+      juegos[i].style.display = 'none';
+    }
+    for (let i = 0; i < juegos.length; i++) {
+      let etiqueta_actual = etiquetas[i].textContent
+      if (etiqueta_actual.includes(valor_plataformas)) {
+        juegos[i].style.display = 'flex';
+      }
+    }
+  }
+
+  if (filtro_hands.checked) {
+    for (let i = 0; i < juegos.length; i++) {
+      juegos[i].style.display = 'none';
+    }
+    for (let i = 0; i < juegos.length; i++) {
+      let etiqueta_actual = etiquetas[i].textContent
+      if (etiqueta_actual.includes(valor_hands)) {
+        juegos[i].style.display = 'flex';
+      }
+    }
+  }
+
+  if (filtro_lucha.checked) {
+    for (let i = 0; i < juegos.length; i++) {
+      juegos[i].style.display = 'none';
+    }
+    for (let i = 0; i < juegos.length; i++) {
+      let etiqueta_actual = etiquetas[i].textContent
+      if (etiqueta_actual.includes(valor_lucha)) {
+        juegos[i].style.display = 'flex';
+      }
+    }
+  }
+
+  if (filtro_carreras.checked) {
+    for (let i = 0; i < juegos.length; i++) {
+      juegos[i].style.display = 'none';
+    }
+    for (let i = 0; i < juegos.length; i++) {
+      let etiqueta_actual = etiquetas[i].textContent
+      if (etiqueta_actual.includes(valor_carreras)) {
+        juegos[i].style.display = 'flex';
+      }
+    }
+  }
+
+}
+
+
+//-----POP UP-----\\
+
+const catalogo = document.querySelector(".catalogo")
+const juego = document.querySelector(".juego")
+const caratula = juego.querySelector("IMG").src
+const titulo = juego.querySelector("H2")
+const popup_juego = document.querySelector(".popup_juego")
+const popup_caratula = document.querySelector("#imagen_juego")
+const popup_titulo = document.querySelector("#titulo_juego")
+
+juego.addEventListener("click", mostrar)
+
+function mostrar(){
+  
+  console.log(caratula)
+  popup_caratula.src = caratula
+  console.log(popup_caratula.textContent)
+  popup_juego.style.display = "flex"
+  catalogo.style.filter = "brightness(50%)"
+  
+
+}
+
+function cerrar_popup_juego(){
+  popup_juego.style.display = "none"
+  catalogo.style.filter = "none"
+}
