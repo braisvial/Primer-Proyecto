@@ -825,7 +825,7 @@ button {
 .bloque_carrito{
     display: none;
     position: fixed;
-    bottom: 10%;
+    bottom: 25%;
     right: 2%;
     background-color: var(--color_secundario);
     padding: 2rem 2rem;
