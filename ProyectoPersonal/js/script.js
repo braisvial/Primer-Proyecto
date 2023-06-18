@@ -123,11 +123,18 @@ function descargarArchivo() {
   }, 100)
 
   function abrirArchivo() {
-    var blob = request.response;
-    var enlace = document.createElement("a");
-    enlace.href = URL.createObjectURL(blob);
-    enlace.download = "launcher.gif";
-    enlace.click();  
+
+    let gif_launcher = document.querySelector(".gif_launcher");
+    gif_launcher.style.display = "flex";
+    setTimeout(function () {
+      gif_launcher.style.display = "none";
+    }, 6000);
+
+    // var blob = request.response;
+    // var enlace = document.createElement("a");
+    // enlace.href = URL.createObjectURL(blob);
+    // enlace.download = "launcher.gif";
+    // enlace.click();
   };
 
   request.send();
