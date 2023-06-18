@@ -357,7 +357,11 @@ body {
     gap: 3rem;
 }
 
-.catalogo label{
+.catalogo label {
+    display: none;
+}
+
+.catalogo details {
     display: none;
 }
 
@@ -529,6 +533,7 @@ body {
 }
 
 .filtros button {
+    font-family: Arial, Helvetica, sans-serif;
     margin-left: 10%;
     width: fit-content;
     margin-bottom: 30%;
@@ -538,7 +543,7 @@ body {
 /*-------------PIE DE PÁGINA----------------------------------------*/
 
 .pie_pagina {
-    background-color: var(--color_secundario);    
+    background-color: var(--color_secundario);
 }
 
 .pie_pagina .contenedor_footer {
@@ -728,8 +733,9 @@ button {
     top: 25%;
     left: 25%;
     width: 50%;
-    height: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
+    height: 52%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
     display: none;
     justify-content: center;
     align-items: center;
@@ -737,12 +743,22 @@ button {
 }
 
 .popup_contenido_juego {
-    background-color: #fff;
-    padding: 20px;
+    display: flex;    
+}
+
+.popup_contenido_juego img{
+    margin: 1rem 2rem;
     border-radius: 5px;
-    max-width: 400px;
-    text-align: center;
-    position: relative;
+}
+
+.popup_texto{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 2rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .boton_cerrar_juego {
@@ -762,7 +778,7 @@ button {
     left: 50%;
     width: 75%;
     height: 2px;
-    background-color: #000;
+    background-color: white;
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
@@ -786,7 +802,7 @@ button {
     z-index: 9999;
     animation: fadeOut 3s ease-in;
     text-align: center;
-    
+
 }
 
 @keyframes fadeOut {
@@ -802,6 +818,23 @@ button {
         opacity: 0;
         transform: translateY(-20px);
     }
+}
+
+/*-------------IMAGEN CARRITO---------------------------------------*/
+
+.bloque_carrito{
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    right: 2%;
+    background-color: var(--color_secundario);
+    padding: 2rem 2rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.carrito{
+    width: 6rem;  
 }
 
 /*-------------MEDIA QUERY------------------------------------------*/

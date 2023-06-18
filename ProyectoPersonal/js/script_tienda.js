@@ -434,9 +434,11 @@ const catalogo = document.querySelector(".catalogo")
 const juego = document.querySelector(".juego")
 const caratula = juego.querySelector("IMG").src
 const titulo = juego.querySelector("H2")
+const descripcion = juego.querySelector("DETAILS")
 const popup_juego = document.querySelector(".popup_juego")
 const popup_caratula = document.querySelector("#imagen_juego")
 const popup_titulo = document.querySelector("#titulo_juego")
+const popup_descripcion = document.querySelector("#descripcion_juego")
 
 juego.addEventListener("click", mostrar)
 
@@ -445,13 +447,28 @@ function mostrar(){
   console.log(caratula)
   popup_caratula.src = caratula
   console.log(popup_caratula.textContent)
-  popup_juego.style.display = "flex"
-  catalogo.style.filter = "brightness(50%)"
-  
+  popup_titulo.textContent = titulo.textContent
+  popup_descripcion.textContent = descripcion.textContent
 
+  popup_juego.style.display = "flex"
+  catalogo.style.filter = "brightness(50%)" 
 }
 
 function cerrar_popup_juego(){
   popup_juego.style.display = "none"
   catalogo.style.filter = "none"
+}
+
+//-----BOTÓN ALQUILAR-----\\
+
+const alquilar = document.querySelector("#boton_alquilar")
+const carrito = document.querySelector(".bloque_carrito")
+
+alquilar.addEventListener("click", boton_alquilar)
+
+function boton_alquilar(){
+  popup_juego.style.display = "none"
+  carrito.style.display = "flex"
+  catalogo.style.filter = "none"
+
 }

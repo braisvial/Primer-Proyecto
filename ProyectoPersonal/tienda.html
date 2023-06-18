@@ -81,12 +81,16 @@
                     <h3>Géneros:</h3>
                     <label><input type="checkbox" class="check" id="genero_accion" value="accion"> Acción</label>
                     <label><input type="checkbox" class="check" id="genero_aventura" value="aventura"> Aventura</label>
-                    <label><input type="checkbox" class="check" id="genero_estrategia" value="estrategia"> Estrategia</label>
+                    <label><input type="checkbox" class="check" id="genero_estrategia" value="estrategia">
+                        Estrategia</label>
                     <label><input type="checkbox" class="check" id="genero_rpg" value="rpg"> RPG</label>
                     <label><input type="checkbox" class="check" id="genero_disparos" value="disparos"> Disparos</label>
-                    <label><input type="checkbox" class="check" id="genero_plataformas" value="plataformas"> Plataformas</label>
-                    <label><input type="checkbox" class="check" id="genero_hack-and-slash" value="h&s"> Hack and Slash</label>
-                    <label><input type="checkbox" class="check" id="genero_lucha" value="lucha"> Lucha y Artes Marciales</label>              
+                    <label><input type="checkbox" class="check" id="genero_plataformas" value="plataformas">
+                        Plataformas</label>
+                    <label><input type="checkbox" class="check" id="genero_hack-and-slash" value="h&s"> Hack and
+                        Slash</label>
+                    <label><input type="checkbox" class="check" id="genero_lucha" value="lucha"> Lucha y Artes
+                        Marciales</label>
                     <label><input type="checkbox" class="check" id="genero_carreras" value="carreras"> Carreras</label>
                 </div>
 
@@ -100,7 +104,7 @@
                     <label><input type="checkbox" name="tematica" value="supervivencia"> Supervivencia</label>
                 </div>
 
-                <button type="button" id = "boton_filtros">Aplicar Filtros</button>
+                <button type="button" id="boton_filtros">Aplicar Filtros</button>
             </div>
         </div>
 
@@ -117,6 +121,10 @@
                         <h4>Alquiler: 3€/día</h4>
                     </div>
                 </div>
+                <details>El juego se desarrolla en Yara, una isla caribeña ficticia que yace bajo una dictadura liderada
+                    por "El Presidente" Antón Castillo quien está preparando a su hijo, Diego, para que continúe con su
+                    mandato. El jugador encarna al guerrillero Dani Rojas, quien busca derrocar a Castillo y a su
+                    régimen.</details>
                 <label>accion disparos</label>
             </div>
             <div class="juego">
@@ -858,10 +866,13 @@
 
     <div class="popup_juego" id="popup_juego">
         <span class="boton_cerrar_juego" onclick="cerrar_popup_juego()"></span>
-        <div class="popup_contenido_juego">            
+        <div class="popup_contenido_juego">
             <img src="" alt="" id="imagen_juego">
-            <h2 id="titulo_juego"></h2>
-            <p id="precio_juego"></p>
+            <div class="popup_texto">
+                <h2 id="titulo_juego"></h2>
+                <p id="descripcion_juego"></p>
+                <button id="boton_alquilar">Alquilar</button>
+            </div>
         </div>
     </div>
 
@@ -875,6 +886,10 @@
             </form>
             <span class="cerrar" onclick="cerrar_login()"></span>
         </div>
+    </div>
+
+    <div class="bloque_carrito">
+        <img class="carrito" src="./img/carrito.png">
     </div>
 
     <script src="js/script.js"></script>

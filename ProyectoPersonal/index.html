@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="derecha">
-                <div class="descargar" onclick="mostrar_descargar()">
+                <div class="descargar" onclick="descargarArchivo()">
                     <img src="./img/download.svg">
                     <p>Descargar</p>
                 </div>
@@ -65,7 +65,7 @@
                 <a href="./faq.html" class="faq">Preguntas Frecuentes</a>
                 <a href="./acerca.html" class="acerca">Acerca de GameClub</a>
                 <a>___________________</a>
-                <div class="desplegable_descargar" onclick="mostrar_descargar()">
+                <div class="desplegable_descargar" onclick="descargarArchivo()">
                     <img src="./img/download.svg">
                     <p>Descargar</p>
                 </div>
@@ -75,6 +75,8 @@
                 </div>
             </div>
         </div>
+
+        <progress id="progressBar" value="0" max="100"></progress>
 
         <div class="pie_pagina">
             <div class="contenedor">
@@ -153,10 +155,6 @@
             </form>
             <span class="cerrar" onclick="cerrar_login()"></span>
         </div>
-    </div>
-
-    <div id="descargar_popup" class="descargar_popup">
-        <span class="cerrar_descargar" onclick="cerrar_descargar()"></span>
     </div>
 
     <script src="js/script.js"></script>

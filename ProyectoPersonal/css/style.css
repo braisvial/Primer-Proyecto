@@ -282,7 +282,7 @@ body {
     transition-timing-function: ease;
 }
 
-.desplegable_descargar p:hover{
+.desplegable_descargar p:hover {
     opacity: 100%
 }
 
@@ -317,7 +317,7 @@ body {
     transition-timing-function: ease;
 }
 
-.desplegable_iniciar_sesion p:hover{
+.desplegable_iniciar_sesion p:hover {
     opacity: 100%
 }
 
@@ -653,49 +653,18 @@ button {
 }
 
 
-/*-------------POP-UP DESCARGAR-------------------------------------*/
+/*-------------DESCARGAR-------------------------------------*/
 
-.descargar_popup {
+#progressBar {
     display: none;
+    width: 20%;
+    height: 3rem;
     position: fixed;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--color_terciario);
-    border-radius: 10px;
-    z-index: 9999;
-    width: 80rem;
-    height: 50rem;
+    left: 40%;
+    transition: opacity 0.5s ease-in-out;
 }
 
-#video_frame {
-    pointer-events: none;
-}
-
-.cerrar_descargar {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-
-.cerrar_descargar:before,
-.cerrar_descargar:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 150%;
-    height: 2px;
-    background-color: white;
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.cerrar_descargar:after {
-    transform: translate(-50%, -50%) rotate(-45deg);
-}
 
 /*-------------MEDIA QUERY------------------------------------------*/
 @media(max-width:1140px) {
@@ -704,6 +673,7 @@ button {
         height: auto;
         max-width: 100vw;
     }
+
     /*-----CABECERA-----*/
     .enlaces a {
         display: none;
@@ -735,7 +705,7 @@ button {
     .fotos_portada {
         display: flex;
         flex-direction: column;
-        
+
     }
 
     .fotos_portada img .grayscale {
@@ -761,7 +731,7 @@ button {
         opacity: 100%;
         height: auto;
         width: 70%;
-        
+
     }
 
     /*---------------------------------------------------------*/
@@ -847,12 +817,12 @@ button {
 
     /*-----FOOTER-----*/
 
-    .pie_pagina{
-        display:none;
+    .pie_pagina {
+        display: none;
     }
 
     .pie_pagina_media {
-        display:flex;
+        display: flex;
         flex-direction: column;
         background-color: var(--color_secundario);
     }
@@ -867,7 +837,7 @@ button {
         text-decoration: none;
     }
 
-    .pie_pagina_media .logos_redes_media img{
+    .pie_pagina_media .logos_redes_media img {
         width: 5rem;
         height: 5rem;
     }
