@@ -91,7 +91,7 @@ foto5.addEventListener('mouseout', () => {
 //-----DESCARGAR-----\\
 
 function descargarArchivo() {
-  var url = "./img/launcher.gif";
+  var url = "../img/launcher.gif";
   var request = new XMLHttpRequest();
   request.open("GET", url, true);
   request.responseType = "blob";
@@ -115,8 +115,8 @@ function descargarArchivo() {
       clearInterval(intervalo);                                                               // Detener el cronómetro después de 5 segundos
 
       setTimeout(function () {
-        progressBar.style.display = "none";                                                     // Retrasar la ocultación de la barra de progreso para que se muestre durante un tiempo
-      }, 1000);                                                                                 // Retrasar la ocultación durante 2 segundos (ajusta el tiempo según tus necesidades)
+        progressBar.style.display = "none";                                                   // Retrasar la ocultación de la barra de progreso para que se muestre durante un tiempo
+      }, 1000);                                                                               // Retrasar la ocultación durante 1 segundos 
 
       abrirArchivo()
     }
@@ -124,17 +124,17 @@ function descargarArchivo() {
 
   function abrirArchivo() {
 
-    let gif_launcher = document.querySelector(".gif_launcher");
-    gif_launcher.style.display = "flex";
-    setTimeout(function () {
-      gif_launcher.style.display = "none";
-    }, 6000);
+    // let gif_launcher = document.querySelector(".gif_launcher");
+    // gif_launcher.style.display = "flex";
+    // setTimeout(function () {
+    //   gif_launcher.style.display = "none";
+    // }, 6000);
 
-    // var blob = request.response;
-    // var enlace = document.createElement("a");
-    // enlace.href = URL.createObjectURL(blob);
-    // enlace.download = "launcher.gif";
-    // enlace.click();
+    var blob = request.response;
+    var enlace = document.createElement("a");
+    enlace.href = URL.createObjectURL(blob);
+    enlace.download = "launcher.gif";
+    enlace.click();
   };
 
   request.send();
